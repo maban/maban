@@ -1,37 +1,18 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	
-	<title>Anna Debenham, freelance front-end developer based in Brighton</title>	
-	
-	<meta name="title" content="Anna Debenham" />
-	<meta name="author" content="Anna Debenham" />
-	<meta name="description" content="Freelance front-end developer based in Brighton" />
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link rel="icon" href="favicon.ico">
-	<link rel="apple-touch-icon" href="icon.png"/>
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->	
-</head>
-
-
-<body>
+---
+layout: home
+title: Anna Debenham
+---
 	
 	<header id="top" class="vcard">
     	<h1 class="fn">Anna Debenham</h1>
     	<p class="role">Freelance front end developer based in the UK</p>
     	<p class="availability booked"><strong>Fully booked:</strong> I have no availability for any freelance development work for the next few months.</p>
 	</header>
-
-	<footer class="footer-main">
-		<small>Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-NonCommercial-ShareAlike 2.0 UK: England &amp; Wales License</a>.</small>
-    </footer>
-
-</body>
-
-</html>
+	
+	<ul>
+	  {% for post in site.posts %}
+	    <li>
+	      <a href="{{ post.url }}">{{ post.title }}</a>
+	    </li>
+	  {% endfor %}
+	</ul>
