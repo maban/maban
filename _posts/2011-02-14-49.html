@@ -1,0 +1,132 @@
+---
+layout: post
+title: Marking up relationships
+---
+
+<p>A couple of weeks ago I was encouraged by <a href="http://adactio.com" rel="friend met">Jeremy Keith</a> to put some <code>rel</code> values on links in my website, so I read up on them to find out when it's appropriate to use them.</p>
+
+<p>I was particularly interested in the way in which they're used to denote relationships between people. <code>rel</code> values can be put on links and are used to indicate the <a href="http://microformats.org/wiki/rel-faq#How_is_rel_used">relationship of the target to the resource on which they appear</a>. Since it's Valentine's Day, I want to use this opportunity to see how we can mark up human to human relationships.</p>
+
+<p>Marking up relationships is documented as <a href="http://www.gmpg.org/xfn/">XHTML Friends Network</a>, or XFN for short.</p>
+
+<h2>Why bother with XFN?</h2>
+
+<p>The idea of using XFN is that it decentralises data. Social networks that support it can build tools that make it easier to import, export and sync our contacts. For example, when you create an account with <a href="http://huffduffer.com/">Huffduffer</a> and add the URL to your website, the service searches for sites that are linking to yours with <code>rel="me"</code> and automatically adds the websites you have an account on. I haven't updated my profile on Huffduffer for months, but it has added links to services I've signed up to since then.</p>
+
+<p>Other websites that use XFN include <a href="http://www.flickr.com/">Flickr</a>, <a href="http://www.google.com/profiles">Google Profiles</a>, <a href="http://www.quora.com">Quora</a>, <a href="http://lanyrd.com">Lanyrd</a> and <a href="http://dribbble.com/">Dribbble</a>. <a href="http://twitter.com">Twitter</a> uses <code>rel="me"</code> when you add your website, but doesn't appear to add it to your contacts.</p>
+
+<blockquote>The web is more a social creation than a technical one. I designed it for a social effect &mdash; to help people work together &mdash; and not as a technical toy.</blockquote>
+<p class="attr">&mdash;Tim Berners-Lee, <cite>Weaving The Web</cite></p>
+
+<h2>How to XFNify your site</h2>
+
+<p>You're probably already familiar with using the <code>rel</code> attribute to reference a stylesheet; you're basically defining the relationship between the stylesheet and the current document.</p>
+
+<pre><code>&lt;link href="style.css" type="text/css" <strong>rel="stylesheet"</strong>/&gt;</code></pre>
+
+<p>It's the same concept with XFN, but you're indicating that this is a human to human relationship rather than a document to document relationship.</p>
+
+<h3>Marking up a contact</h3>
+
+<pre><code>&lt;a href="http://www.maban.co.uk" <strong>rel="me"</strong>&gt;Anna Debenham&lt;/a&gt;</code></pre>
+
+<p>In this example, I've used <code>rel="me"</code> to show that the page I'm linking to represents the same person as the one I'm linking from. You can use more than one rel value, as demonstrated here:</p>
+
+<pre><code>&lt;a href="http://www.hicksdesign.co.uk/" <strong>rel="contact met"</strong>&gt;Jon Hicks&lt;/a&gt;</code></pre>
+
+<p>This indicates that I've met Jon, and consider him a contact.</p>
+
+<h3>Representing affection</h3>
+
+<p>In this example, I'm giving a rel value of sweetheart. Sorry, Cennydd.</p>
+
+<pre><code>&lt;a <strong>rel="sweetheart"</strong> href="http://cennydd.co.uk"&gt;Cennydd Bowles&lt;/a&gt;</code></pre>
+
+<p>This is the <a href="http://gmpg.org/xfn/11">meta data profile description of when to use <code>rel="sweetheart"</code></a></p>
+
+<dl>
+	<dt>sweetheart</dt>
+	<dd>Someone with whom you are intimate and at least somewhat committed, typically exclusively. Symmetric. Not transitive.</dd>
+</dl>
+
+<p>The XFN website has an amusing explanation for why they chose the endearing word "sweetheart" over something more formal:</p>
+
+<blockquote>This value was the best gender-neutral term we could find to represent the more common terms "girlfriend" and "boyfriend," which it is meant to represent, as well as informal terms like "snookums", "honey", "pumpkin", and "sweetie-pie".</blockquote>
+<p class="attr">&mdash;<a href="http://gmpg.org/xfn/background#romance">XFN background, Romance</a></p>
+
+<p>You can also use <code>rel="crush"</code>, <code>rel="spouse"</code>, or even <code>rel="date"</code> for someone you're dating.</p>
+
+<h3>Someone you look up to</h3>
+
+<p>You can use the value <code>muse</code> to reference someone who inspires you, such as a role model.</p>
+
+<h3>Someone you work with</h3>
+
+<p>Use the value <code>co-worker</code> to refer to someone you work with, and <code>colleague</code> for someone in the same field as you. (A colleague might not work in the same company as you but you're in the same field of study.)</p>
+
+<h3>Just friends</h3>
+
+<p>The rel values <code>friend</code> and <code>acquaintance</code> can be used to mark up people you know well.</p>
+
+
+<h3>Family</h3>
+
+<p><code>kin</code> can be used to reference someone in your extended family, and <code>parent</code>, <code>sibling</code> and <code>child</code> to signify a closer relationship.</p>
+
+<h3>Nearby contacts</h3>
+
+<p>If you've got a housemate, you can mark them up with <code>co-resident</code>, or if they live nearby, use <code>neighbour</code>.</p>
+
+<h2>Styling relationships</h2>
+
+<p>We can target the attribute in the CSS to style any links with a particular rel value. In this example, I'm adding a little heart icon to the left of all links that have the rel value of <code>sweetheart</code>.</p>
+
+<p>The HTML:</p>
+<pre><code>&lt;a rel="sweetheart" href="http://cennydd.co.uk"&gt;Cennydd Bowles&lt;/a&gt;</code></pre>
+
+<p>The CSS:</p>
+<pre><code>a[rel~="sweetheart"] {
+	background-image:url(heart.png);
+	background-repeat: no-repeat;
+	background-position: left 2px;
+	padding-left: 15px;
+}</code></pre>
+
+<p>The Result: <a rel="sweetheart" href="http://cennydd.co.uk">Cennydd Bowles</a></p>
+
+<p>Awwww! :) This won't display in IE6 because it doesn't understand attribute selectors. That shouldn't stop you using it though.</p>
+
+<h2>Romantic code</h2>
+
+<p>Since the only way to see whether these values are being used is by viewing source, you could add them in without the person you've referenced even knowing. Imagine viewing source and finding <code>rel="crush"</code> in a reference to you. Then again, could be a bit creepy if you don't share those feelings!</p>
+
+<blockquote>&hellip;refers to a person to whom you are attracted, perhaps even strongly, but who might not express the same feeling in return, or even know that you exist. Crushes are also usually secret, which makes their inclusion in XFN (a public data set) somewhat interesting. We expect that the use of crush in XFN will be in a teasing manner, as between two friends who like to flirt but do not actually date.</blockquote>
+<p class="attr">&mdash;<a href="http://gmpg.org/xfn/background#romance">XFN background, Romance</a></p>
+
+<p>It's also worth pointing out that all the values are gender neutral, positive and assume a monogamous relationship, so you won't find any <code>rel="mistress"</code>. The reason isn't ideological, but purely practical:</p>
+
+<blockquote>There were a whole pile of love, romance, and sexually oriented terms we considered and discarded. Some were rejected on the grounds they were unnecessary&mdash;for example, polyamorous individuals can indicate their other partners using values already defined (having two links marked sweetheart or spouse, for example).</blockquote>
+<p class="attr">&mdash;<a href="http://gmpg.org/xfn/background#romance">XFN background, Romance</a></p>
+
+<h2>Relationships defined by timestamps</h2>
+
+<p>Another thing is that these values are all dependant on the time they are written. You could give someone a rel value of <code>co-worker</code> today, and a few months later they could be working for a different company. Would you then go back and change those values in older posts?</p>
+
+<blockquote>Blogs by their very nature are a time based format. It is possible to use XFN values to refer to people linked to within a blog post. It could then be presumed that those relationships were as defined as of the timestamp of that blog post. Later blog posts could mention the same people with different XFN values. By viewing a set or series of blog posts and watching the XFN values on the interpersonal links change, one could easily derive implied temporal information about the nature of the relationships.</blockquote>
+<p class="attr">&mdash;<a href="http://gmpg.org/xfn/background#timeless">XFN background: out of time</a></p>
+
+<h2>Find out more</h2>
+<ul>
+	<li><a href="http://socialgraph-resources.googlecode.com/svn/trunk/samples/findyours.html">Find sites that are connected to you using Google's Social Graph API</a></li>
+	<li><a href="http://www.gmpg.org/xfn/">Xhtml Friends Network</a></li>
+	<li><a href="http://microformats.org/wiki/existing-rel-values">A list of existing rel values on microformats.org</a></li>
+</ul>
+
+<style type="text/css">
+a[rel~="sweetheart"] {
+	background-image:url(/image/icon/heart-12x12.png);
+	background-repeat: no-repeat;
+	background-position: left 2px;
+	padding-left: 15px;
+}
+</style>
