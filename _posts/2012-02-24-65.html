@@ -1,0 +1,71 @@
+---
+layout: post
+title: Responsive Summit
+---
+
+<p>I was at <a href="http://responsivesummit.com/">Responsive Summit</a> yesterday, where we spent the day discussing the experiences we've had and challenges we've faced with responsive web design projects.</p>
+
+<p><i>We discussed a lot of things during the day and I'm missing out a huge amount in this post. We had differing opinions on things too, these are just my take-away thoughts on some of the things we talked about.</i></p>
+
+<h2>"Responsive design is a fad"</h2>
+
+<p>The web has always been fluid by default, text inherently fills the width of the viewport. We added the widths. Now we have a huge range of devices and an even wider set of unknowns that extend further than just the dimensions of a screen. Things aren't magically going to go back to how they were, screens aren't going to be consistent sizes again, internet speeds will continue to vary wildly, as will the way we interact with devices.</p>
+
+<p>It's a big challenge and mindset change, but things move fast, and it's our job to be able to respond to that. Echoing Mark Boulton's thoughts at the end of the day, I guess this does feel a lot like how the Web Standards movement did at the time. It's the disruption the industry needs to do things better.</p>
+
+<h2>Changing processes</h2>
+
+<p>Responsive design isn't as simple as adding a few media queries to a page. The first topic of the day was workflow and changing skill sets. The way in which we have largely been working for years has been a hack, inherited off print design. The designer opens up Photoshop (the clue for what it was built for is in the name). The first step is to define the width of the canvas. The designer sends the client a static mockup, a painting of how a website will look on a desktop screen. The client signs this off. Design ends and exactly the same mockup is sent to the developer. The developer builds the website exactly as the mockup looks, pixel for pixel. Then <a href="http://www.markboulton.co.uk/journal/comments/responsive-summit-workflow">the big reveal</a>. Classic waterfall process.</p> 
+
+<p>Copying and pasting this process for responsive design projects is like trying to hammer a square peg into a round hole. Now the designer needs to produce mockups at different widths, or the developer has to make lots of design decisions, but in the same budget. How do we present many different designs of the same site to the client, how do we communicate that process effectively, and how do we transition between different roles?</p>
+
+<blockquote>We're trying to control something that's messy.</blockquote>
+<p class="attr">— <cite><a href="https://twitter.com/markboulton">Mark Boulton</a></cite></p>
+
+<h2>Broader skillsets</h2>
+
+<p>The bleed between designer and developer skill sets and responsibilities needs to be bigger. Hire designers that can code. Hire developers that can design. Maybe even create a separate training budget for your designer that can only be used on development conferences, workshops and books, and vice versa to make sure they maintain <a href="http://uxmatters.com/mt/archives/2011/10/the-t-model-and-strategies-for-hiring-ia-practitioners-part-1.php">T-shaped knowledge</a>, which is useful for communicating ideas in a team.</p>
+
+<h2>Adapting roles</h2>
+
+<p>When I get sent a mockup to build, I have to fill in the gaps on things that the designer has missed. I don't always see this as a bad thing; designers can't account for every single possible situation, every possible error message, every screen width, nor should they. The design process shouldn't end at client sign off. Therefore, the design deliverables should communicate enough that the developer can make a good judgement. Design deliverables sent to a client often need to communicate different things as those sent to a developer, and that's something that should be considered.</p>
+
+<p>That's what I love about <a href="http://24ways.org/2011/front-end-style-guides">front-end style guides</a>, and being able to work alongside the designer as I'm building. A style guide is the design of a system, whereas mockups on their own only show how certain pages look in certain scenarios. Mockups may be useful for clients, not so much for developers.</p>
+
+<p>Websites are <a href="http://hereinthehive.com/2010/10/31/web-developers-conference-the-return/">systems rather than pages</a> and as soon as we stop perceiving them as that, the better.</p>
+
+<h2>Designing in the browser vs design software</h2>
+
+<p>The tools we use aren't important, it's what we can produce with them. Our tools have limitations, but a skilled designer can use any piece software to create deliverables that are appropriate to the medium they're designing for.</p>
+
+<h2>Responsive design as an up-sell</h2>
+
+<p>There was a split in the room over whether responsive design should be considered an extra service or become part of the process. The first few times you work this way, it does add time to the project, but eventually, it becomes part of the process. I consider it like accessibility, which I don't sell to my clients as an extra, but I'd devote extra time to it if they needed it. I consider it as part of my job, just like testing in different browsers is part of my job. The real debate should be about how far you go to make the site responsive.</p>
+
+<blockquote>I don't know anyone who sells CSS as an up-sell now.</blockquote>
+<p class="attr">— <cite><a href="https://twitter.com/danielmall">Dan Mall</a></cite></p>
+
+<h2>How do I sell it to the client?</h2>
+
+<p>My approach is to just do it because it's part of my workflow rather than an add-on. I've never been told "I don't want this to work on other devices" and I'd be surprised if I were ever asked that. Where you do have to adjust the budget and mindsets for it, often the client is understanding when you explain that building a site in this way means savings in the long term, and quick entry to new markets as new devices come out.</p>
+
+<blockquote>Responsive design is sustainable design.</blockquote>
+<p class="attr">— <cite><a href="https://twitter.com/cennydd">Cennydd Bowles</a></cite></p>
+
+<h2>Assumptions</h2>
+
+<p>It's tempting to make various assumptions when designing a responsive site, but <a href="https://twitter.com/#!/thebeebs/status/172678120615313409">assumptions are dangerous</a>:</p>
+
+<p><em>"Someone using a mobile device is on a slow connection."</em> Not necessarily if they're connected to wifi.</p>
+
+<p><em>"Desktop users are on a fast internet connection."</em> What about the person using a 3G dongle?</p>
+
+<p><em>"Mobile devices are small screens."</em> Have you ever used a tablet to browse the web and been served up a squished mobile version of the website? Or used something like <a href="http://www.apple.com/ipad/features/airplay.html">Airplay</a> to switch what's on your tablet to your TV screen?</p>
+
+<p>And maybe in the next few months:</p>
+
+<p><em>"People on mobiles with slow connections should be served compressed images."</em> If Apple come out with a retina display iPad, the user's expectation for image quality is going to be different. Don't just think about the devices we have now, think about the devices we will have in the future.</p>
+
+<p>It can feel incredibly daunting. How can we cope with all these unknowns? I think we've got to accept the fact that we will never be able to control every experience exactly as we designed.</p>
+
+<p>The responsive design movement is the catalyst this industry needed to change and improve the way we work. I'm excited about a future of more communication between designers and developers, agile rather than waterfall processes, and designing sustainably rather than for what works now.</p>
