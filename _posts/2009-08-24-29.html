@@ -1,0 +1,53 @@
+---
+layout: post
+title: Using nth-of-type to create grid blocks that clear
+---
+
+<p><figure class="pullout"><img src="http://maban.co.uk/image/article/diagram-nth-of-type-01.png" alt="grid blocks demonstrating that if some have more content than others, some block wrap, but others get stuck" /><figcaption>So this is what happens if the content in some blocks is longer than others.  Yeugh.</figcaption></figure></p>
+
+	<p>Problem: You want to create a grid based layout with floats, but you don&#8217;t want to wrap things in extraneous divs to force blocks to clear properly.</p>
+
+	<p>In an ideal world, all the content is the same height, and blocks will float and clear properly.  But this is not an ideal world.</p>
+
+	<p>	<figure class="pullout"><img src="http://maban.co.uk/image/article/diagram-nth-of-type-02.png" alt="grid blocks where the content overlaps a block that has a fixed-height" /><figcaption>We could specify the height, but this is a really bad idea.  You can&#8217;t guarantee that the content in the blocks will always be the same height, and you&#8217;ll get ugly overlaps if you&#8217;re wrong.</figcaption></figure></p>
+
+	<p>One way of achieving this is by wrapping a div round the first three blocks which clears the content above. But this means adding extraneous divs to your markup.</p>
+
+<h2>nth-of-type to the rescue!</h2>
+
+<p>If we know how many blocks are going to be in each row, we can tell which ones to clear using the nth-of-type selector.</p>
+
+<p>So this code clears the 4th, 7th and 10th block</p>
+
+<pre>
+	<code>
+.block:nth-of-type(4),
+.block:nth-of-type(7),
+.block:nth-of-type(10) {
+    clear: both;
+    }
+	</code>
+</pre>
+
+	<p>And this code adds margins onto every first and second block in a row.  (You can probably think of a more streamlined way of doing this if you&#8217;re better at maths than me!)</p>
+
+<pre>
+	<code>
+.block:nth-of-type(1),
+.block:nth-of-type(2),
+.block:nth-of-type(4),
+.block:nth-of-type(5),
+.block:nth-of-type(7),
+.block:nth-of-type(8),
+.block:nth-of-type(10),
+.block:nth-of-type(11) {
+    margin-right:40px;
+    }
+	</code>
+</pre>
+
+	<p>	<figure class="pullout"><img src="http://maban.co.uk/image/article/diagram-nth-of-type-04.png" alt="example of the correct blocks clearing" /><figcaption>Now we&#8217;ve got the correct grid blocks clearing. Yay!</figcaption></figure></p>
+
+<h3>Browser Compatibility:</h3>
+
+<p>Unfortunately, <a href="http://www.quirksmode.org/css/contents.html">not many browsers currently support this</a>.  Firefox 3.1+, Safari 4.0, Chrome, Konqueror, and Opera (albeit incorrectly).  But if you&#8217;ve got a high proportion of users on these browsers, you can have a go at implementing this and get it to degrade quite nicely.</p>
