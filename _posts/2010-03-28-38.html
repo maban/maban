@@ -1,0 +1,114 @@
+---
+layout: post
+title: Comparison of the UK's political party websites
+---
+
+<p>Government and political party websites are some of the worst designed out there, which is a shame because they often have a lot of important information to communicate. Last year we saw how a strong online presence so positively benefited Obama&#8217;s campaign and won the inspiration of many young people, an audience the media claims to be disillusioned with politics. I wanted to see how each of the main UK party websites compared, so I&#8217;ve done a comparison of the design and code of 4 of them (plus an extra minor party for the lols).
+
+<p>Please note I dislike each party equally, so no bias intended.</p>
+
+<h2>Labour</h2>
+
+<p>I had some great criticisms lined up for Labour&#8217;s website, but they redesigned it halfway through writing this post. It&#8217;s a vast improvement on the previous one, although the code is a disappointment.</p>
+
+<h3>Design:</h3>
+
+<p>I think the new design is ok (compared to the others). It&#8217;s consistent, clear and easy to read. Although the drop-down navigation doesn&#8217;t work when JavaScript is disabled, the pages still link to the subpages so it degrades nicely.</p>
+
+<img src="http://maban.co.uk/image/article/screenshot-party-labour-01.jpg" alt="Labour website screenshot" />
+	
+<p>Most of the website responds well when the text size is increased, but there are a lot of elements with fixed heights, making it difficult or impossible to read. The links below from the policies section could have so easily be made to expand when the text gets bigger.</p>
+
+<img src="http://maban.co.uk/image/article/screenshot-party-labour-02.gif" alt="Labour party policy buttons"/>
+
+<h3>Code</h3>
+
+<p>The structure of the code is good, but the choice of id and class names very poor. Some of the <code>div</code> ids are prefixed by the word &#8220;div&#8221;. It&#8217;s completely unnecessary.  There are also lots of instances of <code>div_a</code>, <code>div_b</code>, <code>li id=&quot;a&quot;</code>, <code>li id=&quot;b&quot;</code>, <code>id=&quot;small-column-left&quot;</code>, so not very semantic code. There are far too many ids. On any site, especially this size or being maintained by other people, it is far better to use classes over ids. Ids are for addressable content and cannot be reused more than once on the same page. Classes are much more flexible and achieve the same result.</p>
+
+<h3>Overall impression</h3>
+
+<p>I spent half an hour on their site, and I still don&#8217;t know what they stand for. Protecting front line services? Who doesn&#8217;t have this as a policy? Also, <a href="http://www.labour.org.uk/policies/crime-justice-and-immigration">longcat waffle like this isn&#8217;t helpful</a>, I want bulletpoints. Although they have a lot written about general areas such as the economy and healthcare, I still don&#8217;t really know where they stand on each policy. Every party is pro education, pro healthcare and pro jobs, but it&#8217;s the little things that I want to know about. In their policies section they have a search box where you can search their policies. I think this is a really nice idea, but I want to know where Labour stand on things like abortion and euthanasia, both things I couldn&#8217;t find when I searched on their site.</p>
+
+<h2>Conservatives</h2>
+
+<h3>Design</h3>
+
+<p>The design isn&#8217;t bad, it doesn&#8217;t look as outdated as most. However, this is just the homepage. The inner pages look very different. (How appropriate). The secondary navigation, and even some of the design is inconsistent throughout the site, making the website that much more difficult to use.</p>
+
+<img src="http://maban.co.uk/image/article/screenshot-party-tory-01.jpg" alt="Conservative party website screenshot" />
+
+<h3>Code</h3>
+
+<p>Classes are reused nicely, and the navigation has access keys. Severe case of divitus though and a lot of JavaScript.</p>
+
+<h3>Overall impression</h3>
+
+<p>I&#8217;m disappointed by what initially looked to be a semi-decent website. My main frustration was that so many of their policies and manifestos were downloadable <span class="caps">PDF</span>s or fancy page-flip Flash rather than <span class="caps">HTML</span> pages. It&#8217;s just lazy.</p>
+
+<h2>Liberal Democrats</h2>
+
+<h3>Design</h3>
+
+<p>When I first visited this site, I thought this was it. Oh right, it&#8217;s a splash page. Hello 1998.</p>
+
+<img src="http://maban.co.uk/image/article/screenshot-party-libdem-01.jpg" alt="Liberal Democrat party splashpage screenshot" />
+
+<p>You&#8217;ve got to have a little sympathy for the Lib dems for having the ugliest colour scheme &#8211; cyan and yellow. It&#8217;s very boxy and boring, and the photos are uninspiring. Mostly old men in suits wistfully pointing at things.</p>
+
+<p>The big blue images with yellow text are repeated across the site, and often have really unhelpful alt text like <code>alt=&quot;&quot;</code>. There&#8217;s a lot of visual clutter and clich&eacute; stock images.</p>
+
+<img src="http://maban.co.uk/image/article/screenshot-party-libdem-02.jpg" alt="Liberal Democrat party website screenshot" />
+
+<h3>Code</h3>
+
+<p>Every <code>div</code> has an id prefixed by the word &#8220;div&#8221;. And if that isn&#8217;t enough, nested within <code>#divTop</code>, we&#8217;ve got <code>#divTopLeft</code>, <code>#divTopCentre</code> and <code>#divTopRight</code>. And within <code>#divTopCentre</code> we&#8217;ve got <code>#divTopCentreTop</code> and <code>#divTopCentreBottom</code>. Blimey.</p>
+
+<h3>Overall impression</h3>
+
+<p>A really average site. The &#8220;what we stand for&#8221; navigation menu is useful, but there really is too much to look at on one page.</p>
+
+<h2>Green</h2>
+
+<h3>Design</h3>
+
+<p>I&#8217;m personally not keen on the Green party&#8217;s website design. To me it feels like a hippy local newspaper site. It&#8217;s very blocky, things don&#8217;t align, and the link styles are too close to the normal text style.</p>
+
+<img src="http://maban.co.uk/image/article/screenshot-party-green-01.jpg" alt="Green party website screenshot" />
+
+<h3>Code</h3>
+
+<p>The code is along the same lines as the Lib dem website. Lots of unsemantic ids and classes like &#8220;left&#8221; and &#8220;right&#8221;. I don&#8217;t understand why they&#8217;ve bothered putting a &#8220;Validate <span class="caps">XHTML</span>&#8221; link on the site since it doesn&#8217;t actually validate.</p>
+
+<h3>Overall impression</h3>
+
+<p>I expected a little more from the Green party as they seem to be quite ahead with technology and are very popular with students. Saying that, their candidate MP <a href="http://www.carolinelucas.com">Caroline Lucas&#8217;s site</a> is really quite nice. I just wish they used that same style on the main site.</p>
+
+<h2>British National Party</h2>
+
+<p>I was going to avoid the <span class="caps">BNP</span> since I don&#8217;t consider them to be a proper political party, but their website is so ridiculous I thought I&#8217;d put them in here to win the wooden spoon award. If you haven&#8217;t heard of them, their policies are far-right, anti-immigration, anti foreign aid and pro capital punishment. Some public sector workforces such as the police ban membership from the party.</p>
+
+<h3>Design</h3>
+
+<p>It seems ironic that the <span class="caps">BNP</span>&#8217;s website is so similar <strong>coughplagiarisedcough</strong> to the Obama website.</p>
+
+<figure><img src="http://maban.co.uk/image/article/screenshot-party-bnp-01.jpg" alt="BNP party website screenshot" width="500px" /><figcaption>The is the <span class="caps">BNP</span> website design.</figcaption></figure>
+
+<figure><img src="http://maban.co.uk/image/article/screenshot-party-bnp-02.jpg" alt="Obama's website screenshot" width="500px" /><figcaption>The image on the right is Obama&#8217;s website design. Hmmm&hellip;</figcaption></figure>
+
+<figure><img src="http://maban.co.uk/image/article/screenshot-party-bnp-03.jpg" alt="BNP website buttons" width="200px" /><figcaption>Have a closer look at the buttons. Drop shadows, reflections, bevels, stripes, gradients. Yep, these buttons have it all.</figcaption></figure>
+
+<figure><img src="http://maban.co.uk/image/article/screenshot-party-bnp-04.jpg" alt="BNP website banner" width="300px" /><figcaption>I found this on their immigration policy website. Note the guy at the front with the <acronym title="Rocket Propelled Grenade"><span class="caps">RPG</span></acronym>. Just a wild guess that this is photoshopped.</figcaption></figure>
+
+<h3>Code</h3>
+
+<p>The site is a hybrid of divs, more divs, break tags and tables. The only heading level is an <code>h2</code>.</p>
+
+<h3>Overall impression</h3>
+
+<p>The design is completely ripped off and has a bad case of photoshop vomit. The code is average and needs more heading levels to be semantic. The navigation wraps onto 2 lines, and the site generally looks like it was designed in Microsoft Publisher.</p>
+
+<h2>Summary</h2>
+
+<p>Too many of the party sites only had a vague list of their policies. A shopping list style of policies with links to more information on each one would be very useful. And it&#8217;s not just education and healthcare that people care about. They want to know the things like whether their party is pro euthanasia, pro abortion or pro same sex marriage, but too many parties shy away from doing this in case it turns voters off. Vague lists are meaningless and only serve to confuse potential voters.</p>
+
+<p>Considering the success of Obama&#8217;s political campaign which had such a strong online emphasis, I expected the UK politcal parties to respond by improving their online experiences, but they&#8217;re disappointingly behind. They may not have as big budgets, but it&#8217;s a very effective form of marketing when it&#8217;s done right. </p>
