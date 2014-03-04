@@ -1,0 +1,77 @@
+---
+layout: post
+title: Experiments with Adobe Edge
+---
+
+<p>A development version of <a href="http://labs.adobe.com/technologies/edge/">Adobe Edge</a> came out today, and I thought I&#8217;d give it a quick play to see whether it would be useful for any of the projects I&#8217;m working on.</p>
+<p>I&#8217;m trying to keep an open mind since the software is still in development, and I&#8217;m grateful to Adobe for releasing a version with the opportunity for developers to give feedback before the product is generally released.</p>
+
+<p>		<a href="http://dev.maban.co.uk/animation/hackasaurus-goggles/" class="see-more">View my demo</a></p>
+
+<p>I built a quick demo animation to see if it could be used as part of the <a href="http://hackasaurus.org/goggles/">Hackasaurus X-ray goggles page</a>. Flash is blocked in a lot of places where we run workshops, so having a demo video of how to use the Goggles might be handy.</p>
+
+<h2>Using Edge</h2>
+
+<p>	<img src="http://maban.co.uk/image/article/screenshot-edge-canvas.png" alt="A screenshot of the Edge canvas" /></p>
+
+<p>My first impressions of the software were positive. It has a very clean layout and feels less cluttered that a lot of Adobe&#8217;s products. The grey text on a grey background isn&#8217;t very friendly on the eyes though.</p>
+
+<p>I used Flash quite extensively before I got into the web, so the concepts of timelines and keyframes are familiar to me. However, the interface feels very alien, and getting things to work is fiddly. It doesn&#8217;t work like Flash does, but I don&#8217;t think it&#8217;s trying to be like Flash.</p>
+
+<p>Most of the language used is borrowed from <span class="caps">CSS</span>. For example, you can set the &#8220;overflow&#8221; of the canvas to be &#8220;hidden&#8221; or &#8220;visible&#8221;. You can also set various tweens to animated elements which use the same names as in jQuery. The generated code uses the jQuery library.</p>
+
+<p>After exporting the file, I added <a href="http://forums.adobe.com/message/3832931?tstart=0">a script to make the animation loop</a> because this isn&#8217;t possible from within the editor yet.</p>
+
+<h2>Adding text</h2>
+
+<p>	<figure class="pullout">
+	<img src="http://maban.co.uk/image/article/screenshot-edge-fonts.png" alt="The choice of fonts in Edge" />
+	<figcaption>These are the choices you have for fonts. Good thing Comic Sans is in there, I was getting worried.</figcaption>
+</figure></p>
+
+<p>There&#8217;s a limited choice of fonts which makes sense, but there&#8217;s no way to change the font stack in the editor.</p>
+
+<p>I can size text (and shapes) in pixels or ems which is handy.</p>
+
+<p>The actual text in the generated animation is selectable, but each bit of text gets wrapped in a <code>&amp;lt;div&amp;gt;</code> tag rather than anything semantic like a paragraph or heading.</p>
+
+<h2>Shapes</h2>
+
+<p>There aren&#8217;t many options for shapes yet, just the choice between a rectangle and a rounded rectangle. Either more shapes are coming, or Adobe expect people will import shapes from other software like Photoshop or Fireworks.</p>
+
+<p>I would like the option to select percentages rather than fixed widths on elements, as I work with mostly flexible-width sites. In fact, I want this feature for Fireworks too!</p>
+
+<h2>The code</h2>
+
+<p>	<figure class="pullout">
+	<img src="http://maban.co.uk/image/article/screenshot-edge-cssdisabled.png" alt="How things look when CSS is disabled" />
+	<figcaption>The page with <span class="caps">CSS</span> disabled</figcaption>
+</figure></p>
+
+<p>The animation relies heavily on <span class="caps">CSS</span> and Javascript so make sure content can degrade nicely with these turned off.</p></p>
+
+<p>Overall, I&#8217;m unimpressed by the code that Edge generates. Everything is output as a <code>&amp;lt;div&amp;gt;</code>, including the text. It&#8217;s a shame that there isn&#8217;t the option to change the tags used. However, based on the interface I&#8217;m pretty sure this might be something a future version will allow</p>
+
+<p>In the layer pane, each element has its tag labelled next to it. Since every element has the same <code>&amp;lt;div&amp;gt;</code> tag, why bother putting that label there at all unless an option was intended to be there to change it? So I&#8217;m hopeful.</p>
+
+<p>	<figure class="pushout">
+	<img src="http://maban.co.uk/image/article/screenshot-edge-labels.png" alt="Labels for each of the layers" />
+</figure></p>
+
+<p>The Edge team have also <a href="http://forums.adobe.com/message/3832667#3832667">hinted towards support for more <span class="caps">HTML</span> elements</a> in their forum <a href="http://forums.adobe.com/thread/884525">in response to Rob Hawkes&#8217;s question</a> about this same issue.</p>
+
+<h2>Marketing</h2>
+
+<p>I&#8217;m disappointed that Edge is being marketed as an HTML5 tool, because I think this reference is misleading. The only thing I can see in the code that is HTML5 is the doctype.</p>
+
+<p>Despite this, I&#8217;m encouraged by how the Edge team are engaging with developer feedback in their forums, and it feels like they&#8217;re open to ideas and working on ways to make the software output more semantic code using things like canvas.</p>
+
+<p>I&#8217;m left wondering what sort of things people will find Edge useful for. I hope not just as a selling point by web agencies as an alternative to Flash ads.</p>
+
+<h2>Possible use cases</h2>
+
+<p>You can&#8217;t create hotspots or turn any of the content into links within the editor, so at the moment what I&#8217;m building feels like a fancy animated gif. That pretty much rules out using it for prototyping, games or presentations.</p>
+
+<p>Depending on how much Adobe plan on charging, it might have a place in schools. Animation software always goes down well, and the output is more flexible. It&#8217;s bloody fiddly to use though.</p>
+
+<p>As with all new technology, we&#8217;re producing lots of demos that look pretty but don&#8217;t really do anything particularly useful. We&#8217;re still at that teething stage with animation, and I&#8217;m looking forward to seeing more practical examples emerge.</p>
