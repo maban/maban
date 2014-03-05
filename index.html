@@ -3,11 +3,12 @@ layout: home
 title: Anna Debenham
 ---
 
-<section>
-
-    <h2>Writing</h2>
+<section class="listing">
     
-    <ol>
+    <h2 class="heading-section">Writing</h2>
+    
+    <!-- writing: blog posts -->
+    <ol class="list list-blocks">
       {% for post in site.posts limit:3 %}
         <li>
           <a href="{{ post.url }}">
@@ -16,6 +17,121 @@ title: Anna Debenham
           </a>
         </li>
       {% endfor %}
+    </ol>
+
+</section>
+
+
+<section class="listing">
+    
+    <h2 class="heading-section">Portfolio</h2>
+    
+    <!-- portfolio: side projects -->
+    <ul class="list list-blocks">
+        <li>
+          <a href="http://www.fivesimplesteps.com/products/front-end-style-guides">
+              <h3>Front-end Style Guides</h3>
+              <p>A pocket guide I wrote, published by Five Simple Steps</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://console.maban.co.uk">
+              <h3>Console Browsers</h3>
+              <p>A site that documents the browsers on game consoles</p>
+          </a>
+        </li>
+    </ul>
+    
+    <!-- portfolio: commendations -->
+    <ul class="list list-blocks">
+        <li>
+          <a href="http://alistapart.com/">
+              <h3>Technical Editor at A List Apart</h3>
+          </a>
+        </li>
+        <li>
+          <a href="http://24ways.org">
+              <h3>Technical Editor at 24 Ways</h3>
+          </a>
+        </li>
+        <li>
+          <a href="https://thenetawards.com/">
+              <h3>Netmag's Young Developer of the Year, 2013</h3>
+          </a>
+        </li>
+    </ul>
+    
+    <!-- portfolio: client work -->
+    <ul class="list list-blocks portfolio-client-work">
+        <li>
+          <a href="">
+              <h3>Code for America</h3>
+              <p>Involvement: Front-end development with Clearleft, building a pattern library. Worked remotely with the Code for America team based in San Francisco.</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+              <h3>Mosaic, Wellcome Trust</h3>
+              <p>Involvement: Front-end development with Clearleft, working on site in London with Wellcome Trust's web designers</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+              <h3>University of Surrey</h3>
+              <p>Involvement: UX prototyping and front-end development, working on-site in Surrey alongside UX designer Leisa Reichelt and the University of Surrey's in-house web team</p>
+          </a>
+        </li>
+    </ul>
+    
+</section>
+
+
+<section class="listing">
+    
+    <h2 class="heading-section">Elsewhere</h2>
+    
+    <!-- elsewhere: articles -->
+    <ol class="list list-columns">
+        <li>
+          <a href="http://alistapart.com/blog/post/getting-started-with-pattern-libraries">
+              <h3>Getting Started With Pattern Libraries</h3>
+              <p>Blog post for A List Apart, 6 February 2014</p>
+          </a>
+        </li>
+        <li>
+          <h3>The Secrets of Time Tracking Success</h3>
+          <p>Article for Netmag, issue 251, March 2012</p>
+        </li>
+        <li>
+          <a href="http://24ways.org/2013/get-started-with-github-pages/">
+              <h3>Get Started With GitHub Pages (Plus Bonus Jekyll)</h3>
+              <p>Article for 24 Ways, 18 December 2013</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://24ways.org/2012/unwrapping-the-wii-u-browser/">
+              <h3>Unwrapping the Wii U Browser</h3>
+              <p>Article for 24 Ways, 22 December 2012</p>
+          </a>
+        </li>
+        <li>
+         <a href="http://alistapart.com/article/testing-websites-in-game-console-browsers">
+             <h3>Testing Websites in Game Console Browsers</h3>
+             <p>Article for A List Apart, 11 September 2012</p>
+         </a>
+        </li>
+        <li>
+         <a href="http://24ways.org/2011/front-end-style-guides/">
+             <h3>Front-end Style Guides</h3>
+             <p>Article for 24 Ways, 7 December 2011</p>
+         </a>
+        </li>
+        <li>
+          <a href="http://www.creativebloq.com/web-design/building-prototypes-html-and-css-9134572">
+              <h3>Building prototypes in HTML and CSS</h3>
+              <p>Article for Netmag's website, 20 September 2011</p>
+          </a>
+        </li>
     </ol>
 
 </section>
