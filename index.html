@@ -3,16 +3,25 @@ layout: home
 title: Anna Debenham
 ---
 	
-	<header id="top" class="vcard">
-    	<h1 class="fn">Anna Debenham</h1>
-    	<p class="role">Freelance front end developer based in the UK</p>
-    	<p class="availability booked"><strong>Fully booked:</strong> I have no availability for any freelance development work for the next few months.</p>
-	</header>
-	
-	<ul>
-	  {% for post in site.posts %}
-	    <li>
-	      <a href="{{ post.url }}">{{ post.title }}</a>
-	    </li>
-	  {% endfor %}
-	</ul>
+<header id="top" class="vcard">
+	<h1 class="fn">Anna Debenham</h1>
+	<p class="role">Freelance front end developer based in the UK</p>
+	<p class="availability booked"><strong>Fully booked:</strong> I have no availability for any freelance development work for the next few months.</p>
+</header>
+
+<section>
+
+    <h2>Writing</h2>
+    
+    <ol>
+      {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url }}">
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.content | strip_html | truncatewords:75}}</p>
+          </a>
+        </li>
+      {% endfor %}
+    </ol>
+
+</section>
