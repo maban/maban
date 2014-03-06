@@ -70,7 +70,7 @@ a:hover {
 
 @media (min-width:50em) {
     .global-nav {
-        margin: 4em 0 0 0;
+        margin: 3em 0 0 0;
         float: right;
         clear: none;
         font-size: 1em;
@@ -119,47 +119,116 @@ a:hover {
     position: relative;
     width: 100%;
     border-top: 1px solid rgba(0,0,0,0.15);
-}
+    }
+
+.listing li a {
+    transition: background-color 0.5s ease;
+    }
+
+
+    
 
 .section-writing {
     background-color: #70A729;
-}
+    }
 
     .section-writing li:nth-of-type(1) a {
-        background-color: rgba(255,255,255,0.7);
-    }
+        background-color: #d2e4bb;
+        }
+    
+        .section-writing li:nth-of-type(1) a:hover,
+        .section-writing li:nth-of-type(1) a:focus,
+        .section-writing li:nth-of-type(1) a:active {
+            background-color: #e1edd3;
+        }
     
     .section-writing li:nth-of-type(2) a {
-        background-color: rgba(255,255,255,0.6);
-    }
+        background-color: #c3dca6;
+        }
+        
+        .section-writing li:nth-of-type(2) a:hover,
+        .section-writing li:nth-of-type(2) a:focus,
+        .section-writing li:nth-of-type(2) a:active {
+            background-color: #deebce;
+        }
     
     .section-writing li:nth-of-type(3) a {
-        background-color: rgba(255,255,255,0.45);
-    }
+        background-color: #aecf86;
+        }
+        
+        .section-writing li:nth-of-type(3) a:hover,
+        .section-writing li:nth-of-type(3) a:focus,
+        .section-writing li:nth-of-type(3) a:active {
+            background-color: #dae8c7;
+        }
+    
+    .section-writing .more-section a {
+        background-color: #578616;
+        }
+    
+        .section-writing .more-section a:hover,
+        .section-writing .more-section a:focus,
+        .section-writing .more-section a:active {
+            background-color: #466d12;
+            }
+
+
+
 
 .section-projects {
     background-color: #E0B016;
-}
+    }
 
     .section-projects .list-block-major li:nth-of-type(1) a {
-        background-color: rgba(255,255,255,0.75);
-    }
+        background-color: #ead06d;
+        }
+        
+        .section-projects .list-block-major li:nth-of-type(1) a:hover,
+        .section-projects .list-block-major li:nth-of-type(1) a:focus,
+        .section-projects .list-block-major li:nth-of-type(1) a:active {
+            background-color: #f1e09e; 
+        }
     
     .section-projects .list-block-major li:nth-of-type(2) a {
-        background-color: rgba(255,255,255,0.6);
-    }
+        background-color: #e6c546;
+        }
+        
+        .section-projects .list-block-major li:nth-of-type(2) a:hover,
+        .section-projects .list-block-major li:nth-of-type(2) a:focus,
+        .section-projects .list-block-major li:nth-of-type(2) a:active {
+            background-color: #f1e09e; 
+            }
+        
+    .section-projects .list-block-minor li a,
+    .section-projects .list-block-minor li a img {
+        transition: padding-left 0.5s ease;
+        -webkit-transform: rotateX( 360deg );
+        }
     
-    .section-projects .list-block-minor li:nth-child(1n) a {
-        background-color: rgba(255,255,255,0.4);
-    }
+    .section-projects .list-block-minor li a:hover,
+    .section-projects .list-block-minor li a:focus,
+    .section-projects .list-block-minor li a:active {
+        padding-left: 7em;
+        }
+    
+    .section-projects .list-block-minor li a:hover img,
+    .section-projects .list-block-minor li a:focus img,
+    .section-projects .list-block-minor li a:active img {
+        padding-left: 1em;
+        }
+    
+    .section-projects .list-block-minor li:nth-child(1) a {
+        background-color: #e9cc61;
+        
+        }
     
     .section-projects .list-block-minor li:nth-child(2n) a {
-        background-color: rgba(255,255,255,0.2);
-    }
+        background-color: #e4c139;
+        }
     
     .section-projects .list-block-minor li:nth-child(3n) a {
-        background-color: rgba(255,255,255,0);
-    }
+        background-color: #E0B016;
+        }
     
 
 .section-portfolio {
@@ -167,21 +236,42 @@ a:hover {
 }
     
     .section-portfolio li:nth-of-type(1) a {
-        background-color: rgba(255,255,255,0.75);
+        background-color: #cae0ed;
     }
+    
+        .section-portfolio li:nth-of-type(1) a:hover,
+        .section-portfolio li:nth-of-type(1) a:focus,
+        .section-portfolio li:nth-of-type(1) a:active {
+            background-color: #e4eff6;
+            }
     
     .section-portfolio li:nth-of-type(2) a {
-        background-color: rgba(255,255,255,0.6);
+        background-color: #b6d4e6;
     }
+        
+        .section-portfolio li:nth-of-type(2) a:hover,
+        .section-portfolio li:nth-of-type(2) a:focus,
+        .section-portfolio li:nth-of-type(2) a:active {
+            background-color: #dae9f2;
+            }
     
     .section-portfolio li:nth-of-type(3) a {
-        background-color: rgba(255,255,255,0.4);
+        background-color: #9fc7de;
     }
+    
+        .section-portfolio li:nth-of-type(3) a:hover,
+        .section-portfolio li:nth-of-type(3) a:focus,
+        .section-portfolio li:nth-of-type(3) a:active {
+            background-color: #cae0ed;
+            }
 
 .section-elsewhere {
     background-color: #EA5582;
     color: #eee;
 }
+
+
+
     
 .listing li {
     list-style-type: none;
@@ -221,6 +311,7 @@ a:hover {
     color: #fff;
     padding: 1em 0.5em 0.5em 0.5em;
     font-size: 0.8em;
+    transition: opacity 0.5s ease;
 }
 
 
@@ -276,6 +367,7 @@ a:hover {
 .list-columns a {
     padding: 0;
     font-size: 0.85em;
+    position: inherit;
 }
 
 .list-columns h3 {
@@ -285,6 +377,41 @@ a:hover {
 .list-columns p {
     font-style: italic;
     opacity: 0.7;
+}
+
+.list-columns li {
+    clear: both;
+    transition: margin 0.25s ease;
+}
+
+.list-columns li:hover {
+    margin-left: 2em;
+    margin-right: 1em;
+}
+
+.list-columns li a {
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 25px;
+}
+
+.list-columns li a {
+    background-image: url("/style/icon-writing-white.png");
+    }
+
+.list-columns li a[href^="http://www.lanyrd.com/"],
+.list-columns li a[href^="http://lanyrd.com/"] {
+    background-image: url("/style/icon-speaking-white.png");
+    }
+
+.list-columns li a[href^="http://www.5by5.tv/"],
+.list-columns li a[href^="http://5by5.tv/"] {
+    background-image: url("/style/icon-podcast-white.png");
+    }
+
+.list-columns li a {
+    padding-left: 38px;
+    display: inline-block;
 }
 
 .listing .more-section {
