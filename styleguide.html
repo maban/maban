@@ -1,9 +1,14 @@
 ---
 layout: home
-title: Anna Debenham
+title: Styleguide
 ---
 
-<section class="listing section-writing">
+<h2 class="heading-section">Section Heading</h2>
+
+
+
+
+<section class="listing">
     
     <h2 class="heading-section">Writing</h2>
     
@@ -13,99 +18,80 @@ title: Anna Debenham
         <li>
           <a href="{{ post.url }}">
               <h3>{{ post.title }}</h3>
-              <time datetime="{{ post.date | date_to_xmlschema }}" class="entry-published date">{{ post.date | date_to_long_string }}</time>
-              <p>{{ post.content | strip_html | truncatewords:60}}</p>
-              <p class="post-number">{{ post.id }}</p>
+              <p>{{ post.content | strip_html | truncatewords:75}}</p>
           </a>
         </li>
       {% endfor %}
-        <li class="more-section"><a href="#" title="More posts.">&hellip;</a></li>
     </ol>
 
 </section>
 
 
-<section class="listing section-projects">
+<section class="listing">
     
-    <h2 class="heading-section">Projects</h2>
+    <h2 class="heading-section">Portfolio</h2>
     
     <!-- portfolio: side projects -->
-    <ul class="list list-blocks list-block-major list-blocks-thumbnails">
+    <ul class="list list-blocks">
         <li>
           <a href="http://www.fivesimplesteps.com/products/front-end-style-guides">
               <h3>Front-end Style Guides</h3>
               <p>A pocket guide I wrote, published by Five Simple Steps</p>
-              <img src="/image/screenshot-fesg-01.jpg"/>
           </a>
         </li>
         <li>
           <a href="http://console.maban.co.uk">
               <h3>Console Browsers</h3>
               <p>A site that documents the browsers on game consoles</p>
-              <img src="/image/screenshot-console-01.png"/>
           </a>
         </li>
     </ul>
     
     <!-- portfolio: commendations -->
-    <ul class="list list-blocks list-block-minor">
+    <ul class="list list-blocks">
         <li>
           <a href="http://alistapart.com/">
-              <h3>Technical Editor for A List Apart</h3>
-              <img src="https://pbs.twimg.com/profile_images/3162014624/138a08880caff7fd80e9b2141a9020de.png"/>
+              <h3>Technical Editor at A List Apart</h3>
           </a>
         </li>
         <li>
           <a href="http://24ways.org">
-              <h3>Co-producer of 24 Ways</h3>
-              <img src="https://pbs.twimg.com/profile_images/378800000811026476/b9279ddece7a4e8c8aaa87ba6b27dc14.png"/>
+              <h3>Technical Editor at 24 Ways</h3>
           </a>
         </li>
         <li>
           <a href="https://thenetawards.com/">
               <h3>Netmag's Young Developer of the Year, 2013</h3>
-              <img src="https://pbs.twimg.com/profile_images/378800000697523305/d556bef753c6ac3933e9d5bf9f147418.jpeg"/>
           </a>
         </li>
     </ul>
-
-</section>
-
-
-<section class="listing section-portfolio">
-
-    <h2 class="heading-section">Portfolio</h2>
     
     <!-- portfolio: client work -->
-    <ul class="list list-blocks list-blocks-thumbnails">
+    <ul class="list list-blocks portfolio-client-work">
         <li>
           <a href="">
               <h3>Code for America</h3>
               <p>Involvement: Front-end development with Clearleft, building a pattern library. Worked remotely with the Code for America team based in San Francisco.</p>
-              <img src="/image/screenshot-cfa-01.jpg"/>
           </a>
         </li>
         <li>
           <a href="">
               <h3>Mosaic, Wellcome Trust</h3>
               <p>Involvement: Front-end development with Clearleft, working on site in London with Wellcome Trust's web designers</p>
-              <img src="/image/screenshot-mosaic-01.jpg"/>
           </a>
         </li>
         <li>
           <a href="">
               <h3>University of Surrey</h3>
               <p>Involvement: UX prototyping and front-end development, working on-site in Surrey alongside UX designer Leisa Reichelt and the University of Surrey's in-house web team</p>
-              <img src="/image/screenshot-surrey-01.jpg"/>
           </a>
         </li>
-        <li class="more-section"><a href="#" title="More work examples.">&hellip;</a></li>
     </ul>
     
 </section>
 
 
-<section class="listing section-elsewhere">
+<section class="listing">
     
     <h2 class="heading-section">Elsewhere</h2>
     
@@ -118,10 +104,8 @@ title: Anna Debenham
           </a>
         </li>
         <li>
-          <a href="http://www.myfavouritemagazines.co.uk/design/net-magazine-back-issues/net-march-14-issue-251/">
-              <h3>The Secrets of Time Tracking Success</h3>
-              <p>Article for Netmag, issue 251, March 2012</p>
-          </a>
+          <h3>The Secrets of Time Tracking Success</h3>
+          <p>Article for Netmag, issue 251, March 2012</p>
         </li>
         <li>
           <a href="http://24ways.org/2013/get-started-with-github-pages/">
