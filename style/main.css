@@ -396,17 +396,15 @@ a:hover {
     background-size: 25px;
 }
 
-.list-column li a {
+.link-type-article {
     background-image: url("/style/icon-writing-white.png");
     }
 
-.list-column li a[href^="http://www.lanyrd.com/"],
-.list-column li a[href^="http://lanyrd.com/"] {
+.link-type-talk {
     background-image: url("/style/icon-speaking-white.png");
     }
 
-.list-column li a[href^="http://www.5by5.tv/"],
-.list-column li a[href^="http://5by5.tv/"] {
+.link-type-podcast {
     background-image: url("/style/icon-podcast-white.png");
     }
 
@@ -516,6 +514,31 @@ a:hover {
     border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 
+.legal {
+    font-size: 0.88em;
+    margin-bottom: 1em;
+}
+
+.legal,
+.legal a {
+    color: rgba(255,255,255,0.7);
+}
+
+.legal a:hover,
+.legal a:focus,
+.legal a:active {
+    color: rgba(255,255,255,1);
+}
+
+@media (min-width:50em) {
+.legal {
+    float: left;
+}
+}
+
+.legal p {
+    margin: 0;
+}
 
 
 @media (min-width:50em) {
@@ -583,6 +606,7 @@ a:hover {
         width: auto;
         margin-right: 0;
         font-size: 0.8em;
+        position: relative;
     }
     
     .list-block-minor a {
@@ -626,7 +650,7 @@ main {
 }
 
 .h-entry {
-    max-width: 45em;
+    max-width: 42em;
     padding: 3em 1.5em;
     background-color: #fff;
     margin: 0 auto;
@@ -670,6 +694,10 @@ main {
         margin-bottom: 0;
         font-size: 1em;
         font-weight: 600;
+    }
+    
+    .project img {
+        width: 100%;
     }
     
     .project h3 + p {
