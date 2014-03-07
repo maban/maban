@@ -1,29 +1,9 @@
 ---
-layout: home
+layout: default
 title: Anna Debenham
 ---
 
-<section class="listing section-writing">
-    
-    <h2 class="heading-section">Writing</h2>
-    
-    <!-- writing: blog posts -->
-    <ol class="list list-blocks">
-      {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url }}">
-              <h3>{{ post.title }}</h3>
-              <time datetime="{{ post.date | date_to_xmlschema }}" class="entry-published date">{{ post.date | date_to_long_string }}</time>
-              <p>{{ post.content | strip_html | truncatewords:60}}</p>
-              <p class="post-number">{{ post.id }}</p>
-          </a>
-        </li>
-      {% endfor %}
-        <li class="more-section"><a href="#" title="More posts.">&hellip;</a></li>
-    </ol>
-
-</section>
-
+<main role="main" class="page-home">
 
 <section class="listing section-projects">
     
@@ -72,6 +52,31 @@ title: Anna Debenham
 </section>
 
 
+
+<section class="listing section-writing">
+    
+    <h2 class="heading-section">Writing</h2>
+    
+    <!-- writing: blog posts -->
+    <ol class="list list-blocks">
+      {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url }}">
+              <h3>{{ post.title }}</h3>
+              <time datetime="{{ post.date | date_to_xmlschema }}" class="entry-published date">{{ post.date | date_to_long_string }}</time>
+              <p>{{ post.content | strip_html | truncatewords:60}}</p>
+              <p class="post-number">{{ post.id }}</p>
+          </a>
+        </li>
+      {% endfor %}
+        <li class="more-section"><a href="/writing" title="More posts.">&hellip;</a></li>
+    </ol>
+
+</section>
+
+
+
+
 <section class="listing section-portfolio">
 
     <h2 class="heading-section">Portfolio</h2>
@@ -99,10 +104,13 @@ title: Anna Debenham
               <img src="/image/screenshot-surrey-01.jpg"/>
           </a>
         </li>
-        <li class="more-section"><a href="#" title="More work examples.">&hellip;</a></li>
+        <li class="more-section"><a href="/portfolio" title="More work examples.">&hellip;</a></li>
     </ul>
     
 </section>
+
+
+
 
 
 <section class="listing section-elsewhere">
@@ -110,7 +118,7 @@ title: Anna Debenham
     <h2 class="heading-section">Elsewhere</h2>
     
     <!-- elsewhere: articles -->
-    <ol class="list list-columns">
+    <ol class="list list-column">
         <li>
           <a href="http://www.myfavouritemagazines.co.uk/design/net-magazine-back-issues/net-march-14-issue-251/">
               <h3>The Secrets of Time Tracking Success</h3>
@@ -124,24 +132,6 @@ title: Anna Debenham
           </a>
         </li>
         <li>
-          <a href="http://5by5.tv/eastwing/69">
-              <h3>The East Wing № 69</h3>
-              <p>Interview with Tim Smith on The East Wing, 17th September 2013</p>
-          </a>
-        </li>
-        <li>
-          <a href="http://lanyrd.com/2013/mobilism/scfxhz/">
-              <h3>Console Browsers: The Ultimate Torture Test</h3>
-              <p>Talk at Mobilism in Amsterdam, 16th May 2013</p>
-          </a>
-        </li>
-        <li>
-          <a href="http://lanyrd.com/2013/responsiveconf/scdtfw/">
-              <h3>Playing with Game Console Browsers</h3>
-              <p>Talk at Responsive Day Out in Brighton, 1st March 2013</p>
-          </a>
-        </li>
-        <li>
           <a href="http://24ways.org/2013/get-started-with-github-pages/">
               <h3>Get Started With GitHub Pages (Plus Bonus Jekyll)</h3>
               <p>Article for 24 Ways, 18 December 2013</p>
@@ -151,18 +141,6 @@ title: Anna Debenham
           <a href="http://24ways.org/2012/unwrapping-the-wii-u-browser/">
               <h3>Unwrapping the Wii U Browser</h3>
               <p>Article for 24 Ways, 22 December 2012</p>
-          </a>
-        </li>
-        <li>
-          <a href="http://lanyrd.com/2012/full-frontal/sztqf/">
-              <h3>Exploring the game console browser landscape</h3>
-              <p>Talk at Full Frontal in Brighton, 9th November 2012</p>
-          </a>
-        </li>
-        <li>
-          <a href="http://5by5.tv/webahead/38">
-              <h3>The Web Ahead № 38</h3>
-              <p>Interview with Jen Simmons on The Web Ahead, 9th October 2012</p>
           </a>
         </li>
         <li>
@@ -184,5 +162,44 @@ title: Anna Debenham
           </a>
         </li>
     </ol>
+    <ol class="list list-column">
+        <li>
+          <a href="http://lanyrd.com/2013/mobilism/scfxhz/">
+              <h3>Console Browsers: The Ultimate Torture Test</h3>
+              <p>Talk at Mobilism in Amsterdam, 16th May 2013</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://lanyrd.com/2013/responsiveconf/scdtfw/">
+              <h3>Playing with Game Console Browsers</h3>
+              <p>Talk at Responsive Day Out in Brighton, 1st March 2013</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://lanyrd.com/2012/full-frontal/sztqf/">
+              <h3>Exploring the game console browser landscape</h3>
+              <p>Talk at Full Frontal in Brighton, 9th November 2012</p>
+          </a>
+        </li>
+    </ol>
+    <ol class="list list-column">
+        <li>
+          <a href="http://5by5.tv/eastwing/69">
+              <h3>The East Wing № 69</h3>
+              <p>Interview with Tim Smith on The East Wing, 17th September 2013</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://5by5.tv/webahead/38">
+              <h3>The Web Ahead № 38</h3>
+              <p>Interview with Jen Simmons on The Web Ahead, 9th October 2012</p>
+          </a>
+        </li>
+    </ol>
+    
 
 </section>
+
+</main>
+
+

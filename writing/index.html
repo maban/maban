@@ -1,0 +1,29 @@
+---
+layout: default
+title: Anna Debenham
+---
+
+
+<main role="main" class="page-writing listing">
+
+    
+    <h2 class="heading-section">Writing</h2>
+    
+    <!-- writing: blog posts -->
+    <ol class="list list-blocks">
+      {% for post in site.posts %}
+        <li>
+              <a href="{{ post.url }}">
+              
+                  <h3>{{ post.title }}</h3>
+                  <time datetime="{{ post.date | date_to_xmlschema }}" class="entry-published date">{{ post.date | date_to_long_string }}</time>
+                  <p>{{ post.content | strip_html | truncatewords:40}}</p>
+                  <p class="post-number">{{ post.id }}</p>
+              </a>
+              </div>
+        </li>
+      {% endfor %}
+    </ol>
+
+
+</main>

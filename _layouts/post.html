@@ -1,12 +1,20 @@
 {% include head.html %}
 
 {% include header.html %}
-    
-    <h1 class="title">{{ page.title }}</h1>
-    
-    <time datetime="{{ page.date | date_to_xmlschema }}" class="entry-published date">{{ page.date | date_to_long_string }}</time>
 
-    {{ content }}
+    <main role="main" class="page-post">
+    
+        <article class="h-entry">
+    
+            <h1 class="title">{{ page.title }}</h1>
+            
+            <time datetime="{{ page.date | date_to_xmlschema }}" class="entry-published date">{{ page.date | date_to_long_string }}</time>
+        
+            {{ content }}
+        
+        </article>
+    
+    </main>
 
 {% include footer.html %}
 
