@@ -73,6 +73,25 @@ blockquote cite {
     font-size: 0.9em;
 }
 
+pre {
+    white-space: pre-wrap;
+    background-color: #F5F5F5;
+    padding: 1em 1.5em;
+    margin: 1.5em -1.5em 1.85em;
+}
+
+code {
+    font-size: 0.85em;
+    padding: 0.2em 0.5em;
+    background-color: #E7E6E9;
+}
+
+pre code {
+    background-color: transparent;
+    font-size: 0.75em;
+    padding: 0;
+}
+
 figure {
     margin-bottom: 2em;
 }
