@@ -5,32 +5,34 @@ color: 669999
 ---
 
 <p>At the moment I'm refreshing an old site and adapting some code I wrote 3 years ago. A few of the pages have lists of teasers to full articles which are displayed in a grid. They use nth-of-type to remove margins off every 3rd block on a row, and clear the block after that.</p>
-	
-	<img class="pull" src="/perch/resources/diagram-nth-of-type-04.png" alt="example of the correct blocks clearing"/>
-	
-	<p>Back then, <a href="http://maban.co.uk/29">I did a write-up of this technique</a>. It's a little ropey and basic, but I've adapted the code since.</p>
-	
-	<p>A while ago I bought a big screen to plug into my laptop, and it's been a real eye-opener. It makes some sites look like when you're using a tablet and a mobile version of the site is being displayed. So I've been updating my nth-of-type code, using it to change the number of blocks displayed in a row depending on the width of the screen.</p>
-	
-	<p><a href="http://jsbin.com/iqiziv/edit">Have a look at the demo in jsbin if you want to try it out</a>.</p>
-	
-	<p>This code isn't perfect and I'm still tweaking it, but I just want to document it in case someone else finds it useful.</p>
-	
-	<p>The HTML is just an ordered list like so:</p>
-	
+
+<div class="full">
+    <img src="/image/diagram-nth-of-type-04.png" alt="example of the correct blocks clearing"/>
+</div>
+
+<p>Back then, <a href="http://maban.co.uk/29">I did a write-up of this technique</a>. It's a little ropey and basic, but I've adapted the code since.</p>
+
+<p>A while ago I bought a big screen to plug into my laptop, and it's been a real eye-opener. It makes some sites look like when you're using a tablet and a mobile version of the site is being displayed. So I've been updating my nth-of-type code, using it to change the number of blocks displayed in a row depending on the width of the screen.</p>
+
+<p><a href="http://jsbin.com/iqiziv/edit">Have a look at the demo in jsbin if you want to try it out</a>.</p>
+
+<p>This code isn't perfect and I'm still tweaking it, but I just want to document it in case someone else finds it useful.</p>
+
+<p>The HTML is just an ordered list like so:</p>
+
 <pre><code>&lt;ol class="teasers"&gt;
     &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.&lt;/li&gt;
     &lt;li&gt;Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.&lt;/li&gt;
     &hellip;
 &lt;/ol&gt;</code></pre>
 
-	<p>I've given the list a class of "teasers" to distinguish it from any other ordered lists on the site. At the moment, I'm just going to build a linearised version with the blocks spanning the full width of the screen. This means sites that don't understand media queries will always just display the linearised version. I'll give them a bit of colour too so I can see what's happening.</p>
-	
+<p>I've given the list a class of "teasers" to distinguish it from any other ordered lists on the site. At the moment, I'm just going to build a linearised version with the blocks spanning the full width of the screen. This means sites that don't understand media queries will always just display the linearised version. I'll give them a bit of colour too so I can see what's happening.</p>
+
 <pre><code>.teasers {
     margin:0;
     padding:0;
     }
-	
+
 .teasers li {
     background-color: #333;
     color: #eee;
@@ -43,10 +45,10 @@ color: 669999
     width:96%
     }</code></pre>
 
-	<p>Now I'm going to start adding some media queries, first for a width of more than 400px. (I'm using px for demonstration but <a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/">you may want to consider using ems instead</a>).</p>
-	
+<p>Now I'm going to start adding some media queries, first for a width of more than 400px. (I'm using px for demonstration but <a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/">you may want to consider using ems instead</a>).</p>
+
 <pre><code>@media (min-width:400px) {  
-	
+
 .teasers li {
     width: 45%;
     }
@@ -83,7 +85,7 @@ color: 669999
 .teasers li:nth-of-type(3n+4) {
     clear: both;
     }	
-    
+
 }</code></pre>
 
 <p>Now all blocks have a width of 28%. I've also specified <code>nth-of-type(2n+2)</code> and <code>nth-of-type(2n+3)</code> to override the styles I gave them in the previous media query block. Pretty much the same deal going on here except now I'm targeting every 3rd block to remove the margin-right, and every block after the 3rd block to force it to clear.</p>
