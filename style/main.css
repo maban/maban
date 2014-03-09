@@ -770,6 +770,12 @@ figcaption {
     margin-right: -1.5em;
 }
 
+.h-entry .full img {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
 @media (min-width:50em) {
     .h-entry h1 {
         float: left;
