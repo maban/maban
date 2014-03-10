@@ -7,12 +7,21 @@ title: dConstruct 2009 (Clearleft)
 
 <p>The navigation was a bit of a challenge.  The selected state was quite fiddly to develop because I wanted the text to resize without dropping out of the green strip.  Here&#8217;s what I did&#8230;</p>
 
-<figure><img alt="Screenshot of a home link at normal size" src="perch/resources/screenshot-dconstruct-01.jpg" /><figcaption>The text in the navigation viewed at normal size.</figcaption></figure>
+<figure class="full">
+    <img alt="Screenshot of a home link at normal size" src="/image/screenshot-dconstruct-01.jpg" />
+    <figcaption>The text in the navigation viewed at normal size.</figcaption>
+</figure>
 
-<figure class="pullout"><img alt="Screenshot of a home link at normal size" src="perch/resources/screenshot-dconstruct-02.jpg" /><figcaption>The text in the navigation viewed 5x bigger than normal.</figcaption></figure>
+<figure class="full">
+    <img alt="Screenshot of a home link at normal size" src="/image/screenshot-dconstruct-04.jpg" />
+    <figcaption>The text in the navigation viewed 5x bigger than normal.</figcaption>
+</figure>
 
 <p>I extended the white background at the top of the image so that it would cover the green strip when the text is resized and not look too out of place.  The selected state is actually two images.</p>
 
-<figure class="pullout"><img alt="Screenshot showing what happens at the top of the link" src="perch/resources/screenshot-dconstruct-03.jpg" /><figcaption>This is what the background image for the right half of the link looks like.  It&#8217;s long to allow for long links.  When the link is small, it looks shorter.</figcaption></figure>
+<figure class="full">
+    <img alt="Screenshot showing what happens at the top of the link" src="/image/screenshot-dconstruct-05.jpg" />
+    <figcaption>This is what the background image for the right half of the link looks like.  It&#8217;s long to allow for long links.  When the link is small, it looks shorter.</figcaption>
+</figure>
 
 <p>While I was working on the site, <a href="http://natbat.net">Nat</a> showed me a really good way to make the site more maintainable and use less code.  The site is made up of strips of content; the header, main content, sponsors and footer, and these all have very similar properties (things like they all have a width of 80% and the same amount of margins).  Rather than repeating the CSS for each class, we added a class within each strip called &#8220;section&#8221;.  So if we needed to make a change to the layout and instead make the width 70%, we would only need to change this in one place.</p>
