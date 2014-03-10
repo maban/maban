@@ -110,8 +110,10 @@ pre code {
     padding: 0;
 }
 
-figure {
-    margin-bottom: 2em;
+@media (min-width:50em) {
+    figure {
+        margin-bottom: 2em;
+    }
 }
 
 figure img,
@@ -630,6 +632,11 @@ figcaption {
 
 .global-header .vcard {
     text-align: center;
+    padding: 0 1.5em;
+    }
+
+.global-footer .list-inline {
+    margin-bottom: 1em;
     }
 
     @media (min-width:50em) {
@@ -637,6 +644,7 @@ figcaption {
     .global-header .vcard {
         float: left;
         text-align: left;
+        padding: 0;
         }
     
     .global-footer .list-inline {
@@ -665,7 +673,6 @@ figcaption {
 
 .legal {
     font-size: 0.88em;
-    margin-bottom: 1em;
     }
 
     @media (min-width:50em) {
@@ -794,14 +801,21 @@ figcaption {
 
 .h-entry {
     max-width: 42em;
-    padding: 3em 1.5em;
+    padding: 1.5em;
     background-color: #fff;
     margin: 0 auto;
+    }
+    
+    @media (min-width:50em) {
+        .h-entry {
+            padding: 3em 1.5em;
+        }
     }
 
 .h-entry h1 {
     font-size: 1.85em;
     line-height: 1.1em;
+    margin: 0;
     }
 
 .h-entry p,
