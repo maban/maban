@@ -130,6 +130,19 @@ pre code {
     padding: 0;
 }
 
+kbd {
+    background-color: #F5F5F2;
+    padding: 0.3em 0.7em 0.1em;
+    border: 1px solid #D3D3D3;
+    margin: 0 0.2em;
+    border-radius: 3px;
+    box-shadow: #ccc 0px 2px 0px;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    font-family: "myriad pro";
+    text-transform: uppercase;
+}
+
 table {
     border-collapse: collapse;
     font-size: 0.9em;
@@ -154,6 +167,12 @@ table th {
 
 table tr:nth-child(odd) td {
     background-color: #F7F7F7;
+}
+
+.warning {
+    background-color: #F6F6E2;
+    padding: 1.2em 1.5em 1em;
+    margin: 1em -1.5em;
 }
 
 @media (min-width:50em) {
