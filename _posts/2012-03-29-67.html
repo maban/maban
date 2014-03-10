@@ -1,14 +1,15 @@
 ---
 layout: post
 title: Chrome transform:rotate bug
-color: C5D8D8
 ---
 
 <p>I just wanted to quickly write up about a bug I've found in the latest build of Chrome (18.0.1025.142), just in case anyone else experiences the same thing. I've <a href="http://code.google.com/p/chromium/issues/detail?id=120846">filed a bug report on Chromium (Issue 120846)</a> and have found a way to fix it.</p>
 
 <p>I'm not sure how widespread the problem is or if it just affects Chrome on Macs, but I imagine it'll be fixed quickly. I've never filed a browser bug before, so maybe this will be useful if you ever need to.</p>
 
-<img class="pullout" src="http://maban.co.uk/image/article/screenshot-transform.jpg" alt="Comparison of a rotated element before the bug, and the same element after the bug, which gives it jagged edges." />
+<div class="full">
+    <img src="/image/screenshot-transform.jpg" alt="Comparison of a rotated element before the bug, and the same element after the bug, which gives it jagged edges." />
+</div>
 
 <p>This morning I turned on my computer, opened Chrome and started working on a project I've been doing for a few weeks. I've got a couple of <code>div</code>s that have a notepaper texture background and are rotated slightly in the CSS, but today the edges looked really jaggedy. I'd taken a screenshot of the site the day before and hadn't changed any of the code since. Now it looked really bad.</p>
 
