@@ -15,8 +15,10 @@ title: Marking up relationships
 
 <p>Other websites that use XFN include <a href="http://www.flickr.com/">Flickr</a>, <a href="http://www.google.com/profiles">Google Profiles</a>, <a href="http://www.quora.com">Quora</a>, <a href="http://lanyrd.com">Lanyrd</a> and <a href="http://dribbble.com/">Dribbble</a>. <a href="http://twitter.com">Twitter</a> uses <code>rel="me"</code> when you add your website, but doesn't appear to add it to your contacts.</p>
 
-<blockquote>The web is more a social creation than a technical one. I designed it for a social effect &mdash; to help people work together &mdash; and not as a technical toy.</blockquote>
-<p class="attr">&mdash;Tim Berners-Lee, <cite>Weaving The Web</cite></p>
+<blockquote>
+    <p>The web is more a social creation than a technical one. I designed it for a social effect &mdash; to help people work together &mdash; and not as a technical toy.
+    <p><cite>&mdash;Tim Berners-Lee, Weaving The Web</cite></p>
+</blockquote>
 
 <h2>How to XFNify your site</h2>
 
@@ -51,8 +53,10 @@ title: Marking up relationships
 
 <p>The XFN website has an amusing explanation for why they chose the endearing word "sweetheart" over something more formal:</p>
 
-<blockquote>This value was the best gender-neutral term we could find to represent the more common terms "girlfriend" and "boyfriend," which it is meant to represent, as well as informal terms like "snookums", "honey", "pumpkin", and "sweetie-pie".</blockquote>
-<p class="attr">&mdash;<a href="http://gmpg.org/xfn/background#romance">XFN background, Romance</a></p>
+<blockquote>
+    <p>This value was the best gender-neutral term we could find to represent the more common terms "girlfriend" and "boyfriend," which it is meant to represent, as well as informal terms like "snookums", "honey", "pumpkin", and "sweetie-pie".</p>
+    <p><cite>&mdash;<a href="http://gmpg.org/xfn/background#romance">XFN background, Romance</a></cite></p>
+</blockquote>
 
 <p>You can also use <code>rel="crush"</code>, <code>rel="spouse"</code>, or even <code>rel="date"</code> for someone you're dating.</p>
 
@@ -68,7 +72,6 @@ title: Marking up relationships
 
 <p>The rel values <code>friend</code> and <code>acquaintance</code> can be used to mark up people you know well.</p>
 
-
 <h3>Family</h3>
 
 <p><code>kin</code> can be used to reference someone in your extended family, and <code>parent</code>, <code>sibling</code> and <code>child</code> to signify a closer relationship.</p>
@@ -81,10 +84,12 @@ title: Marking up relationships
 
 <p>We can target the attribute in the CSS to style any links with a particular rel value. In this example, I'm adding a little heart icon to the left of all links that have the rel value of <code>sweetheart</code>.</p>
 
-<p>The HTML:</p>
+<h4>The HTML:</h4>
+
 <pre><code>&lt;a rel="sweetheart" href="http://cennydd.co.uk"&gt;Cennydd Bowles&lt;/a&gt;</code></pre>
 
-<p>The CSS:</p>
+<h4>The CSS:</h4>
+
 <pre><code>a[rel~="sweetheart"] {
 	background-image:url(heart.png);
 	background-repeat: no-repeat;
@@ -100,22 +105,29 @@ title: Marking up relationships
 
 <p>Since the only way to see whether these values are being used is by viewing source, you could add them in without the person you've referenced even knowing. Imagine viewing source and finding <code>rel="crush"</code> in a reference to you. Then again, could be a bit creepy if you don't share those feelings!</p>
 
-<blockquote>&hellip;refers to a person to whom you are attracted, perhaps even strongly, but who might not express the same feeling in return, or even know that you exist. Crushes are also usually secret, which makes their inclusion in XFN (a public data set) somewhat interesting. We expect that the use of crush in XFN will be in a teasing manner, as between two friends who like to flirt but do not actually date.</blockquote>
-<p class="attr">&mdash;<a href="http://gmpg.org/xfn/background#romance">XFN background, Romance</a></p>
+<blockquote>
+    <p>&hellip;refers to a person to whom you are attracted, perhaps even strongly, but who might not express the same feeling in return, or even know that you exist. Crushes are also usually secret, which makes their inclusion in XFN (a public data set) somewhat interesting. We expect that the use of crush in XFN will be in a teasing manner, as between two friends who like to flirt but do not actually date.</p>
+    <p><cite>&mdash;<a href="http://gmpg.org/xfn/background#romance">XFN background, Romance</a></cite></p>
+</blockquote>
 
 <p>It's also worth pointing out that all the values are gender neutral, positive and assume a monogamous relationship, so you won't find any <code>rel="mistress"</code>. The reason isn't ideological, but purely practical:</p>
 
-<blockquote>There were a whole pile of love, romance, and sexually oriented terms we considered and discarded. Some were rejected on the grounds they were unnecessary&mdash;for example, polyamorous individuals can indicate their other partners using values already defined (having two links marked sweetheart or spouse, for example).</blockquote>
-<p class="attr">&mdash;<a href="http://gmpg.org/xfn/background#romance">XFN background, Romance</a></p>
+<blockquote>
+    <p>There were a whole pile of love, romance, and sexually oriented terms we considered and discarded. Some were rejected on the grounds they were unnecessary&mdash;for example, polyamorous individuals can indicate their other partners using values already defined (having two links marked sweetheart or spouse, for example).</p>
+    <p><cite>&mdash;<a href="http://gmpg.org/xfn/background#romance">XFN background, Romance</a></cite></p>
+</blockquote>
 
 <h2>Relationships defined by timestamps</h2>
 
 <p>Another thing is that these values are all dependant on the time they are written. You could give someone a rel value of <code>co-worker</code> today, and a few months later they could be working for a different company. Would you then go back and change those values in older posts?</p>
 
-<blockquote>Blogs by their very nature are a time based format. It is possible to use XFN values to refer to people linked to within a blog post. It could then be presumed that those relationships were as defined as of the timestamp of that blog post. Later blog posts could mention the same people with different XFN values. By viewing a set or series of blog posts and watching the XFN values on the interpersonal links change, one could easily derive implied temporal information about the nature of the relationships.</blockquote>
-<p class="attr">&mdash;<a href="http://gmpg.org/xfn/background#timeless">XFN background: out of time</a></p>
+<blockquote>
+    <p>Blogs by their very nature are a time based format. It is possible to use XFN values to refer to people linked to within a blog post. It could then be presumed that those relationships were as defined as of the timestamp of that blog post. Later blog posts could mention the same people with different XFN values. By viewing a set or series of blog posts and watching the XFN values on the interpersonal links change, one could easily derive implied temporal information about the nature of the relationships.</p>
+    <p><cite>&mdash;<a href="http://gmpg.org/xfn/background#timeless">XFN background: out of time</a></cite></p>
+</blockquote>
 
 <h2>Find out more</h2>
+
 <ul>
 	<li><a href="http://socialgraph-resources.googlecode.com/svn/trunk/samples/findyours.html">Find sites that are connected to you using Google's Social Graph API</a></li>
 	<li><a href="http://www.gmpg.org/xfn/">Xhtml Friends Network</a></li>
@@ -124,9 +136,9 @@ title: Marking up relationships
 
 <style type="text/css">
 a[rel~="sweetheart"] {
-	background-image:url(/image/icon/heart-12x12.png);
+	background-image:url(/image/heart-12x12.png);
 	background-repeat: no-repeat;
-	background-position: left 2px;
-	padding-left: 15px;
+	background-position: 3px 2px;
+	padding-left: 20px;
 }
 </style>
