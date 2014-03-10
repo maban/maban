@@ -5,25 +5,26 @@ title: IE9, vendor prefixes and future-proofing your CSS
 
 <p>The public beta of IE9 comes out in a few days, so this is a good time to check the lovely CSS3 transforms, border-radii and box-shadows you&#8217;ve added to your <span class="caps">CSS</span> files are future-proof.</p>
 
-	<p>Browsers like Firefox and Safari require the prefix <code>-moz-</code> and <code>-webkit-</code>. IE uses the prefix <code>-ms-</code>, but in <a href="http://blogs.msdn.com/b/ie/archive/2010/03/19/the-css-corner-about-css-corners.aspx">a post they published in March</a>, they stressed the following with regards to border-radius:</p>
+<p>Browsers like Firefox and Safari require the prefix <code>-moz-</code> and <code>-webkit-</code>. IE uses the prefix <code>-ms-</code>, but in <a href="http://blogs.msdn.com/b/ie/archive/2010/03/19/the-css-corner-about-css-corners.aspx">a post they published in March</a>, they stressed the following with regards to border-radius:</p>
 
-	<blockquote cite="http://blogs.msdn.com/b/ie/archive/2010/03/19/the-css-corner-about-css-corners.aspx">As CSS3 Backgrounds &#038; Borders has reached Candidate Recommendation, the property name is not prefixed with -ms.</blockquote>
+<blockquote cite="http://blogs.msdn.com/b/ie/archive/2010/03/19/the-css-corner-about-css-corners.aspx">
+    <p>As CSS3 Backgrounds &#038; Borders has reached Candidate Recommendation, the property name is not prefixed with -ms.</p>
+</blockquote>
 
-	<p>They also made this comment:</p>
+<p>They also made this comment:</p>
 
-	<blockquote cite="http://blogs.msdn.com/b/ie/archive/2010/03/19/the-css-corner-about-css-corners.aspx">&#8220;While a number of web pages already make use of this feature, some do not render properly in IE9 or Opera 10.50 because they lack an unprefixed declaration of the border-radius property. As the specification nears Recommendation and browser vendors are working on their final implementations and testcases for submission to the W3C, we recommend that new content always include a border-radius declaration without vendor prefix.&#8221;</blockquote>
+<blockquote cite="http://blogs.msdn.com/b/ie/archive/2010/03/19/the-css-corner-about-css-corners.aspx">
+    <p>&#8220;While a number of web pages already make use of this feature, some do not render properly in IE9 or Opera 10.50 because they lack an unprefixed declaration of the border-radius property. As the specification nears Recommendation and browser vendors are working on their final implementations and testcases for submission to the W3C, we recommend that new content always include a border-radius declaration without vendor prefix.&#8221;</p>
+</blockquote>
 
-	<p>So make sure every time you use a vendor prefix, you include the non-vendor prefix version for best practice like so:</p>
+<p>So make sure every time you use a vendor prefix, you include the non-vendor prefix version for best practice like so:</p>
 
-<pre>
-	<code>
-div {
-	-moz-border-radius: 1em;
-	-webkit-border-radius: 1em;
-	-o-border-radius: 1em;
-	border-radius: 1em;
-	}
-	</code>
+<pre><code>div {
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -o-border-radius: 1em;
+    border-radius: 1em;
+    }</code>
 </pre>
 
 <p>Browsers still reliant on the vendor prefix will ignore the non-prefixed border-radius, but make sure you declare it at the <em>bottom</em> of the list so they listen to this style in the future</p>
