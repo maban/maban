@@ -3,15 +3,25 @@ layout: post
 title: Using nth-of-type to create grid blocks that clear
 ---
 
-<p><figure class="pullout"><img src="http://maban.co.uk/image/article/diagram-nth-of-type-01.png" alt="grid blocks demonstrating that if some have more content than others, some block wrap, but others get stuck" /><figcaption>So this is what happens if the content in some blocks is longer than others.  Yeugh.</figcaption></figure></p>
+<figure class="full">
+    <img src="/image/diagram-nth-of-type-01.png" alt="grid blocks demonstrating that if some have more content than others, some block wrap, but others get stuck" />
+    <figcaption>So this is what happens if the content in some blocks is longer than others.  Yeugh.</figcaption>
+</figure>
+    
+<p>Problem: You want to create a grid based layout with floats, but you don&#8217;t want to wrap things in extraneous divs to force blocks to clear properly.</p>
 
-	<p>Problem: You want to create a grid based layout with floats, but you don&#8217;t want to wrap things in extraneous divs to force blocks to clear properly.</p>
+<p>In an ideal world, all the content is the same height, and blocks will float and clear properly.  But this is not an ideal world.</p>
 
-	<p>In an ideal world, all the content is the same height, and blocks will float and clear properly.  But this is not an ideal world.</p>
+<figure class="full">
+    <img src="/image/diagram-nth-of-type-02.png" alt="grid blocks where the content overlaps a block that has a fixed-height" />
+    <figcaption>We could specify the height, but this is a really bad idea.  You can&#8217;t guarantee that the content in the blocks will always be the same height, and you&#8217;ll get ugly overlaps if you&#8217;re wrong.</figcaption>
+</figure>
 
-	<p>	<figure class="pullout"><img src="http://maban.co.uk/image/article/diagram-nth-of-type-02.png" alt="grid blocks where the content overlaps a block that has a fixed-height" /><figcaption>We could specify the height, but this is a really bad idea.  You can&#8217;t guarantee that the content in the blocks will always be the same height, and you&#8217;ll get ugly overlaps if you&#8217;re wrong.</figcaption></figure></p>
+<p>One way of achieving this is by wrapping a div round the first three blocks which clears the content above. But this means adding extraneous divs to your markup, and can't always be done easily in a <abbr title="Content Management System">CMS</abbr>.</p>
 
-	<p>One way of achieving this is by wrapping a div round the first three blocks which clears the content above. But this means adding extraneous divs to your markup.</p>
+<div class="full">
+    <img src="/image/diagram-nth-of-type-03.png" alt="a diagram showing blocks wrapped in container divs" />
+</div>
 
 <h2>nth-of-type to the rescue!</h2>
 
@@ -29,7 +39,7 @@ title: Using nth-of-type to create grid blocks that clear
 	</code>
 </pre>
 
-	<p>And this code adds margins onto every first and second block in a row.  (You can probably think of a more streamlined way of doing this if you&#8217;re better at maths than me!)</p>
+<p>And this code adds margins onto every first and second block in a row.  (You can probably think of a more streamlined way of doing this if you&#8217;re better at maths than me!)</p>
 
 <pre>
 	<code>
@@ -46,7 +56,10 @@ title: Using nth-of-type to create grid blocks that clear
 	</code>
 </pre>
 
-	<p>	<figure class="pullout"><img src="http://maban.co.uk/image/article/diagram-nth-of-type-04.png" alt="example of the correct blocks clearing" /><figcaption>Now we&#8217;ve got the correct grid blocks clearing. Yay!</figcaption></figure></p>
+<figure class="full">
+    <img src="/image/diagram-nth-of-type-04.png" alt="example of the correct blocks clearing" />
+    <figcaption>Now we&#8217;ve got the correct grid blocks clearing. Yay!</figcaption>
+</figure>
 
 <h3>Browser Compatibility:</h3>
 
