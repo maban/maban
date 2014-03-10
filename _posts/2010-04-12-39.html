@@ -7,9 +7,11 @@ title: Parallax Illusion
 
 <p>Here&#8217;s the end result: <a href="http://maban.co.uk/sandbox/parallax-illusion/">http://maban.co.uk/sandbox/parallax-illusion/</a></p>
 
-<p>	<img class="pullout" src="http://maban.co.uk/image/article/photo-parallax-01.jpg" alt="photo of the parallax illusion" /></p>
+<div class="full">
+    <img src="/image/photo-parallax-01.jpg" alt="photo of the parallax illusion" />
+</div>
 
-<h3>How it works</h3>
+<h2>How it works</h2>
 
 <p>To build this you only need 2 images. One is the stripes (mine is a 14&#215;8 gif where 6px are transparent, and 8 are black) and the main image which is actually 2 images in 1 layered on top of each other.</p>
 
@@ -19,40 +21,39 @@ title: Parallax Illusion
 
 <p>The stripes of the image that are visible need to be the same width as the gap between the stripes that go on top of it. So that the wings on the down state aren&#8217;t visible while it&#8217;s on the up state, you&#8217;ll need to position the blank stripes slightly differently on the down state, in this case 6px to the right of the ones on the up state. Then simply layer the two images on top of each other and save them as one image.</p>
 
-<h4>The <span class="caps">HTML</span>:</h4>
+<h3>The HTML</h3>
 
 <pre>
 	<code>
-&amp;lt;div class=&quot;image&quot;&amp;gt;
-&amp;lt;div class=&quot;strips&quot;&gt;&amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
+&lt;div class=&quot;image&quot;&gt;
+    &lt;div class=&quot;strips&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 	</code>
 </pre>
 
-	<h4>The <span class="caps">CSS</span>:</h4>
+<h3>The CSS:</h3>
 
-<p>	<pre>
-	<code><br />
-.strips {
-background-image:url(&#8220;strips.gif&#8221;);
-background-repeat:repeat;
-background-position:center center;
-height:100%;
-width:100%;<br />
-}</p>
+<pre>
+<code>.strips {
+    background-image:url(&#8220;strips.gif&#8221;);
+    background-repeat:repeat;
+    background-position:center center;
+    height:100%;
+    width:100%;
+    }
 
-<p>.image {
-background-image:url(&#8220;background.gif&#8221;);
-position:fixed;
-background-repeat:repeat-x;
-height:100%;
-width:100%;<br />
-}
+.image {
+    background-image:url(&#8220;background.gif&#8221;);
+    position:fixed;
+    background-repeat:repeat-x;
+    height:100%;
+    width:100%;
+    }
 	</code>
-</pre></p>
+</pre>
 
-<p>	<p>All this does is position the stripes over the image, and make both images the full height and width of the screen since there&#8217;s no content in them. The image stays in the same place while the stripes move with the width of the window because they are centred.<p></p>
+<p>All this does is position the stripes over the image, and make both images the full height and width of the screen since there&#8217;s no content in them. The image stays in the same place while the stripes move with the width of the window because they are centred.<p>
 
-<h3>More parallax illusions</h3>
+<h2>More parallax illusions</h2>
 
 <p>Paul Annett sent me a couple of links to parallax illusions he&#8217;d seen that other people have made: <a href="http://demo.marcofolio.net/a_parallax_illusion_with_css/">one of a horse running</a>, and <a href="http://demo.marcofolio.net/your_own_css_parallax_illusion/">one of a 3D object</a>.</p>
