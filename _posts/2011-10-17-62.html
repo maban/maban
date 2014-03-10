@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Prototyping with CSS Flexbox
-color: CFB187
 ---
 
 <p>Since giving my first UX Bootcamp workshop on Prototyping in Code, I&#8217;ve been looking at ways to make it easier to teach <span class="caps">CSS</span> layout. I&#8217;ve tried <a href="http://speakerdeck.com/u/anna/p/ux-bootcamp-code-fitness?slide=96">demonstrating floats in a fish tank</a> and <a href="http://speakerdeck.com/u/anna/p/ux-bootcamp-code-fitness?slide=109">how positioning works using diagrams and sketches</a>, but it still seems pretty abstract to a <span class="caps">CSS</span> beginners.</p>
@@ -10,7 +9,9 @@ color: CFB187
 
 <h2>The float method</h2>
 
-<p>	<img class="pullout" src="http://maban.co.uk/image/article/diagram-nth-of-type-04.png" alt="a diagram that shows how nth-of-type can be used to lay out columns of content"/></p>
+<div class="full">
+    <img src="/image/diagram-nth-of-type-04.png" alt="a diagram that shows how nth-of-type can be used to lay out columns of content"/>
+</div>
 
 <p>A couple of years ago, I wrote a blog post on <a href="http://maban.co.uk/29">using nth-of-type to create grid blocks that clear</a>. In it, I explain how you can use floats and nth-of-type to add margins to specific boxes, and get the correct ones to clear. This solution doesn&#8217;t rely on using classnames as a hook, so it means you don&#8217;t have to keep editing the markup if you decide to have 4 columns instead of 3. However, trying to explain this all to a group who have only been writing <span class="caps">CSS</span> for a few hours is heavy going.</p>
 
@@ -22,10 +23,10 @@ color: CFB187
 
 <p class="prominent">If you want to have a play, <a href="http://jsbin.com/abimiy/11/edit#html,live">here&#8217;s a demo of a Flexbox prototype I put on jsbin.</a></p>
 
-<p>	<figure class="pullout">
-	<img src="http://maban.co.uk/image/article/screenshot-prototype-flexbox-hackasaurus.jpg" alt="A screenshot of the Hackasaurus website prototype"/>
+<figure class="full">
+	<img src="/image/screenshot-prototype-flexbox-hackasaurus.jpg" alt="A screenshot of the Hackasaurus website prototype"/>
 	<figcaption>Interactive prototype of the Hackasaurus website</figcaption>
-</figure></p>
+</figure>
 
 <p>Be aware that the <a href="http://www.w3.org/TR/css3-flexbox/#display-flexbox">syntax is in flux</a> at the moment so you will need browser prefixes and these examples may be out of date depending on when you read this, so <a href="http://www.w3.org/TR/css3-flexbox/">check the spec</a>. It&#8217;s not yet supported by Opera or IE, but <a href="http://caniuse.com/flexbox">there&#8217;s a page on &#8220;can I use&#8221; that lists specific versions</a>. It&#8217;s not something I&#8217;d feel comfortable about implementing into live projects until it&#8217;s stabilised a bit, but for quick prototypes it&#8217;s fine.</p>
 
