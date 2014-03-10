@@ -130,6 +130,32 @@ pre code {
     padding: 0;
 }
 
+table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    }
+
+table td,
+table th {
+    border-bottom: 1px solid #ddd;
+    padding: 0.7em 1.8em 0.5em;
+    font-weight: normal;
+    text-align: left;
+    color: #555;
+    vertical-align: top;
+    }
+
+table th {
+    border-bottom: 2px solid #ddd;
+    background-color: #F0F1F0;
+    padding: 1.5em 1.8em 0.8em;
+    font-weight: 600;
+}
+
+table tr:nth-child(odd) td {
+    background-color: #F7F7F7;
+}
+
 @media (min-width:50em) {
     figure {
         margin-bottom: 2em;
@@ -145,6 +171,7 @@ figcaption {
     color: #6F737E;
     font-size: 0.9em;
     margin-top: 0.3em;
+    text-align: center;
 }
 
 .full figcaption {
