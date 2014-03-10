@@ -62,10 +62,21 @@ audio {
     clear: both;
     width: 100%;
     max-width: 25em;
-}
+    }
 
-strong {
-    font-weight: 600;
+aside {
+    clear: both;
+    }
+    
+    @media (min-width:88em) {
+        aside {
+            position: absolute;
+            left: -27%;
+            width: 21%;
+            text-align: right;
+            font-size: 0.9em;
+        }
+        
     }
 
 abbr {
@@ -75,6 +86,10 @@ abbr {
 
 abbr:hover {
     cursor: help;
+    }
+
+strong {
+    font-weight: 600;
     }
 
 blockquote {
@@ -804,6 +819,7 @@ figcaption {
     padding: 1.5em;
     background-color: #fff;
     margin: 0 auto;
+    position: relative;
     }
     
     @media (min-width:50em) {
