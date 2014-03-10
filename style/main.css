@@ -15,6 +15,7 @@ body {
 
 iframe {
     margin: 0 auto;
+    border: none;
 }
 
 h1,
@@ -54,6 +55,14 @@ a:active {
 a:hover {
 	cursor: pointer;
 	}
+	
+audio {
+    margin: 1em auto 2em;
+    display: block;
+    clear: both;
+    width: 100%;
+    max-width: 25em;
+}
 
 strong {
     font-weight: 600;
@@ -120,6 +129,16 @@ figcaption {
     padding: 0 1.65em;
 }
 
+.video iframe {
+    width: 100%;
+    height: 300px;
+}
+
+@media (min-width:50em) {
+    .video iframe {
+        height: 450px;
+    }
+}
 
 
 .list-inline {
@@ -805,7 +824,8 @@ figcaption {
     margin-right: -1.5em;
 }
 
-.h-entry .full img {
+.h-entry .full img,
+.h-entry .full iframe {
     text-align: center;
     margin: 0 auto;
     display: block;
@@ -817,7 +837,7 @@ figcaption {
         margin-top: 0;
         margin-bottom: 1.5em;
         margin-right: 1em;
-        max-width: 18em;
+        max-width: 17em;
         }
     
     .h-entry time {
