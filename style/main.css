@@ -369,19 +369,35 @@ figcaption {
 
 
 .list-blocks-thumbnails img {
-    width: 100%;
+    max-width: inherit;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    max-height: 220px;
+    }
+    
+    @media (min-width:30em) {
+    .list-blocks-thumbnails img {
+        max-height: 400px;
+        }
+    }
+
+.list-blocks-thumbnails a {
+    overflow: hidden;
     }
 
     @media (min-width:50em) {
     .list-blocks-thumbnails img {
+        max-height: 250px;
+        width: inherit;
+        max-width: inherit;
         position: absolute;
-        width: 100%;
-        top: 0;
         left: 0;
         right: 0;
+        top: 0;
+        margin: 0 auto;
         }
     .list-blocks-thumbnails a {
-        padding-top: 67%;
+        padding-top: 275px;
         }
     }
 
@@ -993,7 +1009,7 @@ figcaption {
         }
     
     .project-m .project .description {
-        margin-top: 67%;
+        margin-top: 46%;
         }
 
     .project-s .project {
