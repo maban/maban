@@ -5,6 +5,8 @@
     <main role="main" class="page-post">
     
         <article class="h-entry">
+        
+            {% if page.image %}<div class="full image-article"><img src="{{ page.image }}" /></div>{% endif %}
     
             <h1 class="title">{{ page.title }}</h1>
             

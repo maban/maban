@@ -1036,7 +1036,16 @@ figcaption {
         
     }
 
+.image-article {
+    margin-top: -1.5em;
+    margin-bottom: 1.5em;
+}
 
+@media (min-width:50em) {
+    .image-article {
+        margin-top: -3em;
+    }
+}
 
 .page-writing,
 .page-post {
