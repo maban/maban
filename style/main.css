@@ -406,6 +406,10 @@ figcaption {
     }
 
 
+.list-block-minor li {
+    position: relative;
+    }
+
 .list-block-minor a {
     padding-left: 6em;
     position: inherit;
