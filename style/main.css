@@ -548,7 +548,13 @@ figcaption {
             background-color: #466d12;
             }
 
+.global-nav .section-writing:hover {
+    background-color: #9cb94d;
+    }
 
+.page-writing .global-nav .section-writing:hover {
+    background-color: #96b346;
+    }
 
 
 
@@ -637,7 +643,13 @@ figcaption {
             background-color: #cae0ed;
             }
 
+.global-nav .section-portfolio:hover {
+    background-color: #76adcf;
+    }
 
+.page-portfolio .global-nav .section-portfolio:hover {
+    background-color: #6ea8cc;
+    }
 
 
 .section-elsewhere {
@@ -707,13 +719,25 @@ figcaption {
         }
     }
 
-.global-header h1 {
-    margin-bottom: 0.38em;
+.global-header .fn {
+    margin: 0.8em 0 0.2em 0;
     line-height: 1em;
+    font-size: 1.5em;
     }
 
 .global-header p {
     margin: 0;
+    font-size: 0.9em;
+    }
+
+.global-header p a {
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    }
+
+.global-header p a:hover,
+.global-header p a:focus,
+.global-header p a:active {
+    border-bottom: 1px solid #fff;
     }
 
 .global-header .vcard {
@@ -1051,10 +1075,11 @@ figcaption {
     }
 }
 
-.page-writing,
-.page-post {
+.page-writing main,
+.page-post main {
     border-top: 8px solid #96b346;
     background-color: #e7e7e7;
+    padding-top: 0;
     }
 
 .page-writing .list-blocks li a {
@@ -1070,7 +1095,7 @@ figcaption {
     color: #333;
     }
 
-.page-portfolio {
+.page-portfolio main {
     border-top: 8px solid #6ea8cc;
     background-color: #e7e7e7;
     padding-top: 3em;
