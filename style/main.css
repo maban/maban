@@ -347,12 +347,19 @@ figcaption {
     display: block;
     }
 
-.listing .post-number {
+.listing .post-number,
+.h-entry .post-number {
     position: absolute;
     top: 0.75em;
     right: 1em;
     font-size: 0.75em;
     opacity: 0.5;
+    }
+
+.h-entry .post-number {
+    margin-top: 0;
+    right: 2.15em;
+    top: 1.5em;
     }
 
 
@@ -937,6 +944,7 @@ figcaption {
 .h-entry time {
     color: rgba(0,0,0,0.6);
     font-size: 0.9em;
+    margin-top: 0.58em;
     }
 
 .h-entry img {
