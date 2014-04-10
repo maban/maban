@@ -1129,7 +1129,7 @@ figcaption {
   text-decoration: none;
   border-radius: 2px;
   display: inline-block;
-  margin: 0.5em 0.5em 0 0;
+  margin: 0.5em 0.5em 0.5em 0;
 }
 
 .button:hover,
@@ -1148,6 +1148,7 @@ figcaption {
 .intro {
   font-size: 1.2em;
   line-height: 1.4em;
+  margin-bottom: 1em;
 }
 
 .page-writing main,
