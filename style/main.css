@@ -6,7 +6,7 @@ body {
     line-height: 1.35em;
     background-color: #E7E7E7;
     }
-    
+
     @media (min-width:50em) {
         body {
             font-size: 19px;
@@ -50,7 +50,7 @@ a {
 a:visited {
 	color: #7949AD;
 	}
-	
+
 a:hover,
 a:focus,
 a:active {
@@ -60,7 +60,7 @@ a:active {
 a:hover {
 	cursor: pointer;
 	}
-	
+
 audio {
     margin: 1em auto 2em;
     display: block;
@@ -72,7 +72,7 @@ audio {
 aside {
     clear: both;
     }
-    
+
     @media (min-width:88em) {
         aside {
             position: absolute;
@@ -81,7 +81,7 @@ aside {
             text-align: right;
             font-size: 0.9em;
         }
-        
+
     }
 
 abbr {
@@ -317,7 +317,7 @@ figcaption {
     padding: 1.5em;
     position: relative;
     }
-    
+
 .listing li:nth-of-type(3n+1) {
     clear: both;
     }
@@ -369,22 +369,24 @@ figcaption {
 .list-blocks,
 .list-column {
     clear: both;
-    padding: 0; 
+    padding: 0;
     margin: 0;
     }
 
 
 
-.list-blocks-thumbnails img {
+.list-blocks-thumbnails img,
+.masthead img {
     max-width: inherit;
     margin-left: -1.5em;
     margin-right: -1.5em;
     max-height: 220px;
     }
-    
+
     @media (min-width:30em) {
-    .list-blocks-thumbnails img {
-        max-height: 400px;
+    .list-blocks-thumbnails img,
+    .masthead img {
+        max-height: 300px;
         }
     }
 
@@ -434,7 +436,7 @@ figcaption {
 
 
 .list-column {
-    margin: 0 0 1em 0; 
+    margin: 0 0 1em 0;
     }
 
 .list-column ul,
@@ -442,7 +444,7 @@ figcaption {
     padding: 0;
     margin-top: 1.8em;
     }
-    
+
     @media (min-width:50em) {
     .list-column ul,
     .list-column ol {
@@ -451,7 +453,7 @@ figcaption {
     }
 
 .list-column li {
-    margin: 0 1.5em 1em 1em;  
+    margin: 0 1.5em 1em 1em;
     }
 
 .list-column .heading-subsection {
@@ -460,7 +462,7 @@ figcaption {
     font-size: 1.5em;
     color: rgba(255,255,255,0.65);
     }
-    
+
     @media (min-width:50em) {
     .list-column .heading-subsection {
         display: none;
@@ -515,40 +517,40 @@ figcaption {
         background-color: #aecf86;
         background-color: rgba(255,255,255,0.8);
         }
-    
+
         .section-writing li:nth-of-type(1) a:hover,
         .section-writing li:nth-of-type(1) a:focus,
         .section-writing li:nth-of-type(1) a:active {
             background-color: #e1edd3;
             background-color: rgba(255,255,255,1);
             }
-    
+
     .section-writing li:nth-of-type(2) a {
         background-color: #c3dca6;
         background-color: rgba(255,255,255,0.6);
         }
-        
+
         .section-writing li:nth-of-type(2) a:hover,
         .section-writing li:nth-of-type(2) a:focus,
         .section-writing li:nth-of-type(2) a:active {
             background-color: #deebce;
             }
-    
+
     .section-writing li:nth-of-type(3) a {
         background-color: #d2e4bb;
         background-color: rgba(255,255,255,0.4);
         }
-        
+
         .section-writing li:nth-of-type(3) a:hover,
         .section-writing li:nth-of-type(3) a:focus,
         .section-writing li:nth-of-type(3) a:active {
             background-color: #dae8c7;
             }
-    
+
     .section-writing .more-section a {
         background-color: #578616;
         }
-    
+
         .section-writing .more-section a:hover,
         .section-writing .more-section a:focus,
         .section-writing .more-section a:active {
@@ -572,78 +574,83 @@ figcaption {
     .section-projects .list-block-major li:nth-of-type(1) a {
         background-color: rgba(255,255,255,0.6);
         }
-        
+
         .section-projects .list-block-major li:nth-of-type(1) a:hover,
         .section-projects .list-block-major li:nth-of-type(1) a:focus,
         .section-projects .list-block-major li:nth-of-type(1) a:active {
             background-color: rgba(255,255,255,0.8);
             }
-    
+
     .section-projects .list-block-major li:nth-of-type(2) a {
         background-color: rgba(255,255,255,0.4);
         }
-        
+
         .section-projects .list-block-major li:nth-of-type(2) a:hover,
         .section-projects .list-block-major li:nth-of-type(2) a:focus,
         .section-projects .list-block-major li:nth-of-type(2) a:active {
             background-color: rgba(255,255,255,0.6);
             }
-        
+
     .section-projects .list-block-minor li a,
     .section-projects .list-block-minor li a img {
         transition: padding-left 0.5s ease;
         -webkit-transform: rotateX( 360deg );
         }
-    
+
     .section-projects .list-block-minor li:hover a,
     .section-projects .list-block-minor li:focus a,
     .section-projects .list-block-minor li:active a {
         padding-left: 7em;
         }
-    
+
     .section-projects .list-block-minor li:hover img,
     .section-projects .list-block-minor li:focus img,
     .section-projects .list-block-minor li:active img {
         padding-left: 1em;
         }
-    
+
     .section-projects .list-block-minor {
         background-color: #e9cc61;
         background-color: rgba(255,255,255,0.2);
         padding-bottom: 999px;
         margin-bottom: -999px;
         }
-    
+
+    .section-projects blockquote {
+      background-color: white;
+      border-radius: 2px;
+    }
+
 
 .section-portfolio,
 .page-portfolio {
     background-color: #6ea8cc;
     }
-    
+
     .section-portfolio li:nth-of-type(1) a {
         background-color: rgba(255,255,255,0.8);
         }
-    
+
         .section-portfolio li:nth-of-type(1) a:hover,
         .section-portfolio li:nth-of-type(1) a:focus,
         .section-portfolio li:nth-of-type(1) a:active {
             background-color: #e4eff6;
             }
-    
+
     .section-portfolio li:nth-of-type(2) a {
         background-color: rgba(255,255,255,0.6);
         }
-        
+
         .section-portfolio li:nth-of-type(2) a:hover,
         .section-portfolio li:nth-of-type(2) a:focus,
         .section-portfolio li:nth-of-type(2) a:active {
             background-color: #dae9f2;
             }
-    
+
     .section-portfolio li:nth-of-type(3) a {
         background-color: rgba(255,255,255,0.4);
         }
-    
+
         .section-portfolio li:nth-of-type(3) a:hover,
         .section-portfolio li:nth-of-type(3) a:focus,
         .section-portfolio li:nth-of-type(3) a:active {
@@ -669,7 +676,7 @@ figcaption {
 
 
 
-    
+
 
 
 
@@ -689,9 +696,9 @@ figcaption {
     background-color: rgba(0,0,0,0.2);
     text-decoration: none;
     color: #fff;
-    padding: 0.2em 0 0.65em;   
+    padding: 0.2em 0 0.65em;
     }
-    
+
     .listing .more-section a:hover,
     .listing .more-section a:focus,
     .listing .more-section a:active {
@@ -757,18 +764,18 @@ figcaption {
     }
 
     @media (min-width:50em) {
-    
+
     .global-header .vcard {
         float: left;
         text-align: left;
         padding: 0;
         }
-    
+
     .global-footer .list-inline {
         font-size: 0.85em;
         float: right;
         }
-    
+
     }
 
 .global-header a,
@@ -817,11 +824,11 @@ figcaption {
 
 
 @media (min-width:50em) {
-    
+
     .list-blocks {
         margin-right: 3em;
     }
-    
+
     .more-section {
         width: 3em;
     }
@@ -829,11 +836,11 @@ figcaption {
     .listing {
         overflow: hidden;
     }
-    
+
     .list-column {
         margin-bottom: 3em;
     }
-    
+
     .list-blocks li {
         float: left;
         width: 31.333%;
@@ -841,16 +848,16 @@ figcaption {
         clear: none;
         display: block;
     }
-    
+
     .list-blocks a {
         padding-bottom: 999px;
         margin-bottom: -999px;
     }
-    
+
     .list-blocks li:last-child {
         margin-right: 0;
     }
-    
+
     .list-block-major {
         float: left;
         width: 66.666%;
@@ -858,12 +865,12 @@ figcaption {
         clear: none;
         margin-right: 0;
     }
-    
+
     .list-block-major li {
         width: 47%;
         margin-right: 3%;
     }
-    
+
     .list-block-minor {
         float: right;
         width: 33.333%;
@@ -871,7 +878,7 @@ figcaption {
         clear: none;
         margin-right: 0;
     }
-    
+
     .list-block-minor li {
         float: none;
         width: auto;
@@ -879,30 +886,30 @@ figcaption {
         font-size: 0.8em;
         position: relative;
     }
-    
+
     .list-block-minor a {
         padding-top: 2em;
         padding-bottom: 2em;
         margin-bottom: 0;
     }
-    
+
     .list-block-minor h3 {
         margin: 0 0 0.3em;
     }
-    
+
     .list-column {
         float: left;
         width: 31.333%;
         clear: none;
     }
-    
+
     .list-blocks .more-section {
         width: 3em;
         clear: none;
         position: absolute;
         right: 0;
     }
-    
+
     .list-blocks .more-section a {
         padding: 2.5em 0 999px 0;
         margin-left: 0;
@@ -916,19 +923,24 @@ figcaption {
 
 
 
-.h-entry {
+.h-entry,
+.prose {
     max-width: 42em;
     padding: 1.5em;
-    background-color: #fff;
+
     margin: 0 auto;
     position: relative;
     }
-    
+
     @media (min-width:50em) {
         .h-entry {
             padding: 3em 1.5em;
         }
     }
+
+.h-entry {
+  background-color: #fff;
+}
 
 .h-entry h1 {
     font-size: 1.85em;
@@ -951,17 +963,44 @@ figcaption {
     margin: 1em 0;
     }
 
-.h-entry .full {
+.prose blockquote {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (min-width:50em) {
+.prose blockquote {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+}
+}
+
+.full {
     clear: both;
     margin-left: -1.5em;
     margin-right: -1.5em;
 }
 
-.h-entry .full img,
-.h-entry .full iframe {
+.full img,
+.full iframe {
     text-align: center;
     margin: 0 auto;
     display: block;
+}
+
+.masthead {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  background-color: white;
+  overflow: hidden;
+}
+
+.masthead img {
+  padding: 0;
+  margin: 0;
+  display: table;
 }
 
 @media (min-width:50em) {
@@ -972,7 +1011,7 @@ figcaption {
         margin-right: 1em;
         max-width: 17em;
         }
-    
+
     .h-entry time {
         float: right;
         }
@@ -998,26 +1037,26 @@ figcaption {
         font-size: 1em;
         font-weight: 600;
         }
-    
+
     .project img {
         width: 100%;
         }
-    
+
     .project h3 + p {
         margin-top: 0;
         }
-    
+
     .project .image-l {
         max-width: 100%;
         }
-    
+
 
     @media (min-width:50em) {
-    
+
     .project-l {
         margin-right: 3em;
         }
-    
+
     .project-m,
     .project-s {
         clear: both;
@@ -1025,7 +1064,7 @@ figcaption {
         overflow: hidden;
         border-bottom: 1.5em solid #e7e7e7;
         }
-    
+
     .project-m .project {
         float: left;
         width: 49%;
@@ -1034,16 +1073,16 @@ figcaption {
         padding-bottom: 999px;
         margin-bottom: -999px;
         }
-    
+
     .project-m .project:last-child {
         margin-right: 0;
         }
-    
+
     .project-m .project img {
         position: absolute;
         top: 0;
         }
-    
+
     .project-m .project .description {
         margin-top: 46%;
         }
@@ -1056,20 +1095,20 @@ figcaption {
         padding-bottom: 999px;
         margin-bottom: -999px;
         }
-    
+
     .project-s .project:last-child {
         margin-right: 0;
         }
-    
+
     .project-s .project img {
         position: absolute;
         top: 0;
         }
-    
+
     .project-s .project .description {
         margin-top: 67%;
         }
-        
+
     }
 
 .image-article {
@@ -1081,6 +1120,34 @@ figcaption {
     .image-article {
         margin-top: -3em;
     }
+}
+
+.button {
+  background-color: #333;
+  color: white;
+  padding: 0.65em 1em 0.5em;
+  text-decoration: none;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 0.5em 0.5em 0 0;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #000;
+}
+
+@media (min-width:50em) {
+.button-key {
+    float: right;
+    margin: -0.5em 0 0 0.5em;
+  }
+}
+
+.intro {
+  font-size: 1.2em;
+  line-height: 1.4em;
 }
 
 .page-writing main,
@@ -1108,6 +1175,38 @@ figcaption {
     background-color: #e7e7e7;
     padding-top: 3em;
     }
+
+.page-projects main,
+.page-project main {
+    border-top: 8px solid #dfbc35;
+    background-color: #e7e7e7;
+    padding-top: 3em;
+    }
+
+.page-project .button {
+  background-color: #dfbc35;
+  color: #000;
+}
+
+.page-project .button:hover,
+.page-project .button:focus,
+.page-project .button:active {
+  background-color: #e5c259;
+}
+
+.page-project main {
+  padding-top:0;
+}
+
+.page-project .h-entry {
+  background-color: transparent;
+  padding-top: 2em;
+}
+
+.page-project h1 {
+  font-size: 2em;
+  margin-bottom: 0.8em;
+}
 
 .page-home {
     border-top: 8px solid #555;
