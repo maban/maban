@@ -111,6 +111,12 @@ blockquote cite {
     font-size: 0.9em;
 }
 
+hr {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin: 2.2em 0;
+}
+
 pre {
     white-space: pre-wrap;
     background-color: #F5F5F5;
