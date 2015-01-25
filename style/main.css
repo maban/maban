@@ -179,6 +179,11 @@ table tr:nth-child(odd) td {
     background-color: #F6F6E2;
     padding: 1.2em 1.5em 1em;
     margin: 1em -1.5em;
+    clear: both;
+}
+
+figure {
+    text-align: center;
 }
 
 @media (min-width:50em) {
@@ -197,6 +202,11 @@ figcaption {
     font-size: 0.9em;
     margin-top: 0.3em;
     text-align: center;
+}
+
+.figure-credit {
+    display: block;
+    clear: both;
 }
 
 .full figcaption {
@@ -526,6 +536,7 @@ figcaption {
 
 
 .section-writing,
+.section-1,
 .page-writing {
     background-color: #96b346;
     }
@@ -584,7 +595,8 @@ figcaption {
 
 
 
-.section-projects {
+.section-projects,
+.section-2 {
     background-color: #dfbc35;
     }
 
@@ -640,6 +652,7 @@ figcaption {
 
 
 .section-portfolio,
+.section-3,
 .page-portfolio {
     background-color: #6ea8cc;
     }
@@ -683,7 +696,8 @@ figcaption {
     }
 
 
-.section-elsewhere {
+.section-elsewhere,
+.section-4 {
     background-color: #e9668e;
     color: #fff;
     padding-top: 3em;
