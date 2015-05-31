@@ -1,0 +1,50 @@
+.article {
+  position: relative;
+  @include card;
+  margin-bottom: $base-font-size*2;
+  @media (min-width: $breakpoint-typography-s) {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+  .title {
+    margin: 0 50px 0 0;
+  }
+
+  .date {
+    color: #666;
+    font-size: 0.9em;
+  }
+
+  .hero {
+    margin: -20px -20px $base-font-size -20px;
+
+    img {
+      @media (min-width: $breakpoint-typography-s) {
+        border-radius: 2px 2px 0 0;
+        max-width: none;
+        width: 100%;
+      }
+    }
+
+  }
+
+
+
+
+
+.id {
+  padding: 10px;
+  border-radius: 2px;
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  margin: 0;
+  color: #fff;
+}

@@ -1,0 +1,42 @@
+.header {
+  padding: 20px 20px 0 20px;
+  margin-bottom: $base-font-size*2;
+  @include clear-fix;
+  a {
+    color: #fff;
+    border-bottom: none;
+  }
+
+  .header-intro {
+    margin-right: 120px;
+  }
+
+  .header-intro__title {
+    font-size: 1.4em;
+    margin: 0 0 0.25em 0;
+  }
+
+  .header-intro__title-link {
+    border: none;
+  }
+
+  .header-intro__subtitle {
+    margin: 0;
+  }
+
+  .button--hire {
+    margin: 0;
+    float: right;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .header-intro {
+    /*@media (min-width: $breakpoint-typography-s) {
+      width: 49%;
+      float: left;
+    }*/
+  }
+
+}

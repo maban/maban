@@ -1,0 +1,71 @@
+nav {
+
+  ol,
+  ul {
+      padding-left: 0;
+      }
+
+
+
+}
+
+.nav {
+  margin-left: -20px;
+  margin-right: -20px;
+  @media (min-width: $breakpoint-typography-m) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  clear: both;
+  margin-top: $base-font-size;
+
+  .nav__list {
+    margin: 0;
+    @media (min-width: $breakpoint-typography-m) {
+    display: flex;
+    }
+  }
+
+  .nav__list-item {
+    list-style-type: none;
+    float: left;
+    display: block;
+    float: left;
+    padding-bottom: 0;
+    transition: 0.5s ease all;
+    width: 50%;
+    float: left;
+    @media (min-width: $breakpoint-typography-m) {
+    flex: 1;
+    border-top: 3px solid $color-backdrop;
+
+      &:hover {
+        border-top: none;
+      }
+    }
+    text-align: center;
+
+
+
+  }
+  .section-home {
+    width: 100%;
+  }
+
+  .nav__list-link {
+    display: block;
+    padding: 20px;
+  }
+
+
+
+}
+
+.page-speaking .section-speaking {
+  border-top: none;
+}
+
+.page-post .section-writing,
+.page-writing .section-writing {
+  border-top: none;
+}

@@ -1,0 +1,32 @@
+.flag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 26px;
+  display: block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  background-position: center center;
+}
+
+.flag-ES {
+  background-image: url('/image/flag/ES.png');
+}
+
+.flag-IT {
+  background-image: url('/image/flag/IT.png');
+}
+
+.flag-WA {
+  background-image: url('/image/flag/WA.png');
+}
+
+.flag-GB {
+  background-image: url('/image/flag/GB.png');
+}
+
+.flag-NL {
+  background-image: url('/image/flag/NL.png');
+}

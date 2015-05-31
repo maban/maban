@@ -1,0 +1,15 @@
+img {
+  max-width: 100%;
+}
+
+.full {
+  margin: 2em -20px 1.5em -20px;
+  width: auto;
+  img {
+    max-width: none;
+    width: 100%;
+  }
+  figcaption {
+    padding: 0 20px;
+  }
+}

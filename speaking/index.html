@@ -1,0 +1,110 @@
+---
+layout: default
+title: Anna Debenham
+slug: page-speaking
+---
+
+<h2 class="heading-section">Speaking</h2>
+
+<ol class="content-list">
+
+{% for talk in site.talks reversed %}
+
+{% if talk.workshop %}
+
+{% else %}
+<li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
+  <a class="content-list__link" href="{{ talk.link }}">
+    <h3 class="title">{{ talk.conf }}</h3>
+    <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
+    <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
+    <p class="subtitle">{{ talk.title }}</p>
+    {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
+
+  </a>
+</li>
+{% endif %}
+
+{% endfor %}
+
+</ol>
+
+<h2 class="heading-prominent">Workshops</h2>
+
+<ol class="content-list">
+
+{% for talk in site.talks reversed %}
+
+{% if talk.workshop %}
+
+<li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
+  <a class="content-list__link" href="{{ talk.link }}">
+    <h3 class="title">{{ talk.conf }}</h3>
+    <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
+    <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
+    <p class="subtitle">{{ talk.title }}</p>
+    <span class="flag flag-{{ talk.flag }}"></span>
+  </a>
+</li>
+
+{% else %}
+
+{% endif %}
+
+{% endfor %}
+
+</ol>
+
+<h2 class="heading-prominent">Information for conference organisers</h2>
+
+<div class="article">
+
+
+
+  <p>Hi! Here's some information about me that you might need to help plan your conference. If there's anything you want to know that's missing, please email me.</p>
+
+  <h2>Headshots</h2>
+
+  <img src="/image/avatar-annadebenham-160.jpg" alt="Anna Debenham"/>
+  <ul>
+    <li>Small: <a href="/image/avatar-annadebenham-160.jpg">160px × 160px</a></li>
+    <li>Medium: <a href="/image/avatar-annadebenham-280.jpg">280px × 280px</a></li>
+    <li>Large: <a href="/image/avatar-annadebenham-800.jpg">800px × 800px</a></li>
+  </ul>
+
+  <h2>Biographies</h2>
+
+  <h3>The shorter version (10 words)</h3>
+  <p>Anna is a freelance Front-End Developer based in London.</p>
+
+  <h3>The longer version (52 words)</h3>
+  <p>Anna is a freelance front-end developer based in the UK. She was awarded Young Developer of the Year by Netmag in 2013. When she's not playing on them, she's researching the browsers on game consoles. Last year, she wrote a real book for Five Simple Steps on Front End Style Guides.</p>
+
+  <h2>Travel</h2>
+
+  <p>I live in London 10 minutes from the Underground, 30 minutes from the Eurostar, and under and hour to the nearest airport, so it's pretty easy for me to get around. I'm also confident using public transport, and usually prefer that to a taxi.</p>
+
+  <h3>My closest airports</h3>
+  <ul>
+    <li>Heathrow</li>
+    <li>Gatwick</li>
+    <li>London City</li>
+  </ul>
+
+  <h3>Preferred Airlines</h3>
+  <ul>
+    <li>Virgin
+      <span>Frequent flyer number 00699500247</span>
+    </li>
+    <li>British Airways
+    <span>Frequent flyer number 26235278</span>
+  </li>
+  </ul>
+
+  <h2>Dietary Requirements</h2>
+
+  <p>None*. I eat everything, and I love trying new things.</p>
+
+  <p>*<small>but I will get a bit twitchy if there's nowhere I can get a nice cup of tea ;)</small></p>
+
+</div>

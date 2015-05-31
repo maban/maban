@@ -1,0 +1,187 @@
+//  Colors –––––––––––––––––––––––––––––––––––––––––––––––
+
+$color-base: #363942;
+$color-muted: #DDD;
+$color-muted-alt: #999;
+$color-canvas: #DDDDDD;
+$color-link: #419DD2;
+$color-link-focus: #40BAD2;
+$color-highlight: #EEEE8F;
+
+$color-backdrop: #2D2D3A;
+
+$section-writing: #96b346;
+$section-portfolio: #6ea8cc;
+$section-projects: #dfbc35;
+$section-speaking: #e9668e;
+
+
+
+
+@mixin color($color, $opacity: 1) {
+    color: $color; // fallback
+    color: rgba($color, $opacity);
+    }
+
+@mixin background-color($color, $opacity: 1) {
+    background: $color; // fallback
+    background: rgba($color, $opacity);
+    }
+
+@mixin border-color($color, $opacity: 1) {
+    border-color: $color; // fallback
+    border-color: rgba($color, $opacity);
+    }
+
+
+body {
+  background-color: $color-canvas;
+  color: $color-backdrop;
+}
+
+.header,
+.footer {
+  background-color: $color-backdrop;
+  color: #fff;
+}
+
+.article {
+  background-color: #fff;
+}
+
+.pagination {
+  .pagination__previous,
+  .pagination__next {
+    color: $color-base;
+  }
+}
+
+.content-list__link:link,
+.content-list__link:visited,
+.content-list__link:hover,
+.content-list__link:focus,
+.content-list__link:active {
+  color: $color-base;
+}
+
+.nav {
+
+  .section-portfolio {
+    background-color: $section-portfolio;
+  }
+  .section-writing {
+    background-color: $section-writing;
+  }
+  .section-speaking {
+    background-color: $section-speaking;
+  }
+  .section-projects {
+    background-color: $section-projects;
+  }
+  .section-home {
+    background-color: #555;
+  }
+
+}
+
+.content-list {
+
+  .content-list__link {
+    border: 2px solid #fff;
+
+
+  }
+
+  .talk-passed .content-list__link {
+    background-color: #F2F2F2;
+    border: 2px solid #F2F2F2;
+  }
+
+}
+
+
+
+.id {
+  background-color: $section-writing;
+}
+
+.status {
+  background-color: $section-speaking;
+}
+
+
+
+.page-post,
+.page-writing {
+
+  & .header {
+    border-bottom: 4px solid $section-writing;
+  }
+
+  & .footer {
+    border-top: 4px solid $section-writing;
+  }
+
+  .content-list__link:hover,
+  .content-list__link:focus,
+  .content-list__link:active {
+    border: 2px solid $section-writing;
+  }
+
+}
+
+
+
+.page-speaking {
+
+  & .header {
+    border-bottom: 4px solid $section-speaking;
+  }
+
+  & .footer {
+    border-top: 4px solid $section-speaking;
+  }
+
+  .content-list__link:hover,
+  .content-list__link:focus,
+  .content-list__link:active {
+    border: 2px solid $section-speaking;
+  }
+
+}
+
+.page-portfolio {
+
+  & .header {
+    border-bottom: 4px solid $section-portfolio;
+  }
+
+  & .footer {
+    border-top: 4px solid $section-portfolio;
+  }
+
+  .content-list__link:hover,
+  .content-list__link:focus,
+  .content-list__link:active {
+    border: 2px solid $section-portfolio;
+  }
+
+}
+
+.page-projects {
+
+  & .header {
+    border-bottom: 4px solid $section-projects;
+  }
+
+  & .footer {
+    border-top: 4px solid $section-projects;
+  }
+
+  .content-list__link:hover,
+  .content-list__link:focus,
+  .content-list__link:active {
+    border: 2px solid $section-projects;
+  }
+
+}

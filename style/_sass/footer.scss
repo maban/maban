@@ -1,0 +1,13 @@
+.footer {
+  padding: 20px;
+  margin-top: $base-font-size;
+
+  .footer__links {
+    margin-top: 0;
+  }
+
+  a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+}

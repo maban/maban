@@ -1,36 +1,45 @@
-source:      .
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-include:     ['.htaccess']
-exclude:     []
-keep_files:  ['.git','.svn']
-gems:        []
-timezone:    nil
-encoding:    nil
+title: Pattern Library
+description: A collection of patterns to help you build up a style guide for your site
 
-future:      true
-show_drafts: nil
-limit_posts: 0
+destination: ./_site
+plugins:     _plugins
+layouts:     _layouts
+includes:    _includes
+include:     ['.htaccess']
+exclude:
+  - _config.yaml
+  - example.info
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+keep_files:  ['.git']
+timezone:    Europe/London
+markdown:    redcarpet
+permalink:   /:title
 highlighter: pygments
 
-relative_permalinks: true
+paginate: 20
+paginate_path: "/archives/page/:num"
 
-permalink:     /:title
-paginate_path: 'page:num'
-paginate:      nil
+collections:
+  patterns:
+    output: true
+    title: Patterns
+  talks:
+    output: true
+    title: Talks
+  projects:
+    output: true
+    title: Projects
+  casestudies:
+    output: true
+    title: Case Studies
+  podcasts:
+    output: true
+    title: Podcasts
+  articles:
+    output: true
+    title: Articles
 
-markdown:      kramdown
-markdown_ext:  markdown,mkdown,mkdn,mkd,md
-textile_ext:   textile
-
-excerpt_separator: "\n\n"
-
-safe:        false
-watch:       false    # deprecated
-server:      false    # deprecated
-host:        0.0.0.0
-port:        4000
-baseurl:     /
-url:         http://localhost:4000
-lsi:         false
+sass:
+  sass_dir: style/_sass
