@@ -1,0 +1,116 @@
+---
+layout: default
+title: Anna Debenham
+slug: home
+---
+
+<h2 class="heading-prominent">Projects</h2>
+
+<ol class="content-list">
+
+{% for project in site.projects limit:3 reversed %}
+<li class="content-list__item">
+  <a class="content-list__link" href="{{ project.link }}">
+    <h3 class="title">{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+  </a>
+</li>
+{% endfor %}
+
+</ol>
+
+
+<h2 class="heading-prominent">Writing</h2>
+
+<!-- writing: blog posts -->
+<ol class="content-list">
+  {% for post in site.posts limit:3 %}
+    <li class="content-list__item">
+        <a href="{{ post.url }}" class="content-list__link">
+            <h3 class="title article__title">{{ post.title }}</h3>
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="date article__date">{{ post.date | date_to_long_string }}</time>
+            <p class="excerpt article__excerpt">{{ post.content | strip_html | truncatewords:40}}</p>
+            <p class="id article__id">{{ post.id }}</p>
+        </a>
+    </li>
+  {% endfor %}
+</ol>
+
+
+<h2 class="heading-prominent">Projects</h2>
+
+<ol class="content-list">
+
+{% for casestudy in site.casestudies reversed %}
+<li class="content-list__item">
+  <a class="content-list__link" href="{{ casestudy.link }}">
+    <h3 class="title">{{ casestudy.title }}</h3>
+    <p class="subtitle">{{ casestudy.client }}</p>
+    <p class="subtitle">{{ casestudy.agency }}</p>
+    <p>{{ casestudy.involvement }}</p>
+  </a>
+</li>
+{% endfor %}
+
+</ol>
+
+
+<h2 class="heading-prominent">Upcoming Speaking</h2>
+
+<ol class="content-list">
+
+{% for talk in site.talks reversed %}
+
+{% if talk.upcoming %}
+
+
+<li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
+  <a class="content-list__link" href="{{ talk.link }}">
+    <h3 class="title">{{ talk.conf }}</h3>
+    <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
+    <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
+    <p class="subtitle">{{ talk.title }}</p>
+    {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
+
+  </a>
+</li>
+
+{% else %}
+
+{% endif %}
+
+{% endfor %}
+
+</ol>
+
+
+<h2 class="heading-prominent">Podcasts</h2>
+
+<ol class="content-list">
+
+  {% for podcast in site.podcasts reversed %}
+  <li class="content-list__item">
+    <a class="content-list__link" href="{{ podcast.link }}">
+      <h3 class="title">{{ podcast.podcast }}</h3>
+      <p class="subtitle">With {{ podcast.hosts }}</p>
+    </a>
+  </li>
+  {% endfor %}
+
+</ol>
+
+<h2 class="heading-prominent">Articles</h2>
+
+<ol class="content-list">
+
+{% for article in site.articles reversed %}
+<li class="content-list__item">
+  <a class="content-list__link" href="{{ article.link }}">
+    <h3 class="title">{{ article.publication }}</h3>
+    <p class="subtitle">{{ article.title }}</p>
+    <p class="status">{{ article.type }}</p>
+  </a>
+</li>
+{% endfor %}
+
+</ol>
