@@ -13,3 +13,22 @@ img {
     padding: 0 20px;
   }
 }
+
+.pull,
+.push {
+  width: 50%;
+  float: left;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.pull {
+  margin-left: -20px;
+  margin-right: 20px;
+}
+
+.push {
+  float: right;
+  margin-right: -20px;
+  margin-left: 20px;
+}

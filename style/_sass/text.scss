@@ -5,6 +5,14 @@ html {
     @include rem(line-height, 22px);
     font-size: $base-font-size-m;
   }
+  @media (min-width: $breakpoint-typography-l) {
+    @include rem(line-height, 24px);
+    font-size: $base-font-size-l;
+  }
+  @media (min-width: $breakpoint-typography-xl) {
+    @include rem(line-height, 27px);
+    font-size: $base-font-size-xl;
+  }
 }
 
 body {
@@ -127,17 +135,27 @@ blockquote {
 blockquote p {
     }
 
+cite {
+  font-style: italic;
+}
+
 figure {
 	margin: 2em 0;
+  text-align: center;
 	}
 
 figcaption {
   font-size: 12px;
-  text-align: center;
   @media (min-width: $breakpoint-typography-m) {
     font-size: 13px;
   }
   color: #555;
+}
+
+.lede {
+  font-size: 1.1em;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hidden {

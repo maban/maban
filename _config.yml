@@ -31,9 +31,9 @@ collections:
   projects:
     output: true
     title: Projects
-  casestudies:
+  portfolio:
     output: true
-    title: Case Studies
+    title: Portfolio
   podcasts:
     output: true
     title: Podcasts

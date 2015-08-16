@@ -2,10 +2,31 @@
   box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
   background-color: #fff;
   padding: 20px;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   display: block;
   position: relative;
 
+  @media (min-width: $breakpoint-typography-s) {
+    border-radius: 2px;
+  }
+
+}
+
+@mixin card-outer {
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+  background-color: #fff;
+  margin-bottom: 2em;
+  position: relative;
+  padding: 0;
+  @media (min-width: $breakpoint-typography-s) {
+    border-radius: 2px;
+  }
+
+}
+
+@mixin card-inner {
+  padding: 20px;
+  display: block;
   @media (min-width: $breakpoint-typography-s) {
     border-radius: 2px;
   }

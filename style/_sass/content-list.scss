@@ -1,39 +1,79 @@
 .content-list {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
 
   @include clear-fix;
 
-
-
-  @media (min-width: $breakpoint-typography-s) {
-
-  }
-
   .content-list__item {
     list-style-type: none;
+    @include card-outer;
+    max-width: 30.5%;
+    align-self: stretch;
+    display: flex;
+    flex-grow: 1;
 
     @media (min-width: $breakpoint-typography-s) {
-      width: 32%;
+      width: 19em;
       float: left;
-      margin-right: 2%;
-      align-items: stretch;
+      margin: 0 1em 2em;
 
-      &:nth-of-type(3n+3) {
+
+      /*&:nth-of-type(3n+3) {
         margin-right: 0;
       }
 
       &:nth-of-type(3n+4) {
         clear: both;
-      }
+    }*/
 
+    }
+
+    h4 {
+      font-size: 1em;
+      font-weight: bold;
+      margin-bottom: 0;
+      margin-top: 1em;
+
+      & + p {
+        margin-top: 4px;
+      }
     }
 
   }
 
-  .content-list__link {
-    @include card;
+
+
+  .content-list__item--image {
+    overflow: hidden;
+    .content-list__link {
+      padding-top: 220px;
+      overflow: hidden;
+    }
+    .image {
+      max-height: 200px;
+      max-width: inherit;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+    }
+
   }
+
+
+
+  .content-list__link {
+    @include card-inner;
+    align-items: stretch;
+    width: 100%;
+  }
+
+
 
   .title {
     font-size: 1.4em;
@@ -69,5 +109,69 @@
   }
 
 
+
+}
+
+.content-list--teaser {
+  display: flex;
+  align-items: stretch;
+
+  .content-list__item {
+    @media (min-width: $breakpoint-typography-s) {
+      width: 29%;
+      flex: 5;
+      display: flex;
+      margin-bottom: 0;
+      margin-left: 2%;
+      margin-right: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+
+  .content-list__link {
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    flex: 1;
+  }
+
+  .content-list__item--more,
+  .content-list__item--more:nth-of-type(3n+4) {
+    clear: none;
+    text-align: center;
+    font-family: "Times New Roman";
+    font-size: 2em;
+    align-items: center;
+    background-image: url('/image/ellipsis.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+
+    @media (min-width: $breakpoint-typography-s) {
+      width: 60px;
+      margin-left: 2%;
+      margin-right: 0;
+      flex: inherit;
+    }
+
+    .content-list__link {
+      position: absolute;
+      width: auto;
+    }
+
+    .content-list__link__text {
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+    }
+
+  }
 
 }

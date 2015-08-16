@@ -1,6 +1,21 @@
 main {
   padding: 0;
+  margin-top: $base-font-size*2;
   @media (min-width: $breakpoint-typography-s) {
     padding: 0 20px;
+  }
+}
+
+.layout--major {
+  @media (min-width: $breakpoint-typography-s) {
+    width: 64%;
+    float: left;
+  }
+}
+
+.layout--minor {
+  @media (min-width: $breakpoint-typography-s) {
+    width: 34%;
+    float: right;
   }
 }

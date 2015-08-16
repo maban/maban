@@ -1,10 +1,10 @@
-/*button,
+button,
 input[type=button],
 input[type=submit],
 .button,
 .button-disabled,
-a.button,
-a.button-disabled {
+.button:link,
+.button:visited, {
     background-image: none;
     border: none;
     border-radius: $measure-xxs;
@@ -20,6 +20,8 @@ a.button-disabled {
     &:hover,
     &:focus,
     &:active {
+        border: none;
+        color: #FFF;
         cursor: pointer;
         @include background-color($color-link-focus);
     }
@@ -29,8 +31,7 @@ a.button-disabled {
 button[disabled],
 input[type=button][disabled],
 input[type=submit][disabled],
-.button-disabled,
-a.button-disabled {
+.button-disabled {
     background-color: $color-muted;
     color: $color-muted-alt;
     text-shadow: none;
@@ -42,22 +43,29 @@ a.button-disabled {
 
 }
 
-.button-s,
-a.button-s,
-input[type=button].button-s,
-input[type=submit].button-s {
+.button--s,
+input[type=button].button--s,
+input[type=submit].button--s {
     @include rem(font-size, 12px);
     @include rem(padding, 6px 16px);
     @include rem(margin, 5px);
     @include rem(line-height, 14px);
 }
 
-.button-l,
-a.button-l,
-input[type=button].button-l,
-input[type=submit].button-l {
+.button--l,
+.button--l:link,
+.button--l:visited,
+input[type=button].button--l,
+input[type=submit].button--l {
+    @extend .button;
     @include rem(font-size, 18px);
     @include rem(padding, 12px 28px);
-    @include rem(margin, 5px);
+    margin: 0;
     @include rem(line-height, 20px);
-}*/
+}
+
+.button--pull,
+.button--pull:link,
+.button--pull:visited {
+  margin-right: 10px;
+}

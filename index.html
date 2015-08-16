@@ -1,116 +1,156 @@
 ---
 layout: default
 title: Anna Debenham
-slug: home
+slug: page-home
 ---
 
-<h2 class="heading-prominent">Projects</h2>
+<h2 class="heading-section">About me</h2>
 
-<ol class="content-list">
+<div class="lede">
 
-{% for project in site.projects limit:3 reversed %}
-<li class="content-list__item">
-  <a class="content-list__link" href="{{ project.link }}">
-    <h3 class="title">{{ project.title }}</h3>
-    <p>{{ project.description }}</p>
-  </a>
-</li>
-{% endfor %}
+<p>Hi! I'm Anna, a Freelance Front-end Developer living and working in London in the UK. I work with a range of clients to help build front-end prototypes, style guides and websites. In 2013, I was awarded <a href="https://thenetawards.com/previous-winners/">Netmag's Young Developer of the Year</a>.</p>
 
-</ol>
+<figure class="pull">
+  <img src="/image/photo-ala-meeting.png" />
+  <figcaption>Photo by <a href="https://www.flickr.com/photos/zeldman/16225849549/in/album-72157648241817794/">Jeffrey Zeldman</a></figcaption>
+</figure>
 
+<p>I co-host a small-batch podcast with Brad Frost on Front-end Style Guides, and <a href="/projects/front-end-style-guides/">I've written a book on the topic</a>. I'm also interested in the browsers on various game consoles, and <a href="http://console.maban.co.uk/">I've made a site documenting these</a>.</p>
 
-<h2 class="heading-prominent">Writing</h2>
+<p>As well as developing websites, I'm also a Technical Editor for <a href="http://alistapart.com/">A List Apart</a>, and I was the Technical Editor of <a href="http://abookapart.com/products/responsive-web-design">the second edition of Ethan Marcotte's <cite>Responsive Web Design</cite></a>.</p>
 
-<!-- writing: blog posts -->
-<ol class="content-list">
-  {% for post in site.posts limit:3 %}
-    <li class="content-list__item">
-        <a href="{{ post.url }}" class="content-list__link">
-            <h3 class="title article__title">{{ post.title }}</h3>
-            <time datetime="{{ post.date | date_to_xmlschema }}" class="date article__date">{{ post.date | date_to_long_string }}</time>
-            <p class="excerpt article__excerpt">{{ post.content | strip_html | truncatewords:40}}</p>
-            <p class="id article__id">{{ post.id }}</p>
-        </a>
-    </li>
-  {% endfor %}
-</ol>
+<p>Every December, I co-produce <a href="http://24ways.org/">24 Ways</a>.</p>
+
+</div>
 
 
-<h2 class="heading-prominent">Projects</h2>
+<section class="page-projects">
 
-<ol class="content-list">
+  <h2 class="heading-prominent">Projects</h2>
 
-{% for casestudy in site.casestudies reversed %}
-<li class="content-list__item">
-  <a class="content-list__link" href="{{ casestudy.link }}">
-    <h3 class="title">{{ casestudy.title }}</h3>
-    <p class="subtitle">{{ casestudy.client }}</p>
-    <p class="subtitle">{{ casestudy.agency }}</p>
-    <p>{{ casestudy.involvement }}</p>
-  </a>
-</li>
-{% endfor %}
-
-</ol>
-
-
-<h2 class="heading-prominent">Upcoming Speaking</h2>
-
-<ol class="content-list">
-
-{% for talk in site.talks reversed %}
-
-{% if talk.upcoming %}
-
-
-<li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
-  <a class="content-list__link" href="{{ talk.link }}">
-    <h3 class="title">{{ talk.conf }}</h3>
-    <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
-    <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
-    <p class="subtitle">{{ talk.title }}</p>
-    {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
-
-  </a>
-</li>
-
-{% else %}
-
-{% endif %}
-
-{% endfor %}
-
-</ol>
-
-
-<h2 class="heading-prominent">Podcasts</h2>
-
-<ol class="content-list">
-
-  {% for podcast in site.podcasts reversed %}
-  <li class="content-list__item">
-    <a class="content-list__link" href="{{ podcast.link }}">
-      <h3 class="title">{{ podcast.podcast }}</h3>
-      <p class="subtitle">With {{ podcast.hosts }}</p>
+  <ol class="content-list content-list--teaser">
+  {% for project in site.projects %}
+  <li class="content-list__item content-list__item--image">
+    <a class="content-list__link" href="{{ project.link }}">
+      <h3 class="title">{{ project.title }}</h3>
+      <img class="image" src="/image/{{ project.image }}" alt="" />
+      <p>{{ project.description }}</p>
     </a>
   </li>
   {% endfor %}
+  <li class="content-list__item content-list__item--more">
+    <a class="content-list__link" href="/projects/">
+      <span class="content-list__link__text">Show More Projects</span>
+    </a>
+  </li>
+  </ol>
 
-</ol>
+</section>
 
-<h2 class="heading-prominent">Articles</h2>
 
-<ol class="content-list">
+<section class="page-writing">
 
-{% for article in site.articles reversed %}
-<li class="content-list__item">
-  <a class="content-list__link" href="{{ article.link }}">
-    <h3 class="title">{{ article.publication }}</h3>
-    <p class="subtitle">{{ article.title }}</p>
-    <p class="status">{{ article.type }}</p>
-  </a>
-</li>
-{% endfor %}
+<h2 class="heading-prominent">Writing</h2>
 
-</ol>
+  <!-- writing: blog posts -->
+  <ol class="content-list content-list--teaser">
+    {% for post in site.posts limit:3 %}
+      <li class="content-list__item">
+          <a href="{{ post.url }}" class="content-list__link">
+              <h3 class="title article__title">{{ post.title }}</h3>
+              <time datetime="{{ post.date | date_to_xmlschema }}" class="date article__date">{{ post.date | date_to_long_string }}</time>
+              <p class="excerpt article__excerpt">{{ post.content | strip_html | truncatewords:40}}</p>
+              <p class="id article__id">{{ post.id }}</p>
+          </a>
+      </li>
+    {% endfor %}
+    <li class="content-list__item content-list__item--more">
+      <a class="content-list__link" href="/writing/">
+        <span class="content-list__link__text">Show More Articles</span>
+      </a>
+    </li>
+  </ol>
+
+</section>
+
+
+<section class="page-portfolio">
+
+  <h2 class="heading-prominent">Portfolio</h2>
+
+  <ol class="content-list content-list--teaser">
+
+    {% for casestudy in site.portfolio reversed limit:3 %}
+    <li class="content-list__item content-list__item--image">
+      <a class="content-list__link" href="/portfolio/{{casestudy.filename}}.html">
+        <h2 class="title">{{ casestudy.title }}</h2>
+        <img class="image" src="/image/{{ casestudy.image }}" alt="" />
+        <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
+        {% endif %}</p>
+        <h4>Involvement</h4>
+        <p>{{ casestudy.involvement }}</p>
+      </a>
+    </li>
+    {% endfor %}
+    <li class="content-list__item content-list__item--more">
+      <a class="content-list__link" href="/portfolio/">
+        <span class="content-list__link__text">Show More Case Studes</span>
+      </a>
+    </li>
+  </ol>
+
+</section>
+
+<section class="page-speaking">
+  <h2 class="heading-prominent">Speaking</h2>
+  <ol class="content-list">
+    {% for talk in site.talks reversed %}
+    <li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
+      <a class="content-list__link" href="{{ talk.link }}">
+        <h3 class="title">{{ talk.conf }}</h3>
+        <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
+        <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
+        <p class="subtitle">{{ talk.title }}</p>
+        {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
+      </a>
+    </li>
+    {% endfor %}
+    <li class="content-list__item content-list__item--more">
+    </li>
+  </ol>
+</section>
+
+<section class="page-podcasts">
+  <h2 class="heading-prominent">Podcasts</h2>
+  <ol class="content-list">
+    {% for podcast in site.podcasts reversed %}
+    <li class="content-list__item">
+      <a class="content-list__link" href="{{ podcast.link }}">
+        <h3 class="title">{{ podcast.podcast }} № {{ podcast.episode }}</h3>
+        <p class="subtitle">With {{ podcast.hosts }}</p>
+        <time datetime="{{ podcast.date | date_to_xmlschema }}" class="date">{{ podcast.date | date_to_long_string }}</time>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="page-articles">
+
+  <h2 class="heading-prominent">Published Articles</h2>
+
+  <ol class="content-list">
+
+    {% for article in site.articles reversed %}
+    <li class="content-list__item">
+      <a class="content-list__link" href="{{ article.link }}">
+        <h3 class="title">{{ article.publication }}</h3>
+        <p class="subtitle">{{ article.title }}</p>
+        <p class="status">{{ article.type }}</p>
+      </a>
+    </li>
+    {% endfor %}
+
+  </ol>
+
+</section>

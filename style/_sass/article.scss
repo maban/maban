@@ -3,7 +3,7 @@
   @include card;
   margin-bottom: $base-font-size*2;
   @media (min-width: $breakpoint-typography-s) {
-  max-width: 750px;
+  max-width: 45em;
   margin-left: auto;
   margin-right: auto;
   }
@@ -13,12 +13,19 @@
 }
 
   .title {
-    margin: 0 50px 0 0;
+    margin: 0 50px $base-font-size 0;
   }
 
-  .date {
+  .date,
+  .client,
+  .url {
     color: #666;
     font-size: 0.9em;
+    margin: 0;
+  }
+
+  .client {
+    margin-top: 5px;
   }
 
   .hero {
@@ -47,4 +54,17 @@
   right: 10px;
   margin: 0;
   color: #fff;
+}
+
+.article--full {
+  @extend .article;
+  @media (min-width: $breakpoint-typography-s) {
+      max-width: 80em;
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
 }

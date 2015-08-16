@@ -10,11 +10,18 @@ nav {
 }
 
 .nav {
+
   margin-left: -20px;
   margin-right: -20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
   @media (min-width: $breakpoint-typography-m) {
     margin-left: 0;
     margin-right: 0;
+
   }
   clear: both;
   margin-top: $base-font-size;
@@ -35,15 +42,34 @@ nav {
     transition: 0.5s ease all;
     width: 50%;
     float: left;
+    margin: 0 3px;
+    border-bottom: 10px solid;
     @media (min-width: $breakpoint-typography-m) {
     flex: 1;
-    border-top: 3px solid $color-backdrop;
-
-      &:hover {
-        border-top: none;
-      }
-    }
     text-align: center;
+
+      &.section-portfolio {
+        border-color: $section-portfolio;
+      }
+      &.section-writing {
+        border-color: $section-writing;
+      }
+      &.section-speaking {
+        border-color: $section-speaking;
+      }
+      &.section-projects {
+        border-color: $section-projects;
+      }
+      &.section-home {
+        border-color: $section-home;
+      }
+
+    }
+
+
+
+
+
 
 
 
@@ -54,7 +80,7 @@ nav {
 
   .nav__list-link {
     display: block;
-    padding: 20px;
+    padding: 10px 20px;
   }
 
 

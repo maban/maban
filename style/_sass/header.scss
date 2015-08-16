@@ -1,6 +1,6 @@
 .header {
   padding: 20px 20px 0 20px;
-  margin-bottom: $base-font-size*2;
+  text-align: center;
   @include clear-fix;
   a {
     color: #fff;
@@ -8,7 +8,9 @@
   }
 
   .header-intro {
-    margin-right: 120px;
+    //margin-right: 120px;
+    margin-bottom: 20px;
+
   }
 
   .header-intro__title {
@@ -22,6 +24,7 @@
 
   .header-intro__subtitle {
     margin: 0;
+    font-size: 16px;
   }
 
   .button--hire {

@@ -6,12 +6,14 @@ slug: page-portfolio
 
 <ol class="content-list">
 
-{% for casestudy in site.casestudies reversed %}
-<li class="content-list__item">
-  <a class="content-list__link" href="{{ casestudy.link }}">
-    <h3 class="title">{{ casestudy.title }}</h3>
-    <p class="subtitle">{{ casestudy.client }}</p>
-    <p class="subtitle">{{ casestudy.agency }}</p>
+{% for casestudy in site.portfolio %}
+<li class="content-list__item content-list__item--image">
+  <a class="content-list__link" href="{{casestudy.filename}}.html">
+    <h2 class="title">{{ casestudy.title }}</h2>
+    <img class="image" src="/image/{{ casestudy.image }}" alt="" />
+    <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
+    {% endif %}</p>
+    <h4>Involvement</h4>
     <p>{{ casestudy.involvement }}</p>
   </a>
 </li>

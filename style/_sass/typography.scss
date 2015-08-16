@@ -1,12 +1,20 @@
 //  Fonts ––––––––––––––––––––––––––––––––––––––––––––
 
-$base-font-size: 14px;
+$base-font-size: 15px;
 
-$base-font-size-m: 15px;
+$base-font-size-m: 16px;
+
+$base-font-size-l: 18px;
+
+$base-font-size-xl: 20px;
 
 $breakpoint-typography-s: 30em;
 
 $breakpoint-typography-m: 40em;
+
+$breakpoint-typography-l: 100em;
+
+$breakpoint-typography-xl: 130em;
 
 // Sans serif --------------------------------------------
 
@@ -14,7 +22,7 @@ $font-sans-regular-fallback: "Lucida Grande", "Helvetica", "Arial";
 
 $font-sans-regular: $font-sans-regular-fallback;
 
-$font-serif-regular-fallback: "Georgia", Times, sans-serif;
+$font-serif-regular-fallback: "Palatino Linotype", "Georgia", Times, sans-serif;
 
 $font-serif-regular: $font-serif-regular-fallback;
 
@@ -79,4 +87,8 @@ $font-monospace-regular: "Monaco", "Courier", monospace;
   // output the converted rules
   #{$property}: $px-values;
   #{$property}: $rem-values;
+}
+
+.small {
+  font-size: $base-font-size;
 }

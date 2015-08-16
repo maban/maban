@@ -7,9 +7,10 @@ slug: page-projects
 <ol class="content-list">
 
 {% for project in site.projects reversed %}
-<li class="content-list__item">
+<li class="content-list__item content-list__item--image">
   <a class="content-list__link" href="{{ project.link }}">
     <h3 class="title">{{ project.title }}</h3>
+    <img class="image" src="/image/{{ project.image }}" alt="" />
     <p>{{ project.description }}</p>
   </a>
 </li>
