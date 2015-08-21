@@ -1,25 +1,44 @@
 ---
-layout: default
+layout: project
 title: Anna Debenham
 slug: page-speaking
+image: screenshot-fesg-02.jpg
+image-alt: Screenshots from the talk
 ---
 
-<h2 class="heading-prominent">Front-end Style Guides</h2>
+<div class="layout">
 
-<div class="article">
+    <div class="layout--major">
 
-  <p><a href="">Preview the slides</a></p>
+        <h1 class="title">Front-end Style Guides</h1>
 
-  <h3>Outline</h3>
+        <p><strong>20-45 minutes</strong></p>
 
+        <p>After interviewing a dozen people with Brad Frost for their podcast on Style Guides for the web, Anna has collated all their findings for this talk on the different kinds that are out there, how they're built, what works (and what doesn't), and what makes them such a useful tool.</p>
 
-  <h5>Description</h5>
+        <p>She'll give you a tour of some style guides built by companies with a range of different needs and requirements, and you'll learn how to build your own using a range of possible technologies.</p>
 
-  <p>After interviewing a dozen people with Brad Frost for their podcast on Style Guides for the web, Anna has collated all their findings for this talk on the different kinds that are out there, how they're built, what works (and what doesn't), and what makes them such a useful tool.</p>
+        <p>Most importantly, she'll show you how to make sure they don't get forgotten at the end of the project, and ways that it can be kept up to date as living documentation well after a site has gone live.</p>
 
-  <p>She'll give you a tour of some style guides built by companies with a range of different needs and requirements, and you'll learn how to build your own using a range of possible technologies.</p>
+        <a class="button" href="">Preview the slides</a>
 
-  <p>Most importantly, she'll show you how to make sure they don't get forgotten at the end of the project, and ways that it can be kept up to date as living documentation well after a site has gone live.</p>
+    </div>
+
+    <div class="layout--minor">
+
+      <h2 class="title">Outline</h2>
+
+      <ul>
+        <li>A quick preview of the different types of style guides.</li>
+        <li>What a front-end style guide is, and why they're so useful for designers and developers.</li>
+        <li>Some cool features in exisiting front-end style guides.</li>
+        <li>Tools you can use to help build one.</li>
+        <li>How keep it maintained.</li>
+        <li>An introduction to living style guides.</li>
+        <li>Further resources.</li>
+      </ul>
+
+    </div>
 
 </div>
 
@@ -36,8 +55,7 @@ slug: page-speaking
     <h3 class="title">{{ talk.conf }}</h3>
     <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
     <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
-    <p class="subtitle">{{ talk.title }}</p>
-    <span class="flag flag-{{ talk.flag }}"></span>
+    {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
   </a>
 </li>
 

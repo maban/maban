@@ -1,14 +1,13 @@
 .header {
-  padding: 20px 20px 0 20px;
-  text-align: center;
+
   @include clear-fix;
   a {
-    color: #fff;
     border-bottom: none;
   }
 
   .header-intro {
     //margin-right: 120px;
+    padding: 20px 20px 0 20px;
     margin-bottom: 20px;
 
   }
@@ -28,11 +27,14 @@
   }
 
   .button--hire {
-    margin: 0;
-    float: right;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+    margin: 1.5em 0 0 0;
+    @media (min-width: $breakpoint-typography-m) {
+      margin: 0;
+      float: right;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
   }
 
   .header-intro {

@@ -10,11 +10,11 @@
   & > *:last-child {
     margin-bottom: 0;
   }
+  .title {
+    margin-right: 50px;
+  }
 }
 
-  .title {
-    margin: 0 50px $base-font-size 0;
-  }
 
   .date,
   .client,

@@ -4,19 +4,48 @@ title: Anna Debenham
 slug: page-portfolio
 ---
 
-<ol class="content-list">
+<h1 class="heading-section">Portfolio</h1>
 
-{% for casestudy in site.portfolio %}
-<li class="content-list__item content-list__item--image">
-  <a class="content-list__link" href="{{casestudy.filename}}.html">
-    <h2 class="title">{{ casestudy.title }}</h2>
-    <img class="image" src="/image/{{ casestudy.image }}" alt="" />
-    <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
-    {% endif %}</p>
-    <h4>Involvement</h4>
-    <p>{{ casestudy.involvement }}</p>
-  </a>
-</li>
-{% endfor %}
+<h2 class="heading-section">Client work</h2>
 
+    <ol class="content-list">
+
+    <li class="content-list__item content-list__item--highlight">
+        <h2 class="title">Your project?</h2>
+        <p>Upcoming availability in {{ site.availability }}.</p>
+        <a href="/hire-me/#consultancy" class="button">Hire me</a>
+    </li>
+
+    {% for casestudy in site.portfolio %}
+    <li class="content-list__item content-list__item--image">
+      <a class="content-list__link" href="{{casestudy.url}}">
+        <h2 class="title">{{ casestudy.title }}</h2>
+        <img class="image" src="/image/{{ casestudy.image }}" alt="" />
+        <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
+        {% endif %}</p>
+        <h4>Involvement</h4>
+        <p class="excerpt">{{ casestudy.involvement }}</p>
+      </a>
+    </li>
+    {% endfor %}
+
+</ol>
+
+<h2 class="heading-prominent">Side projects</h2>
+
+<ol class="content-list content-list--teaser">
+    {% for project in site.projects %}
+    <li class="content-list__item content-list__item--image">
+      <a class="content-list__link" href="{{ project.url }}">
+        <h3 class="title">{{ project.title }}</h3>
+        <img class="image" src="/image/{{ project.image }}" alt="" />
+        <p class="excerpt">{{ project.description }}</p>
+      </a>
+    </li>
+    {% endfor %}
+    <li class="content-list__item content-list__item--more">
+      <a class="content-list__link" href="/projects/">
+        <span class="content-list__link__text">Show More Projects</span>
+      </a>
+    </li>
 </ol>

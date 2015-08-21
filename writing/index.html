@@ -4,14 +4,14 @@ title: Anna Debenham
 slug: page-writing
 ---
 
-<h2 class="heading-section">Writing</h2>
+<h1 class="heading-section">Writing</h1>
 
 <!-- writing: blog posts -->
 <ol class="content-list">
   {% for post in site.posts %}
     <li class="content-list__item">
         <a href="{{ post.url }}" class="content-list__link">
-            <h3 class="title article__title">{{ post.title }}</h3>
+            <h2 class="title article__title">{{ post.title }}</h2>
             <time datetime="{{ post.date | date_to_xmlschema }}" class="date article__date">{{ post.date | date_to_long_string }}</time>
             <p class="excerpt article__excerpt">{{ post.content | strip_html | truncatewords:40}}</p>
             <p class="id article__id">{{ post.id }}</p>

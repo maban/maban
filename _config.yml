@@ -18,6 +18,8 @@ markdown:    redcarpet
 permalink:   /:title
 highlighter: pygments
 
+availability: "November 2015"
+
 paginate: 20
 paginate_path: "/archives/page/:num"
 
@@ -31,9 +33,11 @@ collections:
   projects:
     output: true
     title: Projects
+    permalink: /projects/:path/
   portfolio:
     output: true
     title: Portfolio
+    permalink: /portfolio/:path/
   podcasts:
     output: true
     title: Podcasts

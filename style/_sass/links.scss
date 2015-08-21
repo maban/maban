@@ -5,12 +5,13 @@ a:focus,
 a:active {
     color: $color-link;
     text-decoration: none;
+    border-bottom: 2px solid;
     }
 
 a:hover,
 a:focus,
 a:active {
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
     @include border-color($color-link, 0.7);
     }
 
@@ -20,7 +21,7 @@ a img { // IE adds a border around images if a link.
 
 @media print {
 	main a:link:after,
-	main a:visited:after { 
+	main a:visited:after {
 		content:" [" attr(href) "] "; // Adds the full url after a link if it's in the main body of the page.
 		}
 	}

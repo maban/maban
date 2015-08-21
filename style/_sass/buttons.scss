@@ -13,7 +13,6 @@ input[type=submit],
     @include background-color($color-link, 1);
     @include rem(font-size, 14px);
     @include rem(padding, 8px 18px);
-    @include rem(margin, 5px);
     @include rem(line-height, 16px);
     font-family: $font-sans-regular;
 

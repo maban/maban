@@ -1,38 +1,174 @@
 ---
-layout: default
+layout: hire-me
 title: Anna Debenham
-slug: page-hireme
+slug: page-home
 ---
 
-<p>What I do and don't do.</p>
+<h1 class="heading-section">Hire me</h1>
 
-<h2>Availability</h2>
+<div class="prose--highlight">
 
-<h2>Rates</h2>
+    <div class="layout">
 
-<h2>Testimonials</h2>
+        <h1 class="h2 title">Hire me for <a href="#consultancy" style="color: #659bbc">front-end development and consultancy</a>, <a href="#technical-editing" style="color: #849e3d">technical editing</a> and <a href="#speaking" style="color: #e9668e">speaking</a></h1>
 
-<div class="content-list">
+        <p>I've been working for myself since 2008. During that time, I've had the opportunity to help work on the front-end code of some incredible projects with <a href="/portfolio/dconstruct/">Clearleft</a>, <a href="/portfolio/mosaic/">The Wellcome Trust</a>, <a href="/portfolio/idap/">Government Digital Service</a>, <a href="/portfolio/code-for-america/">Code for America</a>, <a href="/portfolio/university-of-surrey/">The University of Surrey</a>, <a href="/portfolio/">and many more</a>.</p>
 
-<blockquote>
-  <p>Anna has everything you could ask for in a front-end developer: an excellent skillset of markup and CSS, augmented by a keen and inquiring mind.</p>
-  <p>Jeremy Keith, Director, Clearleft</p>
-</blockquote>
+        <p>I've written a book about <a href="">Front-end style guides</a>, and I give talks around the world about best practices in web development.</p>
 
-<blockquote>
-  <p>Anna worked at Clearleft as an Intern for 3 months, but we liked her so much we asked her to stay on for a further 2.</p>
-  <p>Anna is sharp, enthusiastic and willing to get stuck-in. She's incredibly conscientious and will always go the extra mile to make sure the work get's done on time and to a high standard.</p>
-  <p>Andy Budd, Director, Clearleft</p>
-</blockquote>
+        <p>In 2013, I was awarded <a href="https://thenetawards.com/previous-winners/">Netmag's Young Developer of the Year</a>.</p>
 
-<blockquote>
-  <p>Not only is Anna an excellent front-end developer but she also has a strong grasp of visual design, meaning her implementations pay attention to the important little details that can often be missed by others. Futhermore, her work to improve web design education in schools and for young people shows a true commitment to the profession and a desire to be the best in the business.</p>
-  <p>Paul Lloyd, Freelance</p>
-</blockquote>
+    </div>
 
-<blockquote>
-  <p>Anna was a fabulous intern for us. She has a fine sense of aesthetic, solid front end code, bundles of enthusiasm and great sense of humour. Work with her!</p>
-  <p>Richard Rutter, Director, Clearleft</p>
-</blockquote>
+</div>
+
+<div class="layout layout--island">
+
+    <div class="layout--major">
+
+        <h2 class="title" id="consultancy">Front-end Development and Consultancy</h2>
+        <p><strong>£500 + VAT a day, plus any agreed expenses</strong></p>
+
+    </div>
+
+    <div class="layout--minor">
+
+        {% if site.availability %}
+        <div class="block--highlight">
+            <h3 class="p title">Upcoming availability in {{ site.availability }}.</h3>
+            <a mailto="anna@maban.co.uk" class="button">anna@maban.co.uk</a>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <div class="layout--major">
+
+        <p>I'll often work with in-house teams on agile projects that need a round of rapid prototyping followed by production-quality code. I prefer to be ingrained with a team, working in the same room as them, rather than working off-site. Where that's not possible (such as if a client is based abroad), I'll arrange a daily standup with the team to feed back what I've worked on that day, ask any questions, and make sure things are on track. I'm not a fan of working in isolation.</p>
+
+        <p>I work closely with the designers and back-end developers to ensure the project's vision is maintained through the different work streams. When I work directly with the designer, they'll often only need to give me very low-fidelity wireframes (usually just a series of rectangles and scribbles on a piece of paper), skipping the photoshop phase. I can quickly turn these into functioning prototypes which the designer then interates on.</p>
+
+        <p>While I'm happy to pitch in with some of the design work alongside a designer and have a decent eye for typography, I am not a designer and I won't be comfortable working on aspects such as mockups or iconography. A lot of people assume I'm a designer, which I find flattering, but I'm absolutely not one!</p>
+
+        <p>When I work with an agency, I expect full autonomy with the client, and I don't agree with <a href="">whitelabelling</a>. It doesn't feel right to me and I'm not very good at pretending.</p>
+
+        <p>I'm confident using version control, build systems including <a href="#">Gulp</a> and <a href="#">Grunt</a>, project planning tools such as <a href="#">Jira</a> and <a href="#">Trello</a>.</p>
+
+        <a href="/portfolio/" class="button">Sites I've helped build</a>
+
+    </div>
+
+    <div class="layout--minor">
+
+        <blockquote class="testimonial">
+            <p>Anna has everything you could ask for in a front-end developer: an excellent skillset of markup and CSS, augmented by a keen and inquiring mind.</p>
+            <cite>Jeremy Keith, Director, Clearleft</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+            <p>Not only is Anna an excellent front-end developer but she also has a strong grasp of visual design, meaning her implementations pay attention to the important little details that can often be missed by others. Futhermore, her work to improve web design education in schools and for young people shows a true commitment to the profession and a desire to be the best in the business.</p>
+            <cite>Paul Lloyd, Freelance</cite>
+        </blockquote>
+
+    </div>
+
+  <!--<div class="layout--minor">
+
+    <blockquote class="testimonial">
+      <p>Anna was a fabulous intern for us. She has a fine sense of aesthetic, solid front end code, bundles of enthusiasm and great sense of humour. Work with her!</p>
+      <p>Richard Rutter, Director, Clearleft</p>
+    </blockquote>
+
+    <blockquote class="testimonial">
+      <p>Anna worked at Clearleft as an Intern for 3 months, but we liked her so much we asked her to stay on for a further 2.</p>
+      <p>Anna is sharp, enthusiastic and willing to get stuck-in. She's incredibly conscientious and will always go the extra mile to make sure the work get's done on time and to a high standard.</p>
+      <p>Andy Budd, Director, Clearleft</p>
+    </blockquote>
+
+  </div>-->
+
+</div>
+
+<div class="layout layout--island">
+
+    <div class="layout--major">
+
+        <h2 class="title" id="technical-editing">Technical editing</h2>
+        <p><strong>Rate negotiable.</strong></p>
+
+    </div>
+
+    <div class="layout--minor">
+
+        <div class="block--highlight">
+          <h3 class="p title">Contact me about tech-editing your book.</h3>
+          <a mailto="anna@maban.co.uk" class="button">anna@maban.co.uk</a>
+        </div>
+
+        <blockquote class="testimonial">
+          <p>Anna is one of the most incisive and thoughtful technical editors I’ve ever worked with. Her impossibly keen eye strengthened the second edition of Responsive Web Design significantly. I’d work with Anna again in a heartbeat.</p>
+          <cite>Ethan Marcotte, Author of <a href="http://abookapart.com/products/responsive-web-design">Responsive Web Design</a></cite>
+        </blockquote>
+
+    </div>
+
+    <div class="layout--major">
+
+        <p>As well as working with clients on websites, I also do tech editing for publications. I'm on the team at <a href="#">A List Apart</a> and <a href="">24 Ways</a> as a tech editor, and I was <a href="#">Ethan Marcotte</a>'s tech editor for the second edition of his book <a href="">Responsive Web Design</a>. I'm currently tech-editing two titles that have yet to be released.</p>
+
+        <p>I tech edit work that's still in the outline phase, and also work that's nearly ready to publish.</p>
+
+        <p>When I'm sent a piece to tech edit, the main thing I do is check that what's being said is correct to the best of my knowledge. I'll test any code in different browsers, and also add comments where I think something needs to be explained more fully.</p>
+
+        <p>Unlike a copy editor, I won't correct spelling or gramatical mistakes, nor will I do line-edits, but I'll often act as a second pair of eyes and flag things that I want the copy editor to look at.</p>
+
+    </div>
+
+</div>
+
+<div class="layout layout--island">
+
+    <div class="layout--major">
+
+        <h2 class="title" id="speaking">Speaking</h2>
+
+        <p><strong>£2,000 + VAT for a new talk on a topic we agree on, or £1,250 + VAT for one of my current talks, plus travel and accommodation. I'm willing to negotiate on my fee for free, London-based community events.</strong></p>
+
+    </div>
+
+    <div class="layout--minor">
+
+        <div class="block--highlight">
+            <h3 class="p title">Invite me to speak at your event.</h3>
+            <a mailto="anna@maban.co.uk" class="button">anna@maban.co.uk</a>
+        </div>
+
+        <figure>
+            <img src="/image/photo-update-1.jpg" alt="Photo of me giving a talk">
+            <figcaption>Photo by Geri Coady, taken at Update 2011</figcaption>
+        </figure>
+
+    </div>
+
+    <div class="layout--major">
+
+        <p>I've given over a dozen talks around the world about the things I'm passionate about. However, I'm a nervous speaker and I’ve taken the decision to only speak at events where I can justify taking the time out of client work to do it.</p>
+
+        <p>I'm also highly conscious of the need for conferences and meetups to offer a safe space for speakers and attendees alike, and therefore only speak at events that have a published and enforced <a href="http://alistapart.com/article/tweaking-the-moral-ui">Code of Conduct</a>.</p>
+
+        <p>When I give a talk, I try and tailor it to the event, so it's really great if you can tell me a bit about your audience beforehand (Is English their first language? Are they mainly designers/developers? Are they at the start of their careers?).</p>
+
+        <p>These are the topics I'm currently speaking about:</p>
+
+        <ul>
+          <li><a href="/speaking/game-console-browsers/">Game console browsers</a></li>
+          <li><a href="/speaking/front-end-style-guides/">Front-end Style Guides</a></li>
+        </ul>
+
+        <p>I live in London, 10 minutes from the Underground, 30 minutes from the Eurostar, and under and hour to the nearest airport, so it's pretty easy for me to get around. I'm also confident using public transport, and usually prefer that to a taxi.</p>
+
+        <a href="/speaking/" class="button">Events I've spoken at</a>
+
+    </div>
 
 </div>

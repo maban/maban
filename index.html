@@ -1,32 +1,36 @@
 ---
-layout: default
+layout: home
 title: Anna Debenham
 slug: page-home
 ---
 
-<h2 class="heading-section">About me</h2>
+<div class="layout">
 
-<div class="lede">
+    <h2 class="heading-section">About me</h2>
 
-<p>Hi! I'm Anna, a Freelance Front-end Developer living and working in London in the UK. I work with a range of clients to help build front-end prototypes, style guides and websites. In 2013, I was awarded <a href="https://thenetawards.com/previous-winners/">Netmag's Young Developer of the Year</a>.</p>
+    <div class="lede">
 
-<figure class="pull">
-  <img src="/image/photo-ala-meeting.png" />
-  <figcaption>Photo by <a href="https://www.flickr.com/photos/zeldman/16225849549/in/album-72157648241817794/">Jeffrey Zeldman</a></figcaption>
-</figure>
+    <p>Hi! I'm Anna, a Freelance Front-end Developer living and working in London in the UK. I work with a range of clients to help build front-end prototypes, style guides and websites. In 2013, I was awarded <a href="https://thenetawards.com/previous-winners/">Netmag's Young Developer of the Year</a>.</p>
 
-<p>I co-host a small-batch podcast with Brad Frost on Front-end Style Guides, and <a href="/projects/front-end-style-guides/">I've written a book on the topic</a>. I'm also interested in the browsers on various game consoles, and <a href="http://console.maban.co.uk/">I've made a site documenting these</a>.</p>
+    <figure class="pull">
+      <img src="/image/photo-ala-meeting.png" />
+      <figcaption>Photo by <a href="https://www.flickr.com/photos/zeldman/16225849549/in/album-72157648241817794/">Jeffrey Zeldman</a></figcaption>
+    </figure>
 
-<p>As well as developing websites, I'm also a Technical Editor for <a href="http://alistapart.com/">A List Apart</a>, and I was the Technical Editor of <a href="http://abookapart.com/products/responsive-web-design">the second edition of Ethan Marcotte's <cite>Responsive Web Design</cite></a>.</p>
+    <p>I co-host a small-batch podcast with Brad Frost on Front-end Style Guides, and <a href="/projects/front-end-style-guides/">I've written a book on the topic</a>. I'm also interested in the browsers on various game consoles, and <a href="http://console.maban.co.uk/">I've made a site documenting these</a>.</p>
 
-<p>Every December, I co-produce <a href="http://24ways.org/">24 Ways</a>.</p>
+    <p>As well as developing websites, I'm also a Technical Editor for <a href="http://alistapart.com/">A List Apart</a>, and I was the Technical Editor of <a href="http://abookapart.com/products/responsive-web-design">the second edition of Ethan Marcotte's <cite>Responsive Web Design</cite></a>.</p>
+
+    <p>Every December, I co-produce <a href="http://24ways.org/">24 Ways</a>.</p>
+
+    </div>
 
 </div>
 
 
-<section class="page-projects">
+<section class="page-projects layout--full">
 
-  <h2 class="heading-prominent">Projects</h2>
+  <h2 class="heading-prominent">Side projects</h2>
 
   <ol class="content-list content-list--teaser">
   {% for project in site.projects %}
@@ -34,7 +38,7 @@ slug: page-home
     <a class="content-list__link" href="{{ project.link }}">
       <h3 class="title">{{ project.title }}</h3>
       <img class="image" src="/image/{{ project.image }}" alt="" />
-      <p>{{ project.description }}</p>
+      <p class="excerpt">{{ project.description }}</p>
     </a>
   </li>
   {% endfor %}
@@ -48,7 +52,7 @@ slug: page-home
 </section>
 
 
-<section class="page-writing">
+<section class="page-writing layout--full">
 
 <h2 class="heading-prominent">Writing</h2>
 
@@ -74,7 +78,7 @@ slug: page-home
 </section>
 
 
-<section class="page-portfolio">
+<section class="page-portfolio layout--full">
 
   <h2 class="heading-prominent">Portfolio</h2>
 
@@ -88,7 +92,7 @@ slug: page-home
         <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
         {% endif %}</p>
         <h4>Involvement</h4>
-        <p>{{ casestudy.involvement }}</p>
+        <p class="excerpt">{{ casestudy.involvement }}</p>
       </a>
     </li>
     {% endfor %}

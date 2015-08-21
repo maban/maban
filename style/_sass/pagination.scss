@@ -13,12 +13,15 @@
     @include card;
     display: block;
     position: relative;
-    width: 50%;
+    border-bottom: none;
     border-left: 50px solid;
+
+    @media (min-width: $breakpoint-typography-m) {
+      width: 50%;
+    }
 
     &:hover,
     &:focus {
-      border-bottom: none;
     }
 
     & > *:last-child {
@@ -50,11 +53,14 @@
   }
 
   .pagination__previous {
-    margin-right: 20px;
+    @media (min-width: $breakpoint-typography-m) {
+        margin-right: 20px;
+    }
   }
 
   .title {
     font-size: 1.25em;
+    margin-right: 45px;
   }
 
 }

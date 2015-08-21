@@ -7,7 +7,15 @@
   }
 
   a {
-    color: #fff;
-    border-bottom: 1px solid #fff;
+  }
+  .vcard {
+    margin: 1em 0 0;
+    font-size: smaller;
+    .adr {
+      margin-bottom: 1em;
+    }
+    p {
+      margin: 0;
+    }
   }
 }

@@ -4,14 +4,16 @@ title: Anna Debenham
 slug: page-projects
 ---
 
+<h1 class="heading-section">Side projects</h1>
+
 <ol class="content-list">
 
-{% for project in site.projects reversed %}
+{% for project in site.projects %}
 <li class="content-list__item content-list__item--image">
-  <a class="content-list__link" href="{{ project.link }}">
+  <a class="content-list__link" href="{% if project.link %}{{ project.link }}{% else %}{{ project.url }}{% endif %}">
     <h3 class="title">{{ project.title }}</h3>
     <img class="image" src="/image/{{ project.image }}" alt="" />
-    <p>{{ project.description }}</p>
+    <p class="excerpt">{{ project.description }}</p>
   </a>
 </li>
 {% endfor %}

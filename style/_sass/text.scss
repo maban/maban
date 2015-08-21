@@ -59,7 +59,9 @@ abbr:hover {
 p,
 ul,
 ol,
-dl {
+dl,
+.p {
+    font-size: $base-font-size;
     margin: $base-font-size 0;
     @include rem(line-height, 21px);
     @media (min-width: $breakpoint-typography-m) {
@@ -71,7 +73,8 @@ dl {
 	p,
 	ul,
 	ol,
-	dl {
+	dl,
+  .p {
     line-height: 20px;
 		}
 	}
