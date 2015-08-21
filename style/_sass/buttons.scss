@@ -22,7 +22,7 @@ input[type=submit],
         border: none;
         color: #FFF;
         cursor: pointer;
-        @include background-color($color-link-focus);
+        background-color: #248699;
     }
 
 }
