@@ -3,6 +3,7 @@
   margin-top: $base-font-size;
 
   .footer__links {
+    @extend .list-inline;
     margin-top: 0;
   }
   .vcard {
