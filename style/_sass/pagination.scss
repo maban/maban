@@ -1,0 +1,66 @@
+.pagination {
+  font-size: 0.9em;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $breakpoint-typography-m) {
+      display: flex;
+  }
+
+  .pagination__next,
+  .pagination__previous {
+    @include card;
+    display: block;
+    position: relative;
+    border-bottom: none;
+    border-left: 50px solid;
+
+    @media (min-width: $breakpoint-typography-m) {
+      width: 50%;
+    }
+
+    &:hover,
+    &:focus {
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: "‹";
+      position: absolute;
+      display: block;
+      vertical-align: middle;
+      top: 40%;
+      left: -35px;
+      font-size: 50px;
+      font-weight: normal;
+      color: #fff;
+    }
+
+  }
+
+  .pagination__next {
+    border-left: none;
+    border-right: 50px solid;
+    &:before {
+      content: "›";
+      left: auto;
+      right: -35px;
+    }
+  }
+
+  .pagination__previous {
+    @media (min-width: $breakpoint-typography-m) {
+        margin-right: 20px;
+    }
+  }
+
+  .title {
+    font-size: 1.25em;
+    margin-right: 45px;
+  }
+
+}

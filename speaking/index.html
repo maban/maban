@@ -1,0 +1,63 @@
+---
+layout: default
+title: Anna Debenham
+slug: page-speaking
+---
+
+<h1 class="heading-section">Speaking</h1>
+
+<h2 class="heading-section">Upcoming and past events</h2>
+
+<ol class="content-list">
+
+<li class="content-list__item content-list__item--highlight">
+    <h3 class="title">Your event?</h3>
+    <a href="/hire-me/#speaking" class="button">Hire me</a>
+</li>
+
+{% for talk in site.talks reversed %}
+
+{% if talk.workshop %}
+
+{% else %}
+<li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
+  <a class="content-list__link" href="{{ talk.link }}">
+    <h3 class="title">{{ talk.conf }}</h3>
+    <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
+    <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
+    <p class="subtitle">{{ talk.title }}</p>
+    {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
+
+  </a>
+</li>
+{% endif %}
+
+{% endfor %}
+
+</ol>
+
+<h2 class="heading-prominent">Workshops</h2>
+
+<ol class="content-list">
+
+{% for talk in site.talks reversed %}
+
+{% if talk.workshop %}
+
+<li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
+  <a class="content-list__link" href="{{ talk.link }}">
+    <h3 class="title">{{ talk.conf }}</h3>
+    <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
+    <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
+    <p class="subtitle">{{ talk.title }}</p>
+    <span class="flag flag-{{ talk.flag }}"></span>
+  </a>
+</li>
+
+{% else %}
+
+{% endif %}
+
+{% endfor %}
+
+</ol>

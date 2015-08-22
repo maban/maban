@@ -1,0 +1,29 @@
+ol,
+ul {
+    margin-left: 0;
+    padding-left: 2em;
+    }
+
+ul {
+    padding-left: 2em;
+    }
+
+li {
+  padding-bottom: 0.25em;
+}
+
+ol li {
+    list-style-type: decimal;
+    }
+
+ul li {
+    list-style-type: disc;
+    padding-left: 0;
+    }
+
+.list-unstyled {
+    padding-left: 0;
+    li {
+      list-style-type: none;
+    }
+}

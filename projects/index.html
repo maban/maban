@@ -4,25 +4,18 @@ title: Anna Debenham
 slug: page-projects
 ---
 
-<main role="main">
+<h1 class="heading-section">Side projects</h1>
 
-    <div class="project-m">
+<ol class="content-list">
 
-        <article class="project" id="project-fesg">
-            <div class="description">
-                <h2 class="title">Front-end Style Guides</h2>
-                <p>An e-book about style guides for people who build websites. Learn how to create comprehensive style guides for the web, whether you’re starting from scratch or assembling one for an existing site.</p>
-            </div>
-            <img src="/image/project-fesg.jpg" alt="Screenshots from Front-end Style Guides"/>
-        </article>
+{% for project in site.projects %}
+<li class="content-list__item content-list__item--image">
+  <a class="content-list__link" href="{% if project.link %}{{ project.link }}{% else %}{{ project.url }}{% endif %}">
+    <h2 class="title h3">{{ project.title }}</h2>
+    <img class="image" src="/image/{{ project.image }}" alt="" />
+    <p class="excerpt">{{ project.description }}</p>
+  </a>
+</li>
+{% endfor %}
 
-        <article class="project" id="project-console">
-            <div class="description">
-                <h2 class="title">Console Browsers</h2>
-            </div>
-            <img src="/image/project-console.jpg" alt="Screenshot of the Console Browser website"/>
-        </article>
-
-    </div>
-
-</main>
+</ol>

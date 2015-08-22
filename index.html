@@ -1,335 +1,160 @@
 ---
-layout: default
+layout: home
 title: Anna Debenham
-slug: home
+slug: page-home
 ---
 
-<main role="main" class="page-home">
+<div class="layout">
 
-<section class="listing section-projects">
+    <h2 class="heading-section">About me</h2>
 
-    <h2 class="heading-section">Projects</h2>
+    <div class="lede">
 
-    <!-- portfolio: side projects -->
-    <ul class="list list-blocks list-block-major list-blocks-thumbnails">
-        <li>
-          <a href="/projects/front-end-style-guides">
-              <h3>Front-end Style Guides</h3>
-              <p>An e-book about style guides for people who build websites. Learn how to create comprehensive style guides for the web, whether you’re starting from scratch or assembling one for an existing site.</p>
-              <img src="/image/project-fesg.jpg" alt="Picture of front-end style guides pocket guide."/>
-          </a>
-        </li>
-        <li>
-          <a href="http://console.maban.co.uk">
-              <h3>Console Browsers</h3>
-              <p>A site that documents the browsers on game consoles</p>
-              <img src="/image/project-console.jpg" alt="Screenshot of console browser microsite."/>
-          </a>
-        </li>
-    </ul>
+    <p>Hi! I'm Anna, a Freelance Front-end Developer living and working in London in the UK. I work with a range of clients to help build front-end prototypes, style guides and websites. In 2013, I was awarded <a href="https://thenetawards.com/previous-winners/">Netmag's Young Developer of the Year</a>.</p>
 
-    <!-- portfolio: commendations -->
-    <ul class="list list-blocks list-block-minor">
-        <li>
-          <a href="http://alistapart.com/">
-              <h3>Technical Editor for A List Apart</h3>
-              <img src="/style/icon-ala.png" alt="A List Apart icon."/>
-          </a>
-        </li>
-        <li>
-          <a href="http://24ways.org">
-              <h3>Co-producer of 24 Ways</h3>
-              <img src="/style/icon-24ways.png" alt="24 ways icon."/>
-          </a>
-        </li>
-        <li>
-          <a href="https://thenetawards.com/">
-              <h3>Netmag's Young Developer of the Year, 2013</h3>
-              <img src="/style/icon-netmag.png" alt="Netmag icon."/>
-          </a>
-        </li>
-    </ul>
+    <figure class="pull">
+      <img src="/image/photo-ala-meeting.png" />
+      <figcaption>Photo by <a href="https://www.flickr.com/photos/zeldman/16225849549/in/album-72157648241817794/">Jeffrey Zeldman</a></figcaption>
+    </figure>
 
-</section>
+    <p>I co-host a small-batch podcast with Brad Frost on Front-end Style Guides, and <a href="/projects/front-end-style-guides/">I've written a book on the topic</a>. I'm also interested in the browsers on various game consoles, and <a href="http://console.maban.co.uk/">I've made a site documenting these</a>.</p>
 
+    <p>As well as developing websites, I'm also a Technical Editor for <a href="http://alistapart.com/">A List Apart</a>, and I was the Technical Editor of <a href="http://abookapart.com/products/responsive-web-design">the second edition of Ethan Marcotte's <cite>Responsive Web Design</cite></a>.</p>
 
-
-<section class="listing section-writing">
-
-    <h2 class="heading-section">Writing</h2>
-
-    <!-- writing: blog posts -->
-    <ol class="list list-blocks">
-      {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url }}">
-              <h3>{{ post.title }}</h3>
-              <time datetime="{{ post.date | date_to_xmlschema }}" class="entry-published date">{{ post.date | date_to_long_string }}</time>
-              <p>{{ post.content | strip_html | truncatewords:60}}</p>
-              <p class="post-number">{{ post.id }}</p>
-          </a>
-        </li>
-      {% endfor %}
-        <li class="more-section"><a href="/writing" title="More posts.">&hellip;</a></li>
-    </ol>
-
-</section>
-
-
-
-
-<section class="listing section-portfolio">
-
-    <h2 class="heading-section">Portfolio</h2>
-
-    <!-- portfolio: client work -->
-    <ul class="list list-blocks list-blocks-thumbnails">
-        <li>
-          <a href="/portfolio#project-cfa">
-              <h3>Code for America</h3>
-              <p>Involvement: Front-end development with Clearleft, building a pattern library. Worked remotely with the Code for America team based in San Francisco.</p>
-              <img src="/image/portfolio-cfa.jpg" alt="Screenshots of Code for America website."/>
-          </a>
-        </li>
-        <li>
-          <a href="/portfolio#project-mosaic">
-              <h3>Mosaic, Wellcome Trust</h3>
-              <p>Involvement: Front-end development with Clearleft, working on site in London with Wellcome Trust's web designers</p>
-              <img src="/image/portfolio-mosaic.jpg" alt="Screenshots of Mosaic website."/>
-          </a>
-        </li>
-        <li>
-          <a href="/portfolio#project-surrey">
-              <h3>University of Surrey</h3>
-              <p>Involvement: UX prototyping and front-end development, working on-site in Surrey alongside UX designer Leisa Reichelt and the University of Surrey's in-house web team</p>
-              <img src="/image/portfolio-surrey.jpg" alt="Screenshots of Surrey website."/>
-          </a>
-        </li>
-        <li class="more-section"><a href="/portfolio" title="More work examples.">&hellip;</a></li>
-    </ul>
-
-</section>
-
-
-
-
-
-<section class="listing section-elsewhere">
-
-    <h2 class="heading-section">Elsewhere</h2>
-
-    <!-- elsewhere: articles -->
-    <div class="list-column">
-    <h3 class="heading-subsection">Articles</h3>
-    <ol class="list">
-        <li>
-          <a class="link-type-article" href="http://www.myfavouritemagazines.co.uk/design/net-magazine-back-issues/net-june-14-issue-254/">
-            <h3>Be Your Own Boss</h3>
-            <h4>Netmag cover article, issue № 254</h4>
-            <p>June 2014</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-article" href="http://www.myfavouritemagazines.co.uk/design/net-magazine-back-issues/net-march-14-issue-251/">
-              <h3>The Secrets of Time Tracking Success</h3>
-              <h4>Netmag article, issue № 251</h4>
-              <p>March 2014</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-article" href="http://alistapart.com/blog/post/getting-started-with-pattern-libraries">
-              <h3>Getting Started With Pattern Libraries</h3>
-              <h4>A List Apart article</h4>
-              <p>6 February 2014</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-article" href="http://24ways.org/2013/get-started-with-github-pages/">
-              <h3>Get Started With GitHub Pages (Plus Bonus Jekyll)</h3>
-              <h4>24 Ways article</h4>
-              <p>18 December 2013</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-article" href="http://24ways.org/2012/unwrapping-the-wii-u-browser/">
-              <h3>Unwrapping the Wii U Browser</h3>
-              <h4>24 Ways article</h4>
-              <p>22 December 2012</p>
-          </a>
-        </li>
-        <li>
-         <a class="link-type-article" href="http://alistapart.com/article/testing-websites-in-game-console-browsers">
-             <h3>Testing Websites in Game Console Browsers</h3>
-             <h4>A List Apart article</h4>
-             <p>11 September 2012</p>
-         </a>
-        </li>
-        <li>
-         <a class="link-type-article" href="http://24ways.org/2011/front-end-style-guides/">
-             <h3>Front-end Style Guides</h3>
-             <h4>24 Ways article</h4>
-             <p>7 December 2011</p>
-         </a>
-        </li>
-        <li>
-          <a class="link-type-article" href="http://www.creativebloq.com/web-design/building-prototypes-html-and-css-9134572">
-              <h3>Building prototypes in HTML and CSS</h3>
-              <h4>Netmag website article</h4>
-              <p>20 September 2011</p>
-          </a>
-        </li>
-    </ol>
+    <p>Every December, I co-produce <a href="http://24ways.org/">24 Ways</a>.</p>
 
     </div>
 
-    <div class="list-column">
+</div>
 
-    <h3 class="heading-subsection">Talks</h3>
-    <ol class="list">
-        <li class="highlight">
-          <a class="link-type-talk" href="http://lanyrd.com/2015/smashingconf-barcelona/">
-            <h3>TBC</h3>
-            <h4>SmashingConf, Barcelona 2015</h4>
-            <p>20th-21st October 2015</p>
-          </a>
-        </li>
-        <li class="highlight">
-          <a class="link-type-talk" href="http://lanyrd.com/2015/upfrontconf/">
-            <h3>TBC</h3>
-            <h4>From The Front, Bologna</h4>
-            <p>17th-18th September 2015</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-talk" href="http://lanyrd.com/2015/upfrontconf/">
-            <h3>Game Console Browsers</h3>
-            <h4>UpFront Conference, Manchester</h4>
-            <p>19th May 2015</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-talk" href="http://lanyrd.com/2015/dotyork/">
-            <h3>Style Guides</h3>
-            <h4>Dot York, York</h4>
-            <p>9th April 2015</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-talk" href="http://lanyrd.com/2014/thewebis/">
-            <h3>The Web Is Everywhere</h3>
-            <h4>The Web Is, Cardiff</h4>
-            <p>30th-31st October 2014</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-talk" href="http://lanyrd.com/2013/mobilism/scfxhz/">
-              <h3>Console Browsers: The Ultimate Torture Test</h3>
-              <h4>Mobilism, Amsterdam</h4>
-              <p>16th May 2013</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-talk" href="http://lanyrd.com/2013/responsiveconf/scdtfw/">
-              <h3>Playing with Game Console Browsers</h3>
-              <h4>Responsive Day Out, Brighton</h4>
-              <p>1st March 2013</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-talk" href="http://lanyrd.com/2012/full-frontal/sztqf/">
-              <h3>Exploring the game console browser landscape</h3>
-              <h4>Full Frontal, Brighton</h4>
-              <p>9th November 2012</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-talk" href="http://lanyrd.com/2011/updateconf/sggxw/">
-              <h3>The Digital Native</h3>
-              <h4>Update, Brighton</h4>
-              <p>5th September 2011</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-talk" href="http://lanyrd.com/2010/lwsedu/">
-              <h3>Web Standards Education</h3>
-              <h4>London Web Standards</h4>
-              <p>18th October 2010</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-talk" href="http://lanyrd.com/2010/future-of-web-design/skth/">
-              <h3>Freelancer Survival Guide</h3>
-              <h4>Future of Web Design, London</h4>
-              <p>17th May 2010</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-talk" href="http://lanyrd.com/2009/tomorrowsweb/sktk/">
-              <h3>A Teenager's Guide to Freelancing</h3>
-              <h4>Tomorrow's Web, London</h4>
-              <p>8th August 2009</p>
-          </a>
-        </li>
-    </ol>
-    </div>
 
-    <div class="list-column">
-    <h3 class="heading-subsection">Podcasts</h3>
-    <ol class="list">
-        <li>
-          <a class="link-type-podcast" href="http://5by5.tv/webahead/72">
-              <h3>The Web Ahead № 72</h3>
-              <h4>With Jen Simmons</h4>
-              <p>5th June 2014</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-podcast" href="http://www.happymondaypodcast.com/episodes/2030-episode-66-anna-debenham">
-              <h3>Happy Monday № 66</h3>
-              <h4>With Sarah Parmenter and Josh Long</h4>
-              <p>14th April 2014</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-podcast" href="http://www.muleradio.net/thebigwebshow/113/">
-              <h3>The Big Web Show № 113</h3>
-              <h4>With Jeffrey Zeldman</h4>
-              <p>7th March 2014</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-podcast" href="http://5by5.tv/eastwing/69">
-              <h3>The East Wing № 69</h3>
-              <h4>With Tim Smith</h4>
-              <p>17th September 2013</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-podcast" href="http://5by5.tv/frequency/94">
-              <h3>The Frequency № 94</h3>
-              <h4>Co-hosted with Myke Hurley</h4>
-              <p>28th February 2013</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-podcast" href="http://unfinished.bz">
-              <h3>Unfinished Business № 1-35</h3>
-              <h4>Co-hosted with Andy Clarke</h4>
-              <p>January – September 2013</p>
-          </a>
-        </li>
-        <li>
-          <a class="link-type-podcast" href="http://5by5.tv/webahead/38">
-              <h3>The Web Ahead № 38</h3>
-              <h4>With Jen Simmons</h4>
-              <p>9th October 2012</p>
-          </a>
-        </li>
-    </ol>
+<section class="page-projects layout--full">
 
-    </div>
+  <h2 class="heading-prominent">Side projects</h2>
 
+  <ol class="content-list content-list--teaser">
+  {% for project in site.projects %}
+  <li class="content-list__item content-list__item--image">
+    <a class="content-list__link" href="{{ project.link }}">
+      <h3 class="title">{{ project.title }}</h3>
+      <img class="image" src="/image/{{ project.image }}" alt="" />
+      <p class="excerpt">{{ project.description }}</p>
+    </a>
+  </li>
+  {% endfor %}
+  <li class="content-list__item content-list__item--more">
+    <a class="content-list__link" href="/projects/">
+      <span class="content-list__link__text">Show More Projects</span>
+    </a>
+  </li>
+  </ol>
 
 </section>
 
-</main>
+
+<section class="page-writing layout--full">
+
+<h2 class="heading-prominent">Writing</h2>
+
+  <!-- writing: blog posts -->
+  <ol class="content-list content-list--teaser">
+    {% for post in site.posts limit:3 %}
+      <li class="content-list__item">
+          <a href="{{ post.url }}" class="content-list__link">
+              <h3 class="title article__title">{{ post.title }}</h3>
+              <time datetime="{{ post.date | date_to_xmlschema }}" class="date article__date">{{ post.date | date_to_long_string }}</time>
+              <p class="excerpt article__excerpt">{{ post.content | strip_html | truncatewords:40}}</p>
+              <p class="id article__id">{{ post.id }}</p>
+          </a>
+      </li>
+    {% endfor %}
+    <li class="content-list__item content-list__item--more">
+      <a class="content-list__link" href="/writing/">
+        <span class="content-list__link__text">Show More Articles</span>
+      </a>
+    </li>
+  </ol>
+
+</section>
+
+
+<section class="page-portfolio layout--full">
+
+  <h2 class="heading-prominent">Portfolio</h2>
+
+  <ol class="content-list content-list--teaser">
+
+    {% for casestudy in site.portfolio reversed limit:3 %}
+    <li class="content-list__item content-list__item--image">
+      <a class="content-list__link" href="/portfolio/{{casestudy.filename}}.html">
+        <h2 class="title">{{ casestudy.title }}</h2>
+        <img class="image" src="/image/{{ casestudy.image }}" alt="" />
+        <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
+        {% endif %}</p>
+        <h3 class="h4">Involvement</h3>
+        <p class="excerpt">{{ casestudy.involvement }}</p>
+      </a>
+    </li>
+    {% endfor %}
+    <li class="content-list__item content-list__item--more">
+      <a class="content-list__link" href="/portfolio/">
+        <span class="content-list__link__text">Show More Case Studes</span>
+      </a>
+    </li>
+  </ol>
+
+</section>
+
+<section class="page-speaking">
+  <h2 class="heading-prominent">Speaking</h2>
+  <ol class="content-list">
+    {% for talk in site.talks reversed %}
+    <li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
+      <a class="content-list__link" href="{{ talk.link }}">
+        <h3 class="title">{{ talk.conf }}</h3>
+        <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
+        <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
+        <p class="subtitle">{{ talk.title }}</p>
+        {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
+      </a>
+    </li>
+    {% endfor %}
+    <li class="content-list__item content-list__item--more">
+    </li>
+  </ol>
+</section>
+
+<section class="page-podcasts">
+  <h2 class="heading-prominent">Podcasts</h2>
+  <ol class="content-list">
+    {% for podcast in site.podcasts reversed %}
+    <li class="content-list__item">
+      <a class="content-list__link" href="{{ podcast.link }}">
+        <h3 class="title">{{ podcast.podcast }} № {{ podcast.episode }}</h3>
+        <p class="subtitle">With {{ podcast.hosts }}</p>
+        <time datetime="{{ podcast.date | date_to_xmlschema }}" class="date">{{ podcast.date | date_to_long_string }}</time>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="page-articles">
+
+  <h2 class="heading-prominent">Published Articles</h2>
+
+  <ol class="content-list">
+
+    {% for article in site.articles reversed %}
+    <li class="content-list__item">
+      <a class="content-list__link" href="{{ article.link }}">
+        <h3 class="title">{{ article.publication }}</h3>
+        <p class="subtitle">{{ article.title }}</p>
+        <p class="status">{{ article.type }}</p>
+      </a>
+    </li>
+    {% endfor %}
+
+  </ol>
+
+</section>

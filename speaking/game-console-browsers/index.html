@@ -1,0 +1,71 @@
+---
+layout: project
+title: Anna Debenham
+slug: page-speaking
+image: screenshot-gcb-02.jpg
+image-alt: Screenshots from the talk
+---
+
+<div class="layout">
+
+    <div class="layout--major">
+
+        <h1 class="title">Game console browsers</h1>
+
+        <p><strong>25-50 minutes</strong></p>
+
+        <p>We're now living with a huge number of devices with browsers, from <a href="http://console.maban.co.uk/">game consoles</a> to <a href="http://maban.co.uk/94/">smart watches</a>, <a href="http://www.telegraph.co.uk/technology/news/8023597/HP-announces-apps-and-printers-that-dont-need-computers.html">printers</a> to <a href="http://www.pocket-lint.com/news/117409-opera-pioneer-carbrowser-app-available">cars</a>. That range is only going to get weirder.</p>
+
+        <p>It may be convenient to disregard the browsers in these devices as being a novelty, but people are using them. In 2011, Ofcom reported that in the UK, <a href="http://stakeholders.ofcom.org.uk/market-data-research/market-data/communications-market-reports/cmr11/internet-web/4.16">20% of 16-24 year olds use their game console to visit websites</a>.</p>
+
+        <p>Browsing the internet on these devices presents us with new challenges, such as building sites that could be interacted with using voice, gesture, a second-screen, using a d-pad or a stylus. Considering how your site will be used by people on these devices will not only benefit your current users, but also prepare you for people using devices that don't exist yet.</p>
+
+        <p>It’s time to look beyond desktop, tablet and smartphone browsers.</p>
+
+        <a class="button" href="https://speakerdeck.com/anna/what-we-can-learn-from-game-console-browsers-1">Preview the slides</a>
+
+    </div>
+
+    <div class="layout--minor">
+
+        <h2 class="title">Outline</h2>
+
+        <ul>
+          <li>Overview of the devices that are out there that have browsers</li>
+          <li>Who uses the browsers on these devices, how many people use them, and why they use them.</li>
+          <li>How people use these devices and in what context.</li>
+          <li>The quirks and capabilities of these devices.</li>
+          <li>Why performance is so vital.</li>
+          <li>Why device silos and browser sniffing aren't sustainable.</li>
+          <li>How to build sites that works with a range of inputs.</li>
+          <li>How to design for a range of screen shapes and sizes.</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<h2 class="heading-prominent">Where I've given this talk</h2>
+
+<ol class="content-list">
+
+{% for talk in site.talks reversed %}
+
+{% if talk.topic == 'Game Console Browsers' %}
+
+<li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
+  <a class="content-list__link" href="{{ talk.link }}">
+    <h3 class="title">{{ talk.conf }}</h3>
+    <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
+    <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
+    {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
+  </a>
+</li>
+
+{% else %}
+
+{% endif %}
+
+{% endfor %}
+
+</ol>

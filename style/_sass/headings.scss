@@ -1,0 +1,79 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-sans-bold;
+  font-weight: normal;
+  @include rem(margin, 30px 0 $base-font-size 0);
+  line-height: 1.25;
+}
+
+h1,
+.h1 {
+  @include rem(font-size, 25px);
+  @media (min-width: $breakpoint-typography-m) {
+    @include rem(font-size, 26px);
+  }
+}
+
+h2,
+.h2 {
+  @include rem(font-size, 22px);
+  @media (min-width: $breakpoint-typography-m) {
+    @include rem(font-size, 23px);
+  }
+}
+
+h3,
+.h3 {
+  @include rem(font-size, 20px);
+  @media (min-width: $breakpoint-typography-m) {
+    @include rem(font-size, 21px);
+  }
+}
+
+h4,
+.h4 {
+  @include rem(font-size, 18px);
+  @media (min-width: $breakpoint-typography-m) {
+    @include rem(font-size, 19px);
+  }
+}
+
+h5,
+.h5 {
+  @include rem(font-size, 17px);
+  @media (min-width: $breakpoint-typography-m) {
+    @include rem(font-size, 18px);
+  }
+}
+
+h6,
+.h6 {
+  @include rem(font-size, 16px);
+  @media (min-width: $breakpoint-typography-m) {
+    @include rem(font-size, 17px);
+  }
+}
+
+.title {
+  margin: 0 0 $base-font-size 0;
+}
+
+.heading-section {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.heading-prominent {
+  text-align: center;
+  margin: 2em 0 1em;
+  clear: both;
+}
