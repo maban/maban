@@ -1,12 +1,12 @@
 <div class="header">
 
-    <header id="top" class="header-intro">
-    	<h1 class="header-intro__title"><a href="http://maban.co.uk" class="header-intro__title-link" rel="me">Anna Debenham</a></h1>
+    <header role="banner" id="top" class="header-intro">
+    {% if page.is-home %}<h1 class="header-intro__title">{% else %}<p class="header-intro__title">{% endif %}<a href="http://maban.co.uk" class="header-intro__title-link" rel="me">Anna Debenham</a>{% if page.is-home %}</h1>{% else %}</p>{% endif %}
     	<p class="header-intro__subtitle">Freelance Front-End Developer based in London, UK</p>
     	<a href="/hire-me/" class="button button--hire">Hire me</a>
     </header>
 
-    <nav class="nav">
+    <nav role="navigation" class="nav">
         <ul class="nav__list">
             <li class="nav__list-item section-home"><a class="nav__list-link" href="/">maban.co.uk</a></li>
             <li class="nav__list-item section-portfolio"><a class="nav__list-link" href="/portfolio">Portfolio</a></li>

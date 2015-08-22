@@ -44,8 +44,7 @@ body {
 .footer {
   @media (min-width: $breakpoint-typography-m) {
     background-color: $color-backdrop;
-    color: #fff;
-    color: rgba(255,255,255,0.7);
+    color: #BEBEC2;
   }
   a:link,
   a:visited,
@@ -54,6 +53,13 @@ body {
   a:active {
     @media (min-width: $breakpoint-typography-m) {
         color: #fff;
+    }
+  }
+  a:hover,
+  a:focus,
+  a:active {
+    @media (min-width: $breakpoint-typography-m) {
+        border-color: #BEBEC2;
     }
   }
 }

@@ -11,7 +11,7 @@ slug: page-projects
 {% for project in site.projects %}
 <li class="content-list__item content-list__item--image">
   <a class="content-list__link" href="{% if project.link %}{{ project.link }}{% else %}{{ project.url }}{% endif %}">
-    <h3 class="title">{{ project.title }}</h3>
+    <h2 class="title h3">{{ project.title }}</h2>
     <img class="image" src="/image/{{ project.image }}" alt="" />
     <p class="excerpt">{{ project.description }}</p>
   </a>

@@ -27,7 +27,7 @@
             <h2>Team</h2>
             <ul>
               {% for name in page.team %}
-              <li><a href="{{ name.link }}">{{ name.name }}</a>, {{ name.role }}</li>
+              <li>{% if name.link %}<a href="{{ name.link }}">{% endif %}{{ name.name }}{% if name.link %}</a>{% endif %}{% if name.role %}, {{ name.role }}{% endif %}</li>
               {% endfor %}
             </ul>
             {% endif %}

@@ -11,7 +11,7 @@ slug: page-portfolio
     <ol class="content-list">
 
     <li class="content-list__item content-list__item--highlight">
-        <h2 class="title">Your project?</h2>
+        <h3 class="title h2">Your project?</h3>
         <p>Upcoming availability in {{ site.availability }}.</p>
         <a href="/hire-me/#consultancy" class="button">Hire me</a>
     </li>
@@ -19,7 +19,7 @@ slug: page-portfolio
     {% for casestudy in site.portfolio %}
     <li class="content-list__item content-list__item--image">
       <a class="content-list__link" href="{{casestudy.url}}">
-        <h2 class="title">{{ casestudy.title }}</h2>
+        <h3 class="title">{{ casestudy.title }}</h3>
         <img class="image" src="/image/{{ casestudy.image }}" alt="" />
         <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
         {% endif %}</p>
@@ -36,8 +36,8 @@ slug: page-portfolio
 <ol class="content-list content-list--teaser">
     {% for project in site.projects %}
     <li class="content-list__item content-list__item--image">
-      <a class="content-list__link" href="{{ project.url }}">
-        <h3 class="title">{{ project.title }}</h3>
+      <a class="content-list__link" href="{% if project.link %}{{ project.link }}{% else %}{{ project.url }}{% endif %}">
+        <h2 class="title h3">{{ project.title }}</h2>
         <img class="image" src="/image/{{ project.image }}" alt="" />
         <p class="excerpt">{{ project.description }}</p>
       </a>

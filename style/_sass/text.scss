@@ -170,4 +170,38 @@ figcaption {
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+.date,
+.client,
+.url {
+  color: #666;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.client {
+  margin-top: 5px;
+}
+
+.hero {
+  margin: -20px -20px $base-font-size -20px;
+  img {
+    @media (min-width: $breakpoint-typography-s) {
+      border-radius: 2px 2px 0 0;
+      max-width: none;
+      width: 100%;
     }
+  }
+}
+
+.id {
+  border-radius: 2px;
+  color: #fff;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  right: 10px;
+  top: -2px;
+}
