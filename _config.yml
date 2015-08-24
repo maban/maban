@@ -44,6 +44,3 @@ collections:
   articles:
     output: true
     title: Articles
-
-sass:
-  sass_dir: style/_sass
