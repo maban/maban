@@ -3,4 +3,6 @@ Gemfile.lock
 
 *.scssc
 
-*.scssc
+/node_modules/*
+
+node_modules/gulp-imagemin/node_modules/imagemin/node_modules/buffer-to-vinyl/node_modules/vinyl/index.js
