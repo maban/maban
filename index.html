@@ -87,7 +87,7 @@ is-home: true
 
     {% for casestudy in site.portfolio reversed limit:3 %}
     <li class="content-list__item content-list__item--image">
-      <a class="content-list__link" href="/portfolio/{{casestudy.filename}}.html">
+      <a class="content-list__link" href="{{casestudy.url}}">
         <h2 class="title">{{ casestudy.title }}</h2>
         <img class="image" src="/image/{{ casestudy.image }}" alt="" />
         <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
