@@ -2,53 +2,57 @@
 
 <body class="page-portfolio">
 
-{% include header.html %}
+  {% include header.html %}
 
-    <main role="main">
+  <main role="main">
 
-        <article class="article">
+    <article class="article">
 
-            {% if page.image %}<div class="hero article__hero"><img src="/image/{{ page.image }}" /></div>{% endif %}
+      {% if page.image %}
+      <div class="hero article__hero">
+        <img src="/image/{{ page.image }}" />
+      </div>
+      {% endif %}
 
-            <h1 class="title article__title">{{ page.title }}</h1>
+      <h1 class="title article__title">{{ page.title }}</h1>
 
-            <p class="client">{{ page.client }}{% if page.agency %}, with {{ page.agency }}
-            {% endif %}</p>
+      <p class="client">{{ page.client }}{% if page.agency %}, with {{ page.agency }}
+      {% endif %}</p>
 
-            {% if page.site %}
-            <p class="url"><a href="{{ page.site }}">{{ page.site }}</a></p>
-            {% endif %}
+      {% if page.site %}
+      <p class="url"><a href="{{ page.site }}">{{ page.site }}</a></p>
+      {% endif %}
 
-            <h2>Involvement</h2>
+      <h2>Involvement</h2>
 
-            <p>{{ page.involvement }}</p>
+      <p>{{ page.involvement }}</p>
 
-            {% if page.team %}
-            <h2>Team</h2>
-            <ul>
-              {% for name in page.team %}
-              <li>{% if name.link %}<a href="{{ name.link }}">{% endif %}{{ name.name }}{% if name.link %}</a>{% endif %}{% if name.role %}, {{ name.role }}{% endif %}</li>
-              {% endfor %}
-            </ul>
-            {% endif %}
+      {% if page.team %}
+      <h2>Team</h2>
+      <ul>
+        {% for name in page.team %}
+        <li>{% if name.link %}<a href="{{ name.link }}">{% endif %}{{ name.name }}{% if name.link %}</a>{% endif %}{% if name.role %}, {{ name.role }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
 
-            {% if page.articles %}
-            <h2>Writeups</h2>
-            <ul>
-              {% for article in page.articles %}
-              <li><a href="{{ article.link }}">{{ article.name }}</a>, {{ article.source }}</li>
-              {% endfor %}
-            </ul>
-            {% endif %}
+      {% if page.articles %}
+      <h2>Writeups</h2>
+      <ul>
+        {% for article in page.articles %}
+        <li><a href="{{ article.link }}">{{ article.name }}</a>, {{ article.source }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
 
-            <h2>About the project</h2>
+      <h2>About the project</h2>
 
-            {{ content }}
+      {{ content }}
 
-        </article>
+    </article>
 
-    </main>
+  </main>
 
-{% include footer.html %}
+  {% include footer.html %}
 
 {% include foot.html %}

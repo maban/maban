@@ -2,50 +2,52 @@
 
 <body class="page-post">
 
-{% include header.html %}
+  {% include header.html %}
 
-    <main role="main" class="layout">
+  <main role="main" class="layout">
 
-        <article class="article">
+    <article class="article">
 
-            {% if page.image %}<div class="hero article__hero"><img src="{{ page.image }}" /></div>{% endif %}
+      {% if page.image %}
+      <div class="hero article__hero">
+        <img src="{{ page.image }}" />
+      </div>
+      {% endif %}
 
-            <h1 class="title article__title">{{ page.title }}</h1>
+      <h1 class="title article__title">{{ page.title }}</h1>
 
-            <time datetime="{{ page.date | date_to_xmlschema }}" class="date article__date">{{ page.date | date_to_long_string }}</time>
+      <time datetime="{{ page.date | date_to_xmlschema }}" class="date article__date">{{ page.date | date_to_long_string }}</time>
 
-            <p class="id article__id">{{ page.id }}</p>
+      <p class="id article__id">{{ page.id }}</p>
 
-            {{ content }}
+      {{ content }}
 
-        </article>
+    </article>
 
-        <div class="pagination">
-        {% assign previous = page.previous %}
-        {% if previous.url %}
-          <a href="{{ previous.url }}" class="pagination__previous">
-              <h2 class="title article__title">{{ previous.title }}</h2>
-              <p class="id article__id">{{ previous.id }}</p>
-              <time datetime="{{ previous.date | date_to_xmlschema }}" class="date article__date">{{ previous.date | date_to_long_string }}</time>
-              <p>{{ previous.content | strip_html | truncatewords:30}}</p>
+    <div class="pagination">
+      {% assign previous = page.previous %}
+      {% if previous.url %}
+      <a href="{{ previous.url }}" class="pagination__previous">
+        <h2 class="title article__title">{{ previous.title }}</h2>
+        <p class="id article__id">{{ previous.id }}</p>
+        <time datetime="{{ previous.date | date_to_xmlschema }}" class="date article__date">{{ previous.date | date_to_long_string }}</time>
+        <p>{{ previous.content | strip_html | truncatewords:30}}</p>
+      </a>
+      {% endif %}
 
-          </a>
-        {% endif %}
+      {% assign next = page.next %}
+      {% if next.url %}
+      <a href="{{ next.url }}" class="pagination__next">
+        <h2 class="title article__title">{{ next.title }}</h2>
+        <p class="id article__id">{{ next.id }}</p>
+        <time datetime="{{ next.date | date_to_xmlschema }}" class="date article__date">{{ next.date | date_to_long_string }}</time>
+        <p>{{ next.content | strip_html | truncatewords:30}}</p>
+      </a>
+      {% endif %}
+    </div>
 
-        {% assign next = page.next %}
-        {% if next.url %}
-          <a href="{{ next.url }}" class="pagination__next">
-              <h2 class="title article__title">{{ next.title }}</h2>
-              <p class="id article__id">{{ next.id }}</p>
-              <time datetime="{{ next.date | date_to_xmlschema }}" class="date article__date">{{ next.date | date_to_long_string }}</time>
-              <p>{{ next.content | strip_html | truncatewords:30}}</p>
+  </main>
 
-          </a>
-        {% endif %}
-        </div>
-
-    </main>
-
-{% include footer.html %}
+  {% include footer.html %}
 
 {% include foot.html %}
