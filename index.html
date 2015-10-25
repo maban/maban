@@ -134,6 +134,7 @@ is-home: true
         <h3 class="title">{{ podcast.podcast }} № {{ podcast.episode }}</h3>
         <p class="subtitle">With {{ podcast.hosts }}</p>
         <time datetime="{{ podcast.date | date_to_xmlschema }}" class="date">{{ podcast.date | date_to_long_string }}</time>
+        {% if podcast.host %}<p class="status">Co-hosted</p>{% endif %}
       </a>
     </li>
     {% endfor %}

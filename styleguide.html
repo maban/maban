@@ -1,7 +1,51 @@
 ---
 title: Pattern Primer
 layout: default
+
+colors:
+ - name: color-base
+   purpose: Body text
+   hex: #363942
+ - name: color-canvas
+   purpose: Site background colour
+   hex: #E7E7E7
+ - name: color-link
+   purpose: Link
+   hex: #246E99
+ - name: color-link-focus
+   purpose: Link focus and hover
+   hex: #40BAD2
+ - name: color-highlight
+   purpose: Highlighted text
+   hex: #EEEE8F
+ - name: color-backdrop
+   purpose: Backdrop
+   hex: #2D2D3A
+ - name: section-writing
+   purpose: Writing
+   hex: #96b346
+ - name: section-portfolio
+   purpose: Portfolio
+   hex: #6ea8cc
+ - name: section-projects
+   purpose: Projects
+   hex: #dfbc35
+ - name: section-speaking
+   purpose: Speaking
+   hex: #e9668e
+ - name: section-home
+   purpose: Home
+   hex: #6D6D76
 ---
+
+<ul class="xx-swatches">
+    {% for color in page.colors %}
+    <li class="xx-swatch">
+        <span class="xx-swatch-preview" style="background-color: {{color.hex}};"></span>
+        <span class="xx-swatch-details">{{color.hex}} <code>${{color.name}}</code> <strong>{{color.purpose}}</strong></span>
+    </li>
+    {% endfor %}
+</ul>
 
 <ul class="xx-swatches">
     <li class="xx-swatch">
@@ -9,11 +53,15 @@ layout: default
         <span class="xx-swatch-details">#363942 <code>$color-base</code> <strong>Body text</strong></span>
     </li>
     <li class="xx-swatch">
-        <span class="xx-swatch-preview" style="background-color: #419DD2;"></span>
-        <span class="xx-swatch-details">#419DD2 <code>$color-link</code> <strong>Link</strong></span>
+        <span class="xx-swatch-preview" style="background-color: #E7E7E7;"></span>
+        <span class="xx-swatch-details">#E7E7E7 <code>$color-canvas</code> <strong>Body text</strong></span>
     </li>
     <li class="xx-swatch">
-        <span class="xx-swatch-preview" style="background-color: #40bad2;"></span>
+        <span class="xx-swatch-preview" style="background-color: #246E99;"></span>
+        <span class="xx-swatch-details">#246E99 <code>$color-link</code> <strong>Link</strong></span>
+    </li>
+    <li class="xx-swatch">
+        <span class="xx-swatch-preview" style="background-color: #40BAD2;"></span>
         <span class="xx-swatch-details">#40BAD2 <code>$color-link-focus</code> <strong>Link hover</strong></span>
     </li>
     <li class="xx-swatch">
@@ -29,8 +77,17 @@ layout: default
         <span class="xx-swatch-details">#999 <code>$color-muted-alt</code> <strong>Muted (Alt)</strong></span>
     </li>
     <li class="xx-swatch">
-        <span class="xx-swatch-preview" style="background-color: #f0f0f0;"></span>
-        <span class="xx-swatch-details">#F0F0F0 <code>$color-canvas</code> <strong>Canvas</strong></span>
+        <span class="xx-swatch-preview" style="background-color: #2D2D3A;"></span>
+        <span class="xx-swatch-details">#2D2D3A <code>$color-backdrop</code> <strong>Backdrop</strong></span>
+    </li>
+</ul>
+
+
+
+<ul class="xx-swatches">
+    <li class="xx-swatch">
+        <span class="xx-swatch-preview" style="background-color: #96b346;"></span>
+        <span class="xx-swatch-details">#96b346 <code>$section-writing</code> <strong>Body text</strong></span>
     </li>
 </ul>
 

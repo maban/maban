@@ -18,7 +18,7 @@ markdown:    redcarpet
 permalink:   /:title
 highlighter: pygments
 
-availability: "November 2015"
+availability: "January 2015"
 
 paginate: 20
 paginate_path: "/archives/page/:num"
