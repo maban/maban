@@ -1,10 +1,10 @@
-title: Pattern Library
-description: A collection of patterns to help you build up a style guide for your site
+title: Maban Ltd
+description: Anna Debenham, Front-end Developer
 
-destination: ./_site
-plugins:     _plugins
-layouts:     _layouts
-includes:    _includes
+destination:  ./_site
+plugins_dir:  _plugins
+layouts_dir:  _layouts
+includes_dir: _includes
 include:     ['.htaccess']
 exclude:
   - _config.yaml

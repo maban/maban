@@ -2,7 +2,9 @@
   "name": "Maban",
   "version": "0.0.0",
   "author": "Anna Debenham",
-  "dependencies": {},
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
   "license": "CC-BY-NC-SA-4.0",
   "private": true,
   "repository": {
