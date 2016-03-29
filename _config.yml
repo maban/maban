@@ -12,6 +12,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - node_modules
 keep_files:  ['.git']
 timezone:    Europe/London
 markdown:    redcarpet
