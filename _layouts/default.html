@@ -2,15 +2,19 @@
 
 <body class="{{ page.slug }}">
 
-  {% include header.html %}
+  <div class="backdrop--dark">
 
-  <main role="main" class="layout--full">
+    {% include header.html %}
 
-  {{ content }}
+    <main role="main" class="layout--full">
 
-  </main>
+    {{ content }}
 
-  {% include footer.html %}
+    </main>
+
+    {% include footer.html %}
+
+  </div>
 
 </body>
 

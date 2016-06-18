@@ -2,19 +2,23 @@
 
 <body class="{{ page.slug }}">
 
-  {% include header.html %}
+  <div class="backdrop--dark">
 
-  <div class="masthead">
-    <img src="/image/{{ page.image }}" alt="{{ page.image-alt }}"/>
+    {% include header.html %}
+
+    <div class="masthead">
+      <img src="/image/{{ page.image }}" alt="{{ page.image-alt }}"/>
+    </div>
+
+    <main role="main" class="layout">
+
+    {{ content }}
+
+    </main>
+
+    {% include footer.html %}
+
   </div>
-
-  <main role="main" class="layout">
-
-  {{ content }}
-
-  </main>
-
-  {% include footer.html %}
 
 </body>
 
