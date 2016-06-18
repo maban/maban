@@ -20,13 +20,19 @@ slug: page-portfolio
 
     {% for casestudy in site.portfolio %}
     <li class="content-list__item content-list__item--image">
-      <a class="content-list__link" href="{{casestudy.url}}">
-        <h3 class="title">{{ casestudy.title }}</h3>
-        <img class="image" src="/image/{{ casestudy.image }}" alt="" />
-        <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
-        {% endif %}</p>
-        <h4>Involvement</h4>
-        <p class="excerpt">{{ casestudy.involvement }}</p>
+      <a class="content-list__item__link" href="{{casestudy.url}}">
+        <div class="content-list__item__heading">
+          <h3 class="content-list__item__title">{{ casestudy.title }}</h3>
+        </div>
+        <div class="content-list__item__image">
+          <img src="/image/{{ casestudy.image }}" alt="" />
+        </div>
+        <div class="content-list__item__text">
+          <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
+            {% endif %}</p>
+          <h4>Involvement</h4>
+          <p class="excerpt">{{ casestudy.involvement }}</p>
+        </div>
       </a>
     </li>
     {% endfor %}
@@ -38,16 +44,19 @@ slug: page-portfolio
 <ol class="content-list content-list--teaser">
     {% for project in site.projects %}
     <li class="content-list__item content-list__item--image">
-      <a class="content-list__link" href="{% if project.link %}{{ project.link }}{% else %}{{ project.url }}{% endif %}">
-        <h2 class="title h3">{{ project.title }}</h2>
-        <img class="image" src="/image/{{ project.image }}" alt="" />
+      <a class="content-list__item__link" href="{% if project.link %}{{ project.link }}{% else %}{{ project.url }}{% endif %}">
+      <div class="content-list__item__heading">
+        <h3 class="content-list__item__title">{{ project.title }}</h3>
+      </div>
+      <div class="content-list__item__image">
+        <img src="/image/{{ project.image }}" alt="" />
+      </div>
+      <div class="content-list__item__text">
         <p class="excerpt">{{ project.description }}</p>
+      </div>
       </a>
     </li>
     {% endfor %}
-    <li class="content-list__item content-list__item--more">
-      <a class="content-list__link" href="/projects/">
-        <span class="content-list__link__text">Show More Projects</span>
-      </a>
-    </li>
 </ol>
+
+<a class="content-list__link" href="/projects/">Show More Projects</a>
