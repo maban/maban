@@ -5,18 +5,13 @@ slug: page-home
 is-home: true
 ---
 
-<div class="layout">
+<section class="l-container u-centered" id="about">
 
-    <h2 class="heading-section">About me</h2>
+  <h2>About me</h2>
 
-    <div class="lede">
+  <div class="lede">
 
     <p>Hi! I'm Anna, a Front-end Developer at <a href="http://snyk.io">Snyk</a> in London in the UK. In 2013, I was awarded <a href="https://thenetawards.com/previous-winners/">Netmag's Young Developer of the Year</a>.</p>
-
-    <figure class="pull">
-      <img src="/image/photo-ala-meeting.png" />
-      <figcaption>Photo by <a href="https://www.flickr.com/photos/zeldman/16225849549/in/album-72157648241817794/">Jeffrey Zeldman</a></figcaption>
-    </figure>
 
     <p>In 2015, I co-hosted a small-batch podcast with Brad Frost on Front-end Style Guides, and <a href="/projects/front-end-style-guides/">I've written a book on the topic</a>. I'm also interested in the browsers on various game consoles, and <a href="http://console.maban.co.uk/">I've made a site documenting these</a>.</p>
 
@@ -24,139 +19,6 @@ is-home: true
 
     <p>Every December, I co-produce <a href="http://24ways.org/">24 Ways</a>.</p>
 
-    </div>
-
-</div>
-
-
-<section class="page-projects layout--full">
-
-  <h2 class="heading-prominent">Side projects</h2>
-
-  <ol class="content-list content-list--teaser">
-  {% for project in site.projects %}
-  <li class="content-list__item content-list__item--image">
-    <a class="content-list__link" href="{{ project.link }}">
-      <h3 class="title">{{ project.title }}</h3>
-      <img class="image" src="/image/{{ project.image }}" alt="" />
-      <p class="excerpt">{{ project.description }}</p>
-    </a>
-  </li>
-  {% endfor %}
-  <li class="content-list__item content-list__item--more">
-    <a class="content-list__link" href="/projects/">
-      <span class="content-list__link__text">Show More Projects</span>
-    </a>
-  </li>
-  </ol>
-
-</section>
-
-
-<section class="page-writing layout--full">
-
-<h2 class="heading-prominent">Writing</h2>
-
-  <!-- writing: blog posts -->
-  <ol class="content-list content-list--teaser">
-    {% for post in site.posts limit:3 %}
-      <li class="content-list__item">
-          <a href="{{ post.url }}" class="content-list__link">
-              <h3 class="title article__title">{{ post.title }}</h3>
-              <time datetime="{{ post.date | date_to_xmlschema }}" class="date article__date">{{ post.date | date_to_long_string }}</time>
-              <p class="excerpt article__excerpt">{{ post.content | strip_html | truncatewords:40}}</p>
-              <p class="id article__id">{{ post.id }}</p>
-          </a>
-      </li>
-    {% endfor %}
-    <li class="content-list__item content-list__item--more">
-      <a class="content-list__link" href="/writing/">
-        <span class="content-list__link__text">Show More Articles</span>
-      </a>
-    </li>
-  </ol>
-
-</section>
-
-
-<section class="page-portfolio layout--full">
-
-  <h2 class="heading-prominent">Portfolio</h2>
-
-  <ol class="content-list content-list--teaser">
-
-    {% for casestudy in site.portfolio reversed limit:3 %}
-    <li class="content-list__item content-list__item--image">
-      <a class="content-list__link" href="{{casestudy.url}}">
-        <h2 class="title">{{ casestudy.title }}</h2>
-        <img class="image" src="/image/{{ casestudy.image }}" alt="" />
-        <p class="client">{{ casestudy.client }}{% if casestudy.agency %}, with {{ casestudy.agency }}
-        {% endif %}</p>
-        <h3 class="h4">Involvement</h3>
-        <p class="excerpt">{{ casestudy.involvement }}</p>
-      </a>
-    </li>
-    {% endfor %}
-    <li class="content-list__item content-list__item--more">
-      <a class="content-list__link" href="/portfolio/">
-        <span class="content-list__link__text">Show More Case Studes</span>
-      </a>
-    </li>
-  </ol>
-
-</section>
-
-<section class="page-speaking">
-  <h2 class="heading-prominent">Speaking</h2>
-  <ol class="content-list">
-    {% for talk in site.talks reversed %}
-    <li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
-      <a class="content-list__link" href="{{ talk.link }}">
-        <h3 class="title">{{ talk.conf }}</h3>
-        <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
-        <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
-        <p class="subtitle">{{ talk.title }}</p>
-        {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
-      </a>
-    </li>
-    {% endfor %}
-    <li class="content-list__item content-list__item--more">
-    </li>
-  </ol>
-</section>
-
-<section class="page-podcasts">
-  <h2 class="heading-prominent">Podcasts</h2>
-  <ol class="content-list">
-    {% for podcast in site.podcasts reversed %}
-    <li class="content-list__item">
-      <a class="content-list__link" href="{{ podcast.link }}">
-        <h3 class="title">{{ podcast.podcast }} № {{ podcast.episode }}</h3>
-        <p class="subtitle">With {{ podcast.hosts }}</p>
-        <time datetime="{{ podcast.date | date_to_xmlschema }}" class="date">{{ podcast.date | date_to_long_string }}</time>
-        {% if podcast.host %}<p class="status">Co-hosted</p>{% endif %}
-      </a>
-    </li>
-    {% endfor %}
-  </ol>
-</section>
-
-<section class="page-articles">
-
-  <h2 class="heading-prominent">Published Articles</h2>
-
-  <ol class="content-list">
-
-    {% for article in site.articles reversed %}
-    <li class="content-list__item">
-      <a class="content-list__link" href="{{ article.link }}">
-        <h3 class="title">{{ article.publication }}</h3>
-        <p class="subtitle">{{ article.title }}</p>
-        <p class="status">{{ article.type }}</p>
-      </a>
-    </li>
-    {% endfor %}
-
-  </ol>
+  </div>
 
 </section>
