@@ -1,31 +1,12 @@
-<div class="header">
+<div class="header l-container u-centered">
 
     <header role="banner" id="top" class="header-intro" itemscope itemtype="http://schema.org/Person">
       <{% if page.is-home %}h1{% else %}p{% endif %} class="header-intro__title">
-      <a href="http://maban.co.uk" class="header-intro__title-link" rel="me">Anna Debenham</a>
+      {% unless page.is-home %}<a href="http://maban.co.uk" class="header-intro__title-link" rel="me">{% endunless %}Anna Debenham{% unless page.is-home %}</a>{% endunless %}
       </{% if page.is-home %}h1{% else %}p{% endif %}>
     	<p class="header-intro__subtitle">Front-End Developer at <a href="http://snyk.io">Snyk</a></p>
+      <p><a href="/#about">About me</a></p>
     	{% comment %}<a href="/hire-me/" class="button button--hire">Hire me</a>{% endcomment %}
     </header>
-
-    <nav role="navigation" class="nav">
-      <ul class="nav__list">
-        <li class="nav__list-item section-home">
-          <a class="nav__list-link" href="/">maban.co.uk</a>
-        </li>
-        <li class="nav__list-item section-portfolio">
-          <a class="nav__list-link" href="/portfolio">Portfolio</a>
-        </li>
-        <li class="nav__list-item section-writing">
-          <a class="nav__list-link" href="/writing">Writing</a>
-        </li>
-        <li class="nav__list-item section-speaking">
-          <a class="nav__list-link" href="/speaking">Speaking</a>
-        </li>
-        <li class="nav__list-item section-projects">
-          <a class="nav__list-link" href="/projects">Side projects</a>
-        </li>
-      </ul>
-    </nav>
 
 </div>
