@@ -1,6 +1,6 @@
 {% include head.html %}
 
-<body class="page-post backdrop--dark">
+<body class="page-post">
 
   {% include header.html %}
 
@@ -28,7 +28,7 @@
 
     </div>
 
-    <div class="pagination">
+    <!--<div class="pagination">
       {% assign previous = page.previous %}
       {% if previous.url %}
       <a href="{{ previous.url }}" class="pagination__previous">
@@ -48,7 +48,7 @@
         <p>{{ next.content | strip_html | truncatewords:30}}</p>
       </a>
       {% endif %}
-    </div>
+    </div>-->
 
   </main>
 

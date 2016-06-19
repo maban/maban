@@ -63,6 +63,9 @@ slug: page-speaking
         <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
         <p class="subtitle">{{ talk.title }}</p>
       </div>
+      <p class="content-list__item__status">
+        {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
+      </p>
       <span class="flag flag-{{ talk.flag }}"></span>
     </a>
   </li>
