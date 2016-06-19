@@ -1,12 +1,47 @@
-<div class="header l-container u-centered">
+<div class="l-container--full l-tight--bottom">
+
+  <nav role="navigation" class="{% if page.is-home %}nav--extended{% else %}nav--mini{% endif %}">
+    <ul class="nav__list">
+      {% unless page.is-home %}
+      <li class="nav__list__item section-home">
+          <p class="nav__list__item__text--prominent"><a href="/">Anna Debenham</a></p>
+          <p class="nav__list__item__text">Front-end developer at <a href="https://snyk.io">Snyk</a></p>
+      </li>
+      {% endunless %}
+      <li class="nav__list__item section-fesg">
+        <a class="nav__list__link" href="/projects/front-end-style-guides/">Book</a>
+      </li>
+      <li class="nav__list__item section-writing">
+        <a class="nav__list__link" href="/writing">Writing</a>
+      </li>
+      <li class="nav__list__item section-portfolio">
+        <a class="nav__list__link" href="/portfolio">Portfolio</a>
+      </li>
+      <li class="nav__list__item section-speaking">
+        <a class="nav__list__link" href="/speaking">Speaking</a>
+      </li>
+      <!--<li class="nav__list__item section-projects">
+        <a class="nav__list__link" href="/projects">Side projects</a>
+      </li>-->
+      <!--<li class="nav__list__item section-ama">
+        <a class="nav__list__link" href="https://github.com/maban/ama">Ask me anything</a>-->
+      </li>
+    </ul>
+  </nav>
+
+</div>
+
+{% if page.is-home %}
+<div class="header l-container l-tight--bottom l-tight--top u-centered u-separator">
 
     <header role="banner" id="top" class="header-intro" itemscope itemtype="http://schema.org/Person">
       <{% if page.is-home %}h1{% else %}p{% endif %} class="header-intro__title">
       {% unless page.is-home %}<a href="http://maban.co.uk" class="header-intro__title-link" rel="me">{% endunless %}Anna Debenham{% unless page.is-home %}</a>{% endunless %}
       </{% if page.is-home %}h1{% else %}p{% endif %}>
     	<p class="header-intro__subtitle">Front-End Developer at <a href="http://snyk.io">Snyk</a></p>
-      <p><a href="/#about">About me</a></p>
+      {% unless page.is-home %}<p><a href="/#about">About me</a></p>{% endunless %}
     	{% comment %}<a href="/hire-me/" class="button button--hire">Hire me</a>{% endcomment %}
     </header>
 
 </div>
+{% endif %}

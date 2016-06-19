@@ -4,12 +4,37 @@ title: Anna Debenham
 slug: page-portfolio
 ---
 
-<h1 class="heading-section">Portfolio</h1>
+<div class="l-container--tight u-centered">
+  <h1 class="heading-section">Portfolio</h1>
+  <h2 class="heading-prominent u-separator">Side projects</h2>
+</div>
 
-<h2 class="heading-section">Client work</h2>
+<div class="l-container--full l-tight--bottom">
+  <ol class="content-list content-list--teaser">
+    {% for project in site.projects %}
+    <li class="content-list__item content-list__item--image">
+      <a class="content-list__item__link" href="{% if project.link %}{{ project.link }}{% else %}{{ project.url }}{% endif %}">
+        <div class="content-list__item__heading">
+          <h3 class="content-list__item__title">{{ project.title }}</h3>
+        </div>
+        <div class="content-list__item__image">
+          <img src="/image/{{ project.image }}" alt="" />
+        </div>
+        <div class="content-list__item__text">
+          <p class="excerpt">{{ project.description }}</p>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
 
-    <ol class="content-list">
+<div class="l-container--tight u-centered u-separator l-tight--top">
+  <h2 class="heading-prominent">Client work</h2>
+</div>
 
+<div class="l-container--full">
+  <ol class="content-list">
     {% comment %}
     <li class="content-list__item content-list__item--highlight">
         <h3 class="title h2">Your project?</h3>
@@ -17,7 +42,6 @@ slug: page-portfolio
         <a href="/hire-me/#consultancy" class="button">Hire me</a>
     </li>
     {% endcomment %}
-
     {% for casestudy in site.portfolio %}
     <li class="content-list__item content-list__item--image">
       <a class="content-list__item__link" href="{{casestudy.url}}">
@@ -36,27 +60,5 @@ slug: page-portfolio
       </a>
     </li>
     {% endfor %}
-
-</ol>
-
-<h2 class="heading-prominent">Side projects</h2>
-
-<ol class="content-list content-list--teaser">
-    {% for project in site.projects %}
-    <li class="content-list__item content-list__item--image">
-      <a class="content-list__item__link" href="{% if project.link %}{{ project.link }}{% else %}{{ project.url }}{% endif %}">
-      <div class="content-list__item__heading">
-        <h3 class="content-list__item__title">{{ project.title }}</h3>
-      </div>
-      <div class="content-list__item__image">
-        <img src="/image/{{ project.image }}" alt="" />
-      </div>
-      <div class="content-list__item__text">
-        <p class="excerpt">{{ project.description }}</p>
-      </div>
-      </a>
-    </li>
-    {% endfor %}
-</ol>
-
-<a class="content-list__link" href="/projects/">Show More Projects</a>
+  </ol>
+</div>
