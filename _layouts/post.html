@@ -6,6 +6,8 @@
 
   <main role="main" class="layout">
 
+    <div class="l-container">
+
     <article class="article">
 
       {% if page.image %}
@@ -24,7 +26,9 @@
 
     </article>
 
-    <div class="pagination">
+    </div>
+
+    <!--<div class="pagination">
       {% assign previous = page.previous %}
       {% if previous.url %}
       <a href="{{ previous.url }}" class="pagination__previous">
@@ -44,7 +48,7 @@
         <p>{{ next.content | strip_html | truncatewords:30}}</p>
       </a>
       {% endif %}
-    </div>
+    </div>-->
 
   </main>
 

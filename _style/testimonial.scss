@@ -1,28 +1,10 @@
 .testimonial {
-  margin-top: $base-font-size*2;
-  margin-bottom: $base-font-size;
-  border-left: 2px solid #ccc;
-  padding: 10px 20px;
-  p:first-child {
-    margin-top: 0;
+  font-size: 0.75em;
+  margin-bottom: 2em;
+  & + & {
+    @extend .u-separator--s;
   }
-  &:before {
-    content: "“";
-    position: absolute;
-    left: -13px;
-    font-size: 2.2em;
-    top: 10px;
-    color: #888;
-    font-weight: bold;
-    font-style: normal;
-    background-color: #E7E7E7;
-    padding: 7px 3px 0;
-    height: 17px;
-    font-family: "times";
-  }
-  cite {
-    margin-bottom: 0;
-    font-style: normal;
-    font-size: 15px;
+  p {
+  font-style: normal;
   }
 }

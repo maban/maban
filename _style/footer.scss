@@ -1,19 +1,4 @@
-.footer {
-  padding: 20px;
-  margin-top: $base-font-size;
-
-  .footer__links {
-    @extend .list-inline;
-    margin-top: 0;
-  }
-  .vcard {
-    margin: 1em 0 0;
-    font-size: smaller;
-    .adr {
-      margin-bottom: 1em;
-    }
-    p {
-      margin: 0;
-    }
-  }
+.footer__links {
+  @extend .t-small;
+  margin-bottom: 2em;
 }

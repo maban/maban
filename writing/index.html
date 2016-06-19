@@ -4,18 +4,30 @@ title: Anna Debenham
 slug: page-writing
 ---
 
-<h1 class="heading-section">Writing</h1>
+<div class="l-container--tight u-centered">
+  <h1 class="heading-section">Writing</h1>
+  <h2 class="heading-prominent u-separator">Written here and elsewhere</h2>
+</div>
 
-<!-- writing: blog posts -->
+<div class="l-container--full">
 <ol class="content-list">
   {% for post in site.posts %}
-    <li class="content-list__item">
-        <a href="{{ post.url }}" class="content-list__link">
-            <h2 class="title article__title">{{ post.title }}</h2>
+    <li class="content-list__item article--teaser">
+        <a href="{% if post.external %}{{ post.link }}{% else %}{{ post.url }}{% endif %}" class="content-list__item__link">
+          <div class="content-list__item__heading">
+            <h2 class="content-list__item__title article__title">{{ post.title }}</h2>
+          </div>
+          <div class="content-list__item__text">
             <time datetime="{{ post.date | date_to_xmlschema }}" class="date article__date">{{ post.date | date_to_long_string }}</time>
             <p class="excerpt article__excerpt">{{ post.content | strip_html | truncatewords:40}}</p>
-            <p class="id article__id">{{ post.id }}</p>
+          </div>
+          {% if post.external %}
+          <p class="content-list__item__publication">{{ post.publication }}</p>
+          {% else %}
+          <p class="content-list__item__id">{{ post.id }}</p>
+          {% endif %}
         </a>
     </li>
   {% endfor %}
 </ol>
+</div>

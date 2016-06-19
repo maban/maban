@@ -1,32 +1,40 @@
 .article {
-  @include card;
-  margin-bottom: $base-font-size*2;
+  background-color: $color-underlay--a;
+  box-sizing: border-box;
+  border-radius: $border-radius-m;
+  color: #333;
+  padding: 1.5em;
   position: relative;
-
-  @media (min-width: $breakpoint-typography-s) {
-    max-width: 45em;
-    margin-left: auto;
-    margin-right: auto;
+  a {
+    color: #007f90;
+    border-color: #007f90;
   }
-
-  & > *:last-child {
+  .article__hero {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    margin-top: -1.5em;
+    margin-bottom: 0.75em;
+    img {
+      width: 100%;
+      max-width: none;
+      border-radius: $border-radius-m $border-radius-m 0 0;
+    }
+  }
+  .article__title {
+    margin-top: 0;
+    margin-right: 2em;
     margin-bottom: 0;
   }
-
-  .title {
-    margin-right: 50px; // give room for article number
+  .article__date {
+    margin-bottom: 1em;
+    display: inline-block;
   }
-
-}
-
-.article--full {
-  @extend .article;
-  @media (min-width: $breakpoint-typography-s) {
-    max-width: 80em;
-  }
-  &:after {
-    clear: both;
-    content: "";
-    display: block;
+  .article__id {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-accent--b;
+    padding: 1em;
+    border-radius: 0 $border-radius-m;
   }
 }

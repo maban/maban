@@ -1,35 +1,21 @@
+@import 'mixins.scss';
+
 // Base
-@import 'transitions.scss';
+@import 'base.scss';
 @import 'typography.scss';
-@import 'measure.scss';
+@import 'backdrop.scss';
 @import 'utility.scss';
-@import 'color-scheme.scss';
-
-// Elements
-@import 'buttons.scss';
-@import 'block.scss';
-@import 'card.scss';
-@import 'text.scss';
-@import 'flag.scss';
-@import 'headings.scss';
-@import 'links.scss';
-@import 'lists.scss';
-@import 'list-inline.scss';
-@import 'media.scss';
-@import 'pagination.scss';
-@import 'prose.scss';
-@import 'testimonial.scss';
-
-// Modules
-@import 'content-list.scss';
-@import 'nav.scss';
-@import 'nav-breadcrumb.scss';
-@import 'header.scss';
-@import 'footer.scss';
 
 
 @import 'layout.scss';
 
+@import 'article-teaser.scss';
 @import 'article.scss';
-
-@import 'styleguide.scss';
+@import 'box.scss';
+@import 'button.scss';
+@import 'content-list.scss';
+@import 'footer.scss';
+@import 'header.scss';
+@import 'list.scss';
+@import 'nav.scss';
+@import 'testimonial.scss';
