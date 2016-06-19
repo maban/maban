@@ -28,7 +28,7 @@ slug: page-speaking
         </div>
         <div class="content-list__item__text">
           <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
-          <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
+          <time class="date">{{ talk.when }}</time>
           <p class="subtitle">{{ talk.title }}</p>
         </div>
         <p class="content-list__item__status">
@@ -60,7 +60,7 @@ slug: page-speaking
       </div>
       <div class="content-list__item__text">
         <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
-        <time datetime="{{ talk.date | date_to_xmlschema }}" class="date">{{ talk.date | date_to_long_string }}</time>
+        <time class="date">{{ talk.when }}</time>
         <p class="subtitle">{{ talk.title }}</p>
       </div>
       <p class="content-list__item__status">
