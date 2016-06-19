@@ -1,0 +1,53 @@
+small,
+.t-small {
+  font-size: 0.7em;
+}
+
+p,
+.t-p {
+  margin-top: 0;
+}
+
+h1,
+.t-h1 {
+  font-weight: 700;
+}
+
+h2,
+.t-h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+h3,
+.t-h3 {
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+a,
+.t-link {
+  border-bottom: 1px solid $color-white;
+  color: $color-white;
+  text-decoration: none;
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-white;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 2px solid $color-white;
+  }
+}
+
+.t-link--unstyled {
+  border: none;
+}
+
+.t-lede {
+  font-size: 1.2em;
+}

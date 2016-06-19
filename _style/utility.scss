@@ -1,0 +1,23 @@
+.u-centered {
+  text-align: center;
+}
+
+[class*='u-separator'] {
+  &:before {
+    content: " ";
+    display: block;
+    margin: 1em auto;
+    border-top: 2px dashed $color-white;
+    width: 200px;
+    @media (min-width: 30em) and (min-height: 40em) {
+      margin: 2em auto;
+    }
+  }
+}
+
+.u-separator--s {
+  @extend [class*='u-separator'];
+  &:before {
+    width: 100px;
+  }
+}

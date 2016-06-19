@@ -1,0 +1,93 @@
+.content-list {
+  @extend nav;
+  font-size: 0.9em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .content-list__item {
+    align-self: flex-start;
+    border-radius: $border-radius-m;
+    width: 100%;
+    margin: 0 0 2.5em 0;
+    background-color: rgba(255,255,255,0.15);
+    box-sizing: border-box;
+    position: relative;
+    @media (min-width: 40em) {
+      width: 47%;
+      margin-left: 1.5%;
+      margin-right: 1.5%;
+    }
+    @media (min-width: 60em) {
+      width: 31.333%;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+    @media (min-width: 80em) {
+      width: 23%;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+    &:hover {
+      .content-list__item__image img {
+        border-bottom: 12px solid $color-accent--d;
+      }
+      .content-list__item__id {
+        background-color: $color-accent--e;
+      }
+      .content-list__item__publication {
+        background-color: $color-accent--c;
+      }
+      .content-list__item__status {
+        background-color: $color-accent--a;
+      }
+    }
+    .content-list__item__link {
+      @extend .t-link--unstyled;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .content-list__item__heading,
+    .content-list__item__text {
+      margin: 0 1em;
+      width: 100%;
+    }
+    .content-list__item__image {
+      order: 1;
+      margin-bottom: 0.8em;
+      width: 100%;
+      img {
+        border-bottom: 12px solid $color-accent--c;
+        border-radius: $border-radius-m $border-radius-m 0 0;
+      }
+    }
+    .content-list__item__heading {
+      order: 2;
+      font-weight: 700;
+    }
+    .content-list__item__text {
+      order: 3;
+    }
+    .content-list__item__title {
+      margin: 0;
+    }
+    .content-list__item__id,
+    .content-list__item__publication,
+    .content-list__item__status {
+      background-color: $color-accent--b;
+      color: #333;
+      margin: 0 0 1em 0;
+      padding: 0.5em;
+      width: 100%;
+      font-size: 0.7em;
+      text-align: right;
+      border-radius: $border-radius-m $border-radius-m 0 0;
+    }
+    .content-list__item__publication {
+      background-color: $color-accent--d;
+    }
+    .content-list__item__status {
+      background-color: $color-accent--d;
+    }
+  }
+
+}
