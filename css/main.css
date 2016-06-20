@@ -329,6 +329,8 @@ a,
               order: 3; }
     .content-list .content-list__item .content-list__item__title {
       margin: 0; }
+    .content-list .content-list__item .content-list__item__subtitle {
+      margin: 0; }
     .content-list .content-list__item .content-list__item__id,
     .content-list .content-list__item .content-list__item__publication,
     .content-list .content-list__item .content-list__item__status {
