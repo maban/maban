@@ -5,7 +5,7 @@
     {% include header.html %}
 
     <div class="masthead">
-      <img src="/image/{{ page.image }}" alt="{{ page.image-alt }}"/>
+      <img src="/image/{% if page.image-hero %}{{ page.image-hero }}{% else %}{{ page.image }}{% endif %}" alt="{{ page.image-alt }}"/>
     </div>
 
     <main role="main" class="layout">
