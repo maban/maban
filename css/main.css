@@ -11,8 +11,14 @@ blockquote {
     font-style: italic; }
 
 figure {
-  margin-left: 0;
-  margin-right: 0; }
+  margin: 2em 0;
+  text-align: center; }
+  figure img {
+    -webkit-border-radius: 0.2em;
+            border-radius: 0.2em; }
+
+figcaption {
+  font-size: 0.85em; }
 
 hr {
   border: 1px dashed #455A64;
@@ -38,11 +44,14 @@ h1,
 h2,
 .t-h2 {
   font-size: 1.5em;
-  font-weight: normal; }
+  font-weight: normal;
+  margin-bottom: 0.7em;
+  margin-top: 1em; }
 
 h3,
 .t-h3 {
   font-size: 1.3em;
+  margin-bottom: 0.7em;
   font-weight: normal; }
 
 a,

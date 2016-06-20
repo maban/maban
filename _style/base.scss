@@ -15,8 +15,15 @@ blockquote {
 }
 
 figure {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 2em 0;
+  text-align: center;
+  img {
+    border-radius: $border-radius-m;
+  }
+}
+
+figcaption {
+  font-size: 0.85em;
 }
 
 hr {
