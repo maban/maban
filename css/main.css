@@ -550,3 +550,7 @@ nav, .content-list {
   margin-bottom: 2em; }
   .testimonial p {
     font-style: normal; }
+
+.twitter-tweet {
+  margin: 0 auto;
+  padding-bottom: 0.8em; }
