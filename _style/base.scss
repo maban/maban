@@ -8,14 +8,23 @@ body {
 }
 
 blockquote {
-  margin: 0 0 1em 0;
+  margin: 1.2em 0 1.2em 0;
+  font-size: 1.1em;
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+  padding-left: 1em;
   p {
-  font-style: italic;
+    font-style: italic;
+    margin-bottom: 0.5em;
+  }
+  cite {
+    font-weight: 700;
+    font-size: 0.8em;
+    font-style: normal;
   }
 }
 
 figure {
-  margin: 2em 0;
+  margin: 1.2em 0 1em;
   text-align: center;
   img {
     border-radius: $border-radius-m;
@@ -33,4 +42,60 @@ hr {
 
 img {
   max-width: 100%;
+}
+
+strong {
+  font-weight: 700;
+}
+
+code {
+  font-family: "Monaco", "courier", monospace;
+  font-size: 0.78em;
+  background-color: #333;
+  padding: 0.2em 0.35em;
+  margin: 0 0.1em 0 0;
+  border-radius: $border-radius-m;
+  color: #fff;
+  display: inline-block;
+}
+
+pre code {
+  font-size: 0.7em;
+  display: block;
+  padding: 1em;
+  white-space: pre-wrap;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+  tr {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+
+  }
+  thead tr {
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+  }
+  td,
+  th {
+    padding: 0.2em 0;
+    flex: 1;
+    text-align: left;
+  }
+}
+
+ul,
+ol {
+  padding-left: 1em;
+}
+
+dl {
+  font-style: italic;
+  dt {
+    font-weight: 700;
+  }
+  dd {
+    margin: 0;
+  }
 }

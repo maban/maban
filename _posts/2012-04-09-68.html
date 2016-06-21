@@ -5,9 +5,9 @@ title: nth-of-type and media queries
 
 <p>At the moment I'm refreshing an old site and adapting some code I wrote 3 years ago. A few of the pages have lists of teasers to full articles which are displayed in a grid. They use nth-of-type to remove margins off every 3rd block on a row, and clear the block after that.</p>
 
-<div class="full">
+<figure>
     <img src="/image/diagram-nth-of-type-04.png" alt="example of the correct blocks clearing"/>
-</div>
+</figure>
 
 <p>Back then, <a href="http://maban.co.uk/29">I did a write-up of this technique</a>. It's a little ropey and basic, but I've adapted the code since.</p>
 
@@ -46,7 +46,7 @@ title: nth-of-type and media queries
 
 <p>Now I'm going to start adding some media queries, first for a width of more than 400px. (I'm using px for demonstration but <a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/">you may want to consider using ems instead</a>).</p>
 
-<pre><code>@media (min-width:400px) {  
+<pre><code>@media (min-width:400px) {
 
 .teasers li {
     width: 45%;
@@ -83,7 +83,7 @@ title: nth-of-type and media queries
 
 .teasers li:nth-of-type(3n+4) {
     clear: both;
-    }	
+    }
 
 }</code></pre>
 
@@ -109,7 +109,7 @@ title: nth-of-type and media queries
 
 .teasers li:nth-of-type(4n+5) {
     clear: both;
-    }	
+    }
 
 }</code></pre>
 

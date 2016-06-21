@@ -7,7 +7,7 @@ title: Using nth-of-type to create grid blocks that clear
     <img src="/image/diagram-nth-of-type-01.png" alt="grid blocks demonstrating that if some have more content than others, some block wrap, but others get stuck" />
     <figcaption>So this is what happens if the content in some blocks is longer than others.  Yeugh.</figcaption>
 </figure>
-    
+
 <p>Problem: You want to create a grid based layout with floats, but you don&#8217;t want to wrap things in extraneous divs to force blocks to clear properly.</p>
 
 <p>In an ideal world, all the content is the same height, and blocks will float and clear properly.  But this is not an ideal world.</p>
@@ -19,9 +19,9 @@ title: Using nth-of-type to create grid blocks that clear
 
 <p>One way of achieving this is by wrapping a div round the first three blocks which clears the content above. But this means adding extraneous divs to your markup, and can't always be done easily in a <abbr title="Content Management System">CMS</abbr>.</p>
 
-<div class="full">
+<figure>
     <img src="/image/diagram-nth-of-type-03.png" alt="a diagram showing blocks wrapped in container divs" />
-</div>
+</figure>
 
 <h2>nth-of-type to the rescue!</h2>
 
@@ -30,20 +30,17 @@ title: Using nth-of-type to create grid blocks that clear
 <p>So this code clears the 4th, 7th and 10th block</p>
 
 <pre>
-	<code>
-.block:nth-of-type(4),
+	<code>.block:nth-of-type(4),
 .block:nth-of-type(7),
 .block:nth-of-type(10) {
-    clear: both;
-    }
-	</code>
+  clear: both;
+}</code>
 </pre>
 
 <p>And this code adds margins onto every first and second block in a row.  (You can probably think of a more streamlined way of doing this if you&#8217;re better at maths than me!)</p>
 
 <pre>
-	<code>
-.block:nth-of-type(1),
+	<code>.block:nth-of-type(1),
 .block:nth-of-type(2),
 .block:nth-of-type(4),
 .block:nth-of-type(5),
@@ -51,9 +48,8 @@ title: Using nth-of-type to create grid blocks that clear
 .block:nth-of-type(8),
 .block:nth-of-type(10),
 .block:nth-of-type(11) {
-    margin-right:40px;
-    }
-	</code>
+  margin-right:40px;
+}</code>
 </pre>
 
 <figure class="full">
