@@ -17,7 +17,7 @@ keep_files:  ['.git']
 timezone:    Europe/London
 markdown:    redcarpet
 permalink:   /:title
-highlighter: pygments
+highlighter: rouge
 
 availability: "January 2015"
 
