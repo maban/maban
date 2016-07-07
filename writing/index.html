@@ -13,7 +13,7 @@ slug: page-writing
 <ol class="content-list">
   {% for post in site.posts %}
     <li class="content-list__item article--teaser">
-        <a href="{% if post.external %}{{ post.link }}{% else %}{{ post.url }}{% endif %}" class="content-list__item__link">
+        <a href="{% if post.external %}{{ post.link }}{% else %}{{ post.url }}{% unless jekyll.environment == "production" %}.html{% endunless %}{% endif %}" class="content-list__item__link">
           <div class="content-list__item__heading">
             <h2 class="content-list__item__title article__title">{{ post.title }}</h2>
           </div>
