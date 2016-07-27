@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "author": "Anna Debenham",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "snyk": "^1.17.4"
   },
   "license": "CC-BY-NC-SA-4.0",
   "private": true,
@@ -18,5 +19,10 @@
     "gulp-imagemin": "^2.3.0",
     "gulp-sass": "^2.0.4",
     "imagemin-pngquant": "^4.1.2"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
