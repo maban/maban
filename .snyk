@@ -3,10 +3,10 @@ ignore: {}
 patch:
   'npm:minimatch:20160620':
     - gulp > vinyl-fs > glob-stream > minimatch:
-        patched: '2016-08-01T09:45:44.502Z'
+        patched: '2016-08-01T09:46:04.499Z'
     - gulp > vinyl-fs > glob-stream > glob > minimatch:
-        patched: '2016-08-01T09:45:44.502Z'
+        patched: '2016-08-01T09:46:04.499Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
-        patched: '2016-08-01T09:45:44.502Z'
+        patched: '2016-08-01T09:46:04.499Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
-        patched: '2016-08-01T09:45:44.502Z'
+        patched: '2016-08-01T09:46:04.499Z'
