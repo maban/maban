@@ -1,0 +1,102 @@
+{% include head.html %}
+
+<body class="{{ page.slug }}">
+
+  {% include header.html %}
+
+  <div class="masthead">
+    <img src="/image/{% if page.image-hero %}{{ page.image-hero }}{% else %}{{ page.image }}{% endif %}" alt="{{ page.image-alt }}"/>
+  </div>
+
+  <main role="main" class="layout">
+
+    <div class="l-container">
+
+      <div class="l-container--tight u-centered">
+        <h1 class="heading-section">{{page.title}}</h1>
+        <h2 class="heading-prominent">{{page.duration}}</p>
+      </div>
+
+      <span class="u-separator"></span>
+
+      <h2 class="h4">Outline</h2>
+
+      <ul>
+        {% for outline in page.outline %}
+        <li>{{outline}}</li>
+        {% endfor %}
+      </ul>
+
+      <h2 class="h4">Description</h2>
+
+      {{content | markdownify}}
+
+    </div>
+
+    <span class="u-separator"></span>
+
+    <div class="l-container--tight u-centered">
+      <a class="button" href="https://speakerdeck.com/anna/style-guides-pattern-libraries-and-code-standards">Preview the slides</a>
+    </div>
+
+    <span class="u-separator"></span>
+
+    <div class="l-container--full">
+
+      <div class="l-container--tight u-centered">
+        <h2>Feedback</h2>
+      </div>
+
+      <div class="content-list content-list--quotes">
+      {% for feedback in page.testimonials %}
+        <blockquote class="content-list__item">
+          <div class="content-list__item__text">
+            {% for testimonial in feedback.testimonial %}
+            <p>{{testimonial.text}}</p>
+            <cite>{{testimonial.cite}}</cite>
+            {% endfor %}
+          </div>
+        </blockquote>
+      {% endfor %}
+      </div>
+
+    </div>
+
+    <div class="l-container--full u-separator">
+
+      <div class="l-container--tight u-centered">
+        <h2>Where I've given this talk</h2>
+      </div>
+
+      <ol class="content-list">
+      {% for talk in site.talks reversed %}
+      {% if talk.topic == 'Front-end Style Guides' %}
+      <li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
+        <a class="content-list__item__link" href="{{ talk.link }}">
+          <div class="content-list__item__heading">
+            <h3 class="content-list__item__title">{{ talk.conf }}</h3>
+          </div>
+          <div class="content-list__item__text">
+            <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
+            <time class="date">{{ talk.when }}</time>
+            <p class="subtitle">{{ talk.title }}</p>
+          </div>
+          <p class="content-list__item__status">
+            {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
+          </p>
+          <span class="flag flag-{{ talk.flag }}"></span>
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+      </ol>
+
+    </div>
+
+  </main>
+
+  {% include footer.html %}
+
+</body>
+
+{% include foot.html %}
