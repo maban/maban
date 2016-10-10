@@ -19,17 +19,22 @@
 
       <span class="u-separator"></span>
 
-      <h2 class="h4">Outline</h2>
+      <h2 class="u-centered">Outline</h2>
 
-      <ul>
-        {% for outline in page.outline %}
-        <li>{{outline}}</li>
-        {% endfor %}
-      </ul>
+      <div class="article">
+        <ul>
+          {% for outline in page.outline %}
+          <li>{{outline}}</li>
+          {% endfor %}
+        </ul>
+      </div>
 
-      <h2 class="h4">Description</h2>
+      <span class="u-separator"></span>
 
-      {{content | markdownify}}
+      <h2 class="u-centered">Description</h2>
+      <div class="article">
+        {{content | markdownify}}
+      </div>
 
     </div>
 
@@ -43,9 +48,7 @@
 
     <div class="l-container--full">
 
-      <div class="l-container--tight u-centered">
-        <h2>Feedback</h2>
-      </div>
+      <h2 class="u-centered">Feedback</h2>
 
       <div class="content-list content-list--quotes">
       {% for feedback in page.testimonials %}

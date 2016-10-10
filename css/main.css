@@ -22,8 +22,7 @@ figure {
   margin: 1.2em 0 1em;
   text-align: center; }
   figure img {
-    border-radius: 0.2em;
-    border: 1px solid #e1e8ed; }
+    border-radius: 0.2em; }
 
 figcaption {
   font-size: 0.85em; }
@@ -269,6 +268,8 @@ a,
     background-color: #8BC34A;
     padding: 1em;
     border-radius: 0 0.2em; }
+  .article figure img {
+    border: 1px solid #e1e8ed; }
 
 .box {
   background-color: rgba(255, 255, 255, 0.18);
