@@ -3,6 +3,13 @@
   font-size: 0.8em;
   padding: 1em;
   border-radius: $border-radius-m;
+  margin-bottom: 2em;
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .box--invert {

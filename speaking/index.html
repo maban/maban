@@ -22,7 +22,7 @@ slug: page-speaking
 
       <figure>
         <img src="/image/photo-update-1.jpg" alt="Photo of me giving a talk">
-        <figcaption>Photo by Geri Coady, taken at Update 2011</figcaption>
+        <figcaption>Photo by Geri Coady</figcaption>
       </figure>
 
     </div>
@@ -54,9 +54,7 @@ slug: page-speaking
 
 <div class="l-container--full">
 
-  <div class="l-container--tight u-centered">
-    <h2 class="u-separator">Upcoming and past events</h2>
-  </div>
+  <h2 class="u-separator u-centered">Upcoming and past events</h2>
 
   <ol class="content-list content-list--teaser">
     {% for talk in site.talks reversed %}
@@ -81,16 +79,16 @@ slug: page-speaking
     {% endif %}
     {% endfor %}
   </ol>
+
 </div>
 
-<h2 class="u-separator u-centered">Workshops</h2>
+<div class="l-container--full">
 
-<ol class="content-list">
+  <h2 class="u-separator u-centered">Workshops</h2>
 
+  <ol class="content-list content-list--teaser">
     {% for talk in site.talks reversed %}
-
     {% if talk.workshop %}
-
     <li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
       <a class="content-list__item__link" href="{{ talk.link }}">
         <div class="content-list__item__heading">
@@ -107,11 +105,10 @@ slug: page-speaking
         <span class="flag flag-{{ talk.flag }}"></span>
       </a>
     </li>
-
     {% else %}
-
     {% endif %}
-
     {% endfor %}
 
   </ol>
+
+</div>
