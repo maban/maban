@@ -1,0 +1,12 @@
+.alert {
+  padding: 1em;
+  background-color: rgba(0,0,0,0.08);
+  margin-bottom: 1em;
+  border-radius: $border-radius-m;
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  &.--update {
+    font-size: 0.95em;
+  }
+}

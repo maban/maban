@@ -7,6 +7,13 @@ body {
   @extend .backdrop--dark;
 }
 
+abbr {
+  border-bottom: 2px dotted $color-accent--a;
+  &:hover {
+    cursor: help;
+  }
+}
+
 blockquote {
   margin: 1.2em 0 1.2em 0;
   font-size: 1.1em;
