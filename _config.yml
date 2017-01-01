@@ -5,6 +5,9 @@ destination:  ./_site
 plugins_dir:  _plugins
 layouts_dir:  _layouts
 includes_dir: _includes
+sass:
+    sass_dir: _style
+
 include:     ['.htaccess']
 exclude:
   - _config.yaml
