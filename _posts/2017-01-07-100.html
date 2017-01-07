@@ -1,0 +1,60 @@
+---
+layout: post
+title: Front-end Style Guides, behind the scenes
+---
+
+<p>Last week, I published a new version of my book, <a href="/projects/front-end-style-guides/">Front-end Style Guides</a>. A lot of work went into it over several years, and I thought it would be worth writing about that, and my experience with self-publishing.</p>
+
+<h2>Why I self published</h2>
+
+<p>I didn't start out with the intention to self-publish. Front-end Style Guides was originally published by <a href="https://www.fivesimplesteps.com/">Five Simple Steps</a>, and when they closed their doors, I was given full rights to do what I wanted with my book. I didn't get any warning this was going to happen – and I had people asking to buy it when the site closed, so I had to come up with a way of selling my book very quickly.</p>
+
+<p>Not a lot of publishers had these short books at the time, so it would have been hard to find one who wanted to re-publish it in the same format. But the hard work was done – it had been written, edited, and formatted properly into the various ebook formats. So I went with what seemed like the most simple option and put it up for sale on my site for the same price.</p>
+
+<p>In retrospect, it was probably the <em>least</em> simple option. Within a couple of days, I had to set up with a payment gateway (PayPal), decided on a provider to host my book files and serve all the downloads (<a href="https://www.sendowl.com/">SendOwl</a>), not to mention, get my head around <a href="https://www.gov.uk/government/collections/vat-moss-vat-on-sales-of-digital-services-in-the-eu">VATMOSS</a> and handle customer support. And do a bit of marketing if I could. Some authors had put their books on <a href="https://gumroad.com/">Gumroad</a>, which would have been a lot easier, but I didn't know about it at the time. Still, I'm really happy with SendOwl, so I've stuck with them. They've added lots of new features since I first started using them, and I like that they don't charge a transaction fee.</p>
+
+<p>Shortly after I'd done all this, Five Simple Steps was bought and the buyers offered me a new contract. I turned it down because I was already set up for selling the book myself, and I didn't feel like having a publisher was worthwhile at this stage. It was the right decision because the business didn't do well and Five Simple Steps has now closed its doors, this time for good.</p>
+
+<h2>The update</h2>
+
+<p>So, fast-forward to April 2016, and I was asked if I would be interested in having my book translated. Hell yes, I was. But now the book was a couple of years old, some of the links were broken and the examples were getting a bit dated. Also, any change I made would need the <abbr title="International Standard Book Number">ISBN</abbr> to be updated because Five Simple Steps wasn't the publisher any more. So I said I'd do a refresh first. But that ended up turning into a full re-write.</p>
+
+<p>I asked <a href="http://fullcreammilk.co.uk/">Owen Gregory</a> if he'd like to be my editor again but he was fully booked, so <a href="http://cennydd.com/">my husband</a> offered to do it instead. <a href="https://paulrobertlloyd.com">Paul Lloyd</a> had some rare availability and was happy to be my tech editor again, despite me making him use Google Docs. Now that the book wasn't part of a collection, I was also keen to redesign the cover which always looked very bland outside of its set. I'm a huge fan of <a href="http://www.hellogeri.com/">Geri Coady</a> and have always been keen to work with her on something, and now was my chance! I gave her a loose brief (you know, the "I like green" sort of thing) and she came up with the concept of terraniums – living, breathing plants that are separate entities but can be grouped to form small habitats. It was perfect!</p>
+
+<h2>Conversion</h2>
+
+<p>I knew from experience that the book writing part would take a long time, but I was naïve about how much work would be involved in converting the book into the various formats (.EPUB, .PDF and .MOBI). (For good writeups on that, see <a href="http://booktoolkit.com/resources">Rachel Andrew's book toolkit resources</a>). I started writing the book in Google Docs which was excellent for collaborating with editors, but not so great at the conversion stage. (A thing I like about self-publishing is I don't have to use Microsoft Word). .EPUBs use XHTML, and there are tools that will convert an .EPUB into a .MOBI or .PDF, so I tackled that first.</p>
+
+<p>It was a nightmare! There's an "export to HTML" option in Google Docs that spits out garbage. I was able to salvage that with about an hour of find-and-replacing to remove unnecessary <code>span</code>s, but I ended up with spaces in the middle of words so I had to spend an afternoon cleaning up the whole thing manually. And the links get some Google Docs prefix, with some getting split across words, so, yet more manual editing.</p>
+
+<p>XHTML doesn't allow use of HTML5 elements like <code>figcaption</code>, so I made these <code>div</code>s with classnames that matched the element name. When it was mostly done, I zipped it up and opened that in <a href="https://github.com/Sigil-Ebook/Sigil">Sigil</a>, which meant even more messing about (pro tip: do this sooner in the process). I was able to create a faily decent .EPUB from this.</p>
+
+<p>To convert it into a .MOBI and .PDF format, I had the option of buying a license for an advanced <a href="http://www.princexml.com/">command-line tool called Prince</a>, or I could use a <a href="https://calibre-ebook.com/">GUI called Calibre</a>. I gave the GUI a go. It took me a few hours to produce a .PDF I was happy with, and the .MOBI took a lot less time and I was able to check it on my Kindle. Then it was a case of testing, tweaking, and updating my site with the new book.</p>
+
+<h2>When's the print version coming out?</h2>
+
+<p>I get asked this a lot. The first time I wrote my book, I was told it would only ever be an ebook. That affected how I wrote it – it had more links than a book for print would, and it was written in lots of short sections to make it easy to dip into and search. All the work I produce is for screens. I have no experience in print, nor do I feel a strong desire to gain that experience. (Producing an ebook was experience enough, trust me!)</p>
+
+<p>The cost and energy involved in printing a book is not insignificant. Writing books is not my business, I have a full-time job so I can't be handling and shipping stacks of printed books. Outsourcing all that to something like <a href="https://www.lulu.com/">lulu</a> is an option, but there's also a lot of work involved.</p>
+
+<p>The main issue for me is that it doesn't <em>need</em> to be printed. I want my physical impact on the planet to be as small as possible, and printing words on dead trees, shipping them in trucks around the planet, for them to sit (mostly untouched) on a shelf for years before being shoved in a box labelled "free books" and left on a kerbside… it just felt unnecessary.</p>
+
+<p>If you buy my ebook, it travels with you everywhere. You can be miles away from your bookshelf and open it on your device to get that reference you were looking for. Sure, it doesn't smell quite as good when you open it, but I hope it's just as pleasurable to read.</p>
+
+<p><i>Disclaimer: I do not hate books. I have shelves full of them. Books written about tech date quickly, though, and while I would get a lot of satisfaction out of being able to wave my book around and say "here it is, here's my book that I wrote" and see it on a bookself, I know that my book is no different to a printed book – just as much work went into it. It <em>is</em> a real book. There's a digital copy of it in the British Library.</i></p>
+
+<h2>What's next?</h2>
+
+<p>Now that I know how to write an ebook, I would like to do another, and self-publish again. Not about style guides, but maybe on Game Console Browsers since I have so much research on it. It's nice to package it up in this way so I feel ready to move onto something new. I'd love the opportunity to work with Geri, Paul and Cennydd again too. They gave me exactly the level of support I needed.</p>
+
+<h2>Some tips if you're thinking of self-publishing an ebook</h2>
+
+<ul>
+  <li>Test out the ebook conversion process by converting some of your blog posts to ebooks.</li>
+  <li>Write about something you've got experience and passion about. You're going to be thinking and writing a lot about this topic so you need to enjoy it.</li>
+  <li>Think really hard about whether you <em>really</em> want to self-publish. You'll have to do your own customer support, file new taxes, format the thing, arrange contracts and pay for services in advance, you'll get no stipend. You'll need a lot of self-motivation. You won't have a publisher to pressure you about deadlines, so you'll need to set your own and stick to them.</li>
+  <li>Hire editors. They will make your book so much better, and easier to read. Plus, they'll spot embarrasing typos. Get a tech editor to check your code and arguments make sense, but also a general editor to make your words gooder and stuff. It's an overhead, but it's essential if you want to write a professional book. You can even hire <a href="http://booktoolkit.com/technical-edit">Rachel Andrew</a> as your tech editor.</li>
+  <li>Plan an outline, your sections, note what bits you need to research more. Share this with people who are familiar with the topic and see if you're missing anything.</li>
+  <li>Write. Set yourself some time and a word count goal, and write. The words you type could be gibberish but it's better than staring at a blank screen, or editing the same paragraph again and again.</li>
+  <li>Consider not telling friends of family that you're writing the thing so you don't get a tummyache every time they ask how your book is going.</li>
+</ul>
