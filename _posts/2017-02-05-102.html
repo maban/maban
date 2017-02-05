@@ -1,0 +1,42 @@
+---
+layout: post
+title: What we can learn from the Y2K bug
+---
+
+<p>The Guardian's <cite>Chips with Everything</cite> podcast recently published <a href="https://www.theguardian.com/technology/audio/2017/jan/22/cascade-failure-an-inside-look-at-the-y2k-bug-tech-podcast">an episode about the Y2K bug</a>, which I recommend you listen to if you write software.</p>
+
+<iframe style="margin-bottom:1em;" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/303957338&amp;color=8bc34a&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<p>The <abbr title="Year 2000">Y2K</abbr> bug came about due to the small amount of storage space that computers traditionally had which meant that, for optimisation, years were presented as 2 digits (<code>80</code> for 1980, or <code>99</code> for 1999). The problem was when that ticked over to 2000 – the year would be presented as <code>00</code>, and sorting algorithms would look at that date and say "Ah, that's 1900 which is in the past".</p>
+
+<p>The podcast reveals that the first effects of Y2K <a href="http://www.co-intelligence.org/y2k_bkdwnexmpls.html">were felt years prior to the turn of the century</a>. For example, in 1998, supermarket chain Marks &amp; Spencer were sent a batch of corned beef with the barcode setting the expiry date as 2002. Marks &amp; Spencer's system interpreted this as <code>02</code>, which translated to 1902 - a date 96 years in the past. Therefore, the system said that this batch of corned beef was out of date, despite not expiring for another four years. The supermarket sent back the corned beef and ordered another batch, which was sent back again. This repeated four times before the bug in the system was found to be the culprit.</p>
+
+<p>I really enjoyed this episode because it revealed that, although the Y2K bug turned out to be a non-event, that wasn't because it was some sort of myth. Software developers put an incredible amount of work in the years leading up to the year 2000 to prevent computer systems from failing. One of these people was <a href="https://www.gresham.ac.uk/professors-and-speakers/professor-martyn-thomas-cbe">Professor Martyn Thomas CBE</a>, who was involved in fixing the bugs in computer programs that would have caused problems when <code>99</code> ticked over to <code>00</code>. He was interviewed in the podcast.</p>
+
+<p>What's particularly interesting is when he talks about how many similar problems are in computer programs today, in particular, around cybersecurity:</p>
+
+<blockquote>
+  <p>I'm much more worried about cybersecurity, I think that is a threat that is not yet being addressed strategically. We have to fix it at the root which is by making the software <em>far</em> less vulnerable to cyber attack. And that certainly can be done, but we don't appear to be setting about any kind of strategy nationally or internationally that would bring that about.</p>
+  <cite>Martyn Thomas on Chips with Everything by The Guardian<br/><a href="https://soundcloud.com/guardianchips/cascade-failure-an-inside-look-at-the-y2k-bug#t=14:48">Cascade failure: an inside look at the Y2K bug (14:48-15:22)</a></cite>
+</blockquote>
+
+<p>This was really encouraging to hear, because it's what <a href="https://snyk.io">Snyk</a>, the company I work for, is doing by making developers aware of vulnerabilities in the open source code that they rely on, and giving them an easy way to fix it. I think cybersecurity is going to be an increasinly important topic over the coming years, and that we'll see more vulnerabilities being exploited in the systems we rely on. It's something I've become more aware of, too – <a href="https://snyk.io/vuln">the code we use and reuse has <em>so</em> many vulnerabilities</a>, and open source software, by its nature, duplicates those vulnerabilities across all the systems that rely on it. But if we know about them and can fix them quickly, we're making it harder for hackers.</p>
+
+<p>This relates to another thing that Martyn talks about:</p>
+
+<blockquote>
+  <p>But we still build software on the assumption that you can test it to show that it's fit for purpose… software is vastly complex, and a typical programmer makes a mistake in, if they're <em>good</em>, every 30 lines of program. If they're <em>very, very good</em>, they may make a mistake in every 100 lines of program. If they're typical, it's in about 10 lines of code.</p>
+  <p>And you don't find all of those by testing… when a modern car has got a hundred million lines of software, you know, even an error in one in a hundred lines is still a million software errors in your car. And a lot of those are vulnerabilities that can be exploited as cybersecurity problems, for example.</p>
+  <cite>Martyn Thomas on Chips with Everything by The Guardian<br/><a href="https://soundcloud.com/guardianchips/cascade-failure-an-inside-look-at-the-y2k-bug#t=18:20">Cascade failure: an inside look at the Y2K bug (18:20-19:28)</a></cite>
+</blockquote>
+
+<p>Our tests can only tell us about the scenarios we are testing for. Code is buggy, and the more code we write, the more bugs we introduce. I think things like pair programming and writing good tests can help improve quality vastly, but we also need to make it quick and easy to implement and roll out fixes when we find errors. In particular, we need to take security more seriously when writing software, especially for programs that are relied on so widely.</p>
+
+<blockquote>
+  <p>There are still potential things that could go wrong that could cause <em>very</em> widepsread devestation. The number of services and computer systems that are dependant on GPS, for example, is unbelivebly wide… and yet, you're dealing with a signal that you can buy a jammer for on the internet for $100, and where, if you bought a reasonably powerful jammer for $1000 and stuck it in a balloon and floated it over London, you'd take out GPS over the whole of the South of England. The emergency services use GPS… ships use it for navigation… and the dependance across the whole of society on that easily jammed and, actually increasingly easily spoofed signal is astounding.</p>
+  <cite>Martyn Thomas on Chips with Everything by The Guardian<br/><a href="https://soundcloud.com/guardianchips/cascade-failure-an-inside-look-at-the-y2k-bug#t=19:42">Cascade failure: an inside look at the Y2K bug (19:42-21:11)</a></cite>
+</blockquote>
+
+<p>Martyn recommends this situation be improved by introducing strict liability policies so that companies that write bad software can be sued for damages, to encourage them to improve standards and take security more seriously.</p>
+
+<p>Anyone who has watched <a href="https://en.wikipedia.org/wiki/Mr._Robot_(TV_series)">Mr Robot</a> will be aware of how big an impact one cyberattack can have.</p>
