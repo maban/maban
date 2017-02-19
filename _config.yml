@@ -19,7 +19,7 @@ exclude:
 keep_files:  ['.git']
 timezone:    Europe/London
 markdown:    redcarpet
-permalink:   /:title
+permalink:   /:title/
 
 availability: "January 2015"
 
