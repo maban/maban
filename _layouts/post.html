@@ -13,8 +13,10 @@
       {% if page.image %}
       <div class="hero article__hero">
         <img src="{{ page.image }}" />
+        {%if page.image-credit %}<small class="article__image-credit">{{ page.image-credit }}</small>{% endif %}
       </div>
       {% endif %}
+
 
       <h1 class="title article__title">{{ page.title }}</h1>
 

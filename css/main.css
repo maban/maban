@@ -282,7 +282,8 @@ a,
     margin-left: -1.5em;
     margin-right: -1.5em;
     margin-top: -1.5em;
-    margin-bottom: 0.75em; }
+    margin-bottom: 0.75em;
+    position: relative; }
     .article .article__hero img {
       width: 100%;
       max-width: none;
@@ -301,6 +302,13 @@ a,
     background-color: #8BC34A;
     padding: 1em;
     border-radius: 0 0.2em; }
+  .article .article__image-credit {
+    text-align: right;
+    color: #777;
+    display: block;
+    position: absolute;
+    margin: 0 1em 0 1em;
+    right: 0; }
   .article figure img {
     border: 1px solid #e1e8ed; }
 
