@@ -18,11 +18,14 @@ slug: page-writing
             <h2 class="content-list__item__title article__title">{{ post.title }}</h2>
           </div>
           <div class="content-list__item__text">
+            {% if post.external %}
+            <p>{{ post.publication }}</p>
+            {% endif %}
             <time datetime="{{ post.date | date_to_xmlschema }}" class="date article__date">{{ post.date | date_to_long_string }}</time>
             <p class="excerpt article__excerpt">{{ post.content | strip_html | truncatewords:40}}</p>
           </div>
           {% if post.external %}
-          <p class="content-list__item__publication">{{ post.publication }}</p>
+          <span class="content-list__item__publication"></span>
           {% else %}
           <p class="content-list__item__id">{{ post.id }}</p>
           {% endif %}

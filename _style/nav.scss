@@ -46,7 +46,7 @@ nav {
     margin-bottom: 0;
   }
   .nav__list__item__text--prominent {
-    font-size: 1.84em;
+    font-size: 1.625em;
     margin: 0 0 0.3em;
     line-height: 1;
   }
@@ -126,7 +126,7 @@ nav {
     @media (min-width: 40em) {
       margin-bottom: 0;
       width: auto;
-      text-align: left;
+      text-align: center;
     }
   }
 }
