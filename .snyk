@@ -1,5 +1,12 @@
-version: v1.5.0
-ignore: {}
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:lodash:20180130':
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > lodash:
+        reason: No remediation available
+        expires: '2018-08-06T15:09:23.485Z'
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
     - gulp > vinyl-fs > glob-stream > minimatch:
