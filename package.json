@@ -4,7 +4,7 @@
   "author": "Anna Debenham",
   "dependencies": {
     "gulp": "^3.9.1",
-    "snyk": "^1.117.1"
+    "snyk": "^1.177.0"
   },
   "license": "CC-BY-NC-SA-4.0",
   "private": true,
