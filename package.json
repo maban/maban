@@ -4,7 +4,7 @@
   "author": "Anna Debenham",
   "dependencies": {
     "gulp": "^3.9.1",
-    "snyk": "^1.117.1"
+    "snyk": "^1.192.3"
   },
   "license": "CC-BY-NC-SA-4.0",
   "private": true,
@@ -22,7 +22,8 @@
   "scripts": {
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect",
-    "test": "snyk test"
+    "test": "snyk test",
+    "prepare": "npm run snyk-protect"
   },
   "snyk": true
 }
