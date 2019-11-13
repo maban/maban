@@ -15,7 +15,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp-autoprefixer": "^2.3.1",
-    "gulp-imagemin": "^2.3.0",
+    "gulp-imagemin": "^6.2.0",
     "gulp-sass": "^2.0.4",
     "imagemin-pngquant": "^4.1.2"
   },
