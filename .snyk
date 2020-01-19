@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.14.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:lodash:20180130':
@@ -33,3 +33,15 @@ patch:
         patched: '2018-12-16T17:34:01.056Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
         patched: '2018-12-16T17:34:01.056Z'
+  'npm:extend:20180424':
+    - gulp > liftoff > extend:
+        patched: '2020-01-19T15:19:12.960Z'
+    - snyk > get-uri > extend:
+        patched: '2020-01-19T15:19:12.960Z'
+    - snyk > proxy-agent > pac-proxy-agent > get-uri > extend:
+        patched: '2020-01-19T15:19:12.960Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2020-01-19T15:19:12.960Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2020-01-19T15:19:12.960Z'
