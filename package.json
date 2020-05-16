@@ -2,9 +2,6 @@
   "name": "Maban",
   "version": "0.0.0",
   "author": "Anna Debenham",
-  "dependencies": {
-    "snyk": "^1.321.0"
-  },
   "license": "CC-BY-NC-SA-4.0",
   "private": true,
   "repository": {
@@ -16,7 +13,8 @@
     "gulp-autoprefixer": "^2.3.1",
     "gulp-imagemin": "^2.3.0",
     "gulp-sass": "^2.0.4",
-    "imagemin-pngquant": "^4.1.2"
+    "imagemin-pngquant": "^4.1.2",
+    "snyk": "^1.321.0"
   },
   "scripts": {
     "snyk-protect": "snyk protect",
