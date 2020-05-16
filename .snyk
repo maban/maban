@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.0
+version: v1.14.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:lodash:20180130':
@@ -10,6 +10,13 @@ ignore:
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > inherits:
         reason: No patch or upgrade available
         expires: '2019-01-15T17:30:26.922Z'
+  SNYK-JS-MINIMIST-559764:
+    - snyk > @snyk/update-notifier > latest-version > package-json > registry-auth-token > rc > minimist:
+        reason: No fix available
+        expires: '2020-06-15T15:15:32.075Z'
+    - snyk > @snyk/update-notifier > latest-version > package-json > registry-url > rc > minimist:
+        reason: No fix available
+        expires: '2020-06-15T15:15:32.075Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
