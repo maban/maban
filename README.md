@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/maban/maban/badge.svg)](https://snyk.io/test/github/maban/maban)
+
 # Front-end Style Guide
 
 A boilerplate style guide built entirely in Jekyll so that it can be hosted on GitHub Pages. Outputs static HTML. Still very much a work in progress, some patterns are not complete.
