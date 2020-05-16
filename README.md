@@ -94,4 +94,4 @@ For these reasons, it's great for prototyping for now, but I wouldn't recommend 
 
 ## Thank you
 
-Many thanks to [@paulrobertlloyd](http://twitter.com/paulrobertlloyd) for his [barebones style guide](http://barebones.paulrobertlloyd.com/), which is better than this one, just not using Jekyll.
+Many thanks to [@paulrobertlloyd](https://twitter.com/paulrobertlloyd) for his [barebones style guide](https://barebones.paulrobertlloyd.com/), which is better than this one, just not using Jekyll.

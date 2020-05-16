@@ -3,7 +3,7 @@ layout: post
 title: Chrome transform:rotate bug
 ---
 
-<p>I just wanted to quickly write up about a bug I've found in the latest build of Chrome (18.0.1025.142), just in case anyone else experiences the same thing. I've <a href="http://code.google.com/p/chromium/issues/detail?id=120846">filed a bug report on Chromium (Issue 120846)</a> and have found a way to fix it.</p>
+<p>I just wanted to quickly write up about a bug I've found in the latest build of Chrome (18.0.1025.142), just in case anyone else experiences the same thing. I've <a href="https://code.google.com/p/chromium/issues/detail?id=120846">filed a bug report on Chromium (Issue 120846)</a> and have found a way to fix it.</p>
 
 <p>I'm not sure how widespread the problem is or if it just affects Chrome on Macs, but I imagine it'll be fixed quickly. I've never filed a browser bug before, so maybe this will be useful if you ever need to.</p>
 
@@ -17,13 +17,13 @@ title: Chrome transform:rotate bug
 
 <p>I tweeted about it, and people gave me good suggestions, such as <a href="https://twitter.com/ryancallaghans/status/185288679319810048">rotating it 360deg</a>, <a href="https://twitter.com/codepo8/status/185288777781092353">restarting the computer in case there was a video card problem</a>, <a href="https://twitter.com/anthony_casey/status/185288947407134720">using background-clip</a> or applying <a href="https://twitter.com/i_like_robots/status/185288946345971712">-webkit-transform-style:preserve-3d</a></p>
 
-<p>None of these seemed to do the trick though. Then <a href="https://twitter.com/aegirthor/status/185288970895245312">Aegir</a> and <a href="https://twitter.com/stopsatgreen/status/185293801546465280">Peter</a> suggested it might be related to a silent Chrome update the night before. <a href="http://blog.chromium.org/2012/03/moar-better-graphics.html">The update</a> made some improvements to Canvas2D and WebGL.</p>
+<p>None of these seemed to do the trick though. Then <a href="https://twitter.com/aegirthor/status/185288970895245312">Aegir</a> and <a href="https://twitter.com/stopsatgreen/status/185293801546465280">Peter</a> suggested it might be related to a silent Chrome update the night before. <a href="https://blog.chromium.org/2012/03/moar-better-graphics.html">The update</a> made some improvements to Canvas2D and WebGL.</p>
 
 <h2>The demo</h2>
 
-<p>To test if it really was a bug in the browser rather than my code, I isolated the code and <a href="http://jsbin.com/enezas/edit#html,live">created a demo</a> of the problem. I discovered I only get jagged edges on rotated elements if they have a repeating background image. Elements without a background image but a background colour didn't have jagged edges. Elements with both were fine too, as long as the colour was similar.</p>
+<p>To test if it really was a bug in the browser rather than my code, I isolated the code and <a href="https://jsbin.com/enezas/edit#html,live">created a demo</a> of the problem. I discovered I only get jagged edges on rotated elements if they have a repeating background image. Elements without a background image but a background colour didn't have jagged edges. Elements with both were fine too, as long as the colour was similar.</p>
 
-<p>Before filing the bug with the Chromium team, I had to check it wasn't actually a webkit bug. (webkit bugs go to a different place). I downloaded the <a href="http://nightly.webkit.org/">nightly build of webkit</a>, and my demo looked fine in there, so it's definitely a Chrome thing.</p>
+<p>Before filing the bug with the Chromium team, I had to check it wasn't actually a webkit bug. (webkit bugs go to a different place). I downloaded the <a href="https://nightly.webkit.org/">nightly build of webkit</a>, and my demo looked fine in there, so it's definitely a Chrome thing.</p>
 
 <h2>The fix</h2>
 

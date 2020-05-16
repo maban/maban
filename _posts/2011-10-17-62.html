@@ -3,9 +3,9 @@ layout: post
 title: Prototyping with CSS Flexbox
 ---
 
-<p>Since giving my first UX Bootcamp workshop on Prototyping in Code, I&#8217;ve been looking at ways to make it easier to teach <span class="caps">CSS</span> layout. I&#8217;ve tried <a href="http://speakerdeck.com/u/anna/p/ux-bootcamp-code-fitness?slide=96">demonstrating floats in a fish tank</a> and <a href="http://speakerdeck.com/u/anna/p/ux-bootcamp-code-fitness?slide=109">how positioning works using diagrams and sketches</a>, but it still seems pretty abstract to a <span class="caps">CSS</span> beginners.</p>
+<p>Since giving my first UX Bootcamp workshop on Prototyping in Code, I&#8217;ve been looking at ways to make it easier to teach <span class="caps">CSS</span> layout. I&#8217;ve tried <a href="https://speakerdeck.com/u/anna/p/ux-bootcamp-code-fitness?slide=96">demonstrating floats in a fish tank</a> and <a href="https://speakerdeck.com/u/anna/p/ux-bootcamp-code-fitness?slide=109">how positioning works using diagrams and sketches</a>, but it still seems pretty abstract to a <span class="caps">CSS</span> beginners.</p>
 
-<p>I&#8217;ve been having a read through the specs for the <a href="http://www.w3.org/TR/css3-flexbox/">Flexible Box Layout Module</a>. The name describes the behaviour of the boxes which can stretch and expand to fill content, with unused space being distributed amongst the boxes. This is what we often try to achieve when floating elements.</p>
+<p>I&#8217;ve been having a read through the specs for the <a href="https://www.w3.org/TR/css3-flexbox/">Flexible Box Layout Module</a>. The name describes the behaviour of the boxes which can stretch and expand to fill content, with unused space being distributed amongst the boxes. This is what we often try to achieve when floating elements.</p>
 
 <h2>The float method</h2>
 
@@ -13,28 +13,28 @@ title: Prototyping with CSS Flexbox
     <img src="/image/diagram-nth-of-type-04.png" alt="a diagram that shows how nth-of-type can be used to lay out columns of content"/>
 </figure>
 
-<p>A couple of years ago, I wrote a blog post on <a href="http://maban.co.uk/29">using nth-of-type to create grid blocks that clear</a>. In it, I explain how you can use floats and nth-of-type to add margins to specific boxes, and get the correct ones to clear. This solution doesn&#8217;t rely on using classnames as a hook, so it means you don&#8217;t have to keep editing the markup if you decide to have 4 columns instead of 3. However, trying to explain this all to a group who have only been writing <span class="caps">CSS</span> for a few hours is heavy going.</p>
+<p>A couple of years ago, I wrote a blog post on <a href="https://maban.co.uk/29">using nth-of-type to create grid blocks that clear</a>. In it, I explain how you can use floats and nth-of-type to add margins to specific boxes, and get the correct ones to clear. This solution doesn&#8217;t rely on using classnames as a hook, so it means you don&#8217;t have to keep editing the markup if you decide to have 4 columns instead of 3. However, trying to explain this all to a group who have only been writing <span class="caps">CSS</span> for a few hours is heavy going.</p>
 
-<p>The post doesn&#8217;t do a great job of demonstrating how the code works and I&#8217;ve since optimised the code, so I&#8217;ve added <a href="http://jsbin.com/ivocod/edit#html,live">a version of the floats examples you can play with in jsbin</a>. It also uses media queries to linearise the content at a smaller viewport.</p>
+<p>The post doesn&#8217;t do a great job of demonstrating how the code works and I&#8217;ve since optimised the code, so I&#8217;ve added <a href="https://jsbin.com/ivocod/edit#html,live">a version of the floats examples you can play with in jsbin</a>. It also uses media queries to linearise the content at a smaller viewport.</p>
 
 <h2>How Flexbox works</h2>
 
 <p>I&#8217;m still learning the ins and outs of Flexbox, but I&#8217;ve been testing it out making an interactive prototype for the re-development of the Hackasaurus website. Once I&#8217;d got to grips with it, developing the prototype took considerably less time than my usual method of floats and positioning.</p>
 
-<p class="prominent">If you want to have a play, <a href="http://jsbin.com/abimiy/11/edit#html,live">here&#8217;s a demo of a Flexbox prototype I put on jsbin.</a></p>
+<p class="prominent">If you want to have a play, <a href="https://jsbin.com/abimiy/11/edit#html,live">here&#8217;s a demo of a Flexbox prototype I put on jsbin.</a></p>
 
 <figure class="full">
 	<img src="/image/screenshot-prototype-flexbox-hackasaurus.jpg" alt="A screenshot of the Hackasaurus website prototype"/>
 	<figcaption>Interactive prototype of the Hackasaurus website</figcaption>
 </figure>
 
-<p>Be aware that the <a href="http://www.w3.org/TR/css3-flexbox/#display-flexbox">syntax is in flux</a> at the moment so you will need browser prefixes and these examples may be out of date depending on when you read this, so <a href="http://www.w3.org/TR/css3-flexbox/">check the spec</a>. It&#8217;s not yet supported by Opera or IE, but <a href="http://caniuse.com/flexbox">there&#8217;s a page on &#8220;can I use&#8221; that lists specific versions</a>. It&#8217;s not something I&#8217;d feel comfortable about implementing into live projects until it&#8217;s stabilised a bit, but for quick prototypes it&#8217;s fine.</p>
+<p>Be aware that the <a href="https://www.w3.org/TR/css3-flexbox/#display-flexbox">syntax is in flux</a> at the moment so you will need browser prefixes and these examples may be out of date depending on when you read this, so <a href="https://www.w3.org/TR/css3-flexbox/">check the spec</a>. It&#8217;s not yet supported by Opera or IE, but <a href="https://caniuse.com/flexbox">there&#8217;s a page on &#8220;can I use&#8221; that lists specific versions</a>. It&#8217;s not something I&#8217;d feel comfortable about implementing into live projects until it&#8217;s stabilised a bit, but for quick prototypes it&#8217;s fine.</p>
 
 <p>To set up Flexbox, create an element with children. In the <span class="caps">CSS</span>, set <code>display:box</code> on the parent, and <code>box-flex:1</code> on the children. All the children will adapt to fit the width of their content and their parent. Widths are calculated automatically so you don&#8217;t have to worry about the box-model&#8217;s pixel-width borders messing up your percentage-based dimensions.</p>
 
 <p>This is the bit I find a bit odd: if you want the boxes to be distributed evenly, add a width to the children. I want to set a width of 100% to the children so that browsers that don&#8217;t support Flexbox just linearise the content, but it won&#8217;t accept percentage widths. Even setting a percentage for the margins doesn&#8217;t seem to have any effect.</p>
 
-<p><a href="http://oli.jp/2011/css3-flexbox/#shrieking-eels">Oli Studholme does an excellent job of explaining limitations like this</a>, and suggests using width:0 as a workaround to force it to have a width. I&#8217;m not sure about this since it feels a bit dodgy as a fallback for browsers that don&#8217;t have Flexbox, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=394078">but it&#8217;s all still in development</a>. For a prototype my goal is making something quickly for demonstration rather than proper use, so I&#8217;m not worrying about browser support.</p>
+<p><a href="https://oli.jp/2011/css3-flexbox/#shrieking-eels">Oli Studholme does an excellent job of explaining limitations like this</a>, and suggests using width:0 as a workaround to force it to have a width. I&#8217;m not sure about this since it feels a bit dodgy as a fallback for browsers that don&#8217;t have Flexbox, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=394078">but it&#8217;s all still in development</a>. For a prototype my goal is making something quickly for demonstration rather than proper use, so I&#8217;m not worrying about browser support.</p>
 
 <h2>Other fancy stuff you can do with it</h2>
 
@@ -44,9 +44,9 @@ title: Prototyping with CSS Flexbox
 
 <p>You can also set boxes to stack vertically, and the most exciting of all (to me, anyway) is being able to reorder where they&#8217;re displayed. Think of the potential with responsive designs&hellip;</p>
 
-<p>Oli has some <a href="http://oli.jp/2011/css3-flexbox/#you-keep-using-that-word">juicy examples of things you can do with Flexbox</a>. His article was written in January so I <em>think</em> some of the things he&#8217;s mentioned as not being implemented properly in Firefox are working now. It&#8217;s a really interesting read, and full of examples.</p>
+<p>Oli has some <a href="https://oli.jp/2011/css3-flexbox/#you-keep-using-that-word">juicy examples of things you can do with Flexbox</a>. His article was written in January so I <em>think</em> some of the things he&#8217;s mentioned as not being implemented properly in Firefox are working now. It&#8217;s a really interesting read, and full of examples.</p>
 
-<p>There&#8217;s also a <a href="http://flexiejs.com/playground/">Flexbox playground</a> where you can test out all the possibilities.</p>
+<p>There&#8217;s also a <a href="https://flexiejs.com/playground/">Flexbox playground</a> where you can test out all the possibilities.</p>
 
 <h2>Teaching Flexbox</h2>
 
