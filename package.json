@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "author": "Anna Debenham",
   "dependencies": {
-    "gulp": "^3.9.1",
     "snyk": "^1.278.1"
   },
   "license": "CC-BY-NC-SA-4.0",
@@ -13,7 +12,7 @@
     "url": "git://github.com/maban/maban.github.io.git"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.7",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-imagemin": "^2.3.0",
     "gulp-sass": "^2.0.4",
