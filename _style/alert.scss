@@ -6,7 +6,12 @@
   > *:last-child {
     margin-bottom: 0;
   }
-  &.--update {
-    font-size: 0.95em;
-  }
+}
+
+.alert--update {
+  font-size: 0.95em;
+}
+
+.alert--failure {
+  background-color: $color-accent--d;
 }
