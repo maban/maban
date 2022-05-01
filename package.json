@@ -1,6 +1,6 @@
 {
   "name": "Maban",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Anna Debenham",
   "license": "CC-BY-NC-SA-4.0",
   "private": true,
@@ -9,17 +9,13 @@
     "url": "git://github.com/maban/maban.github.io.git"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-imagemin": "^2.3.0",
-    "gulp-sass": "^2.0.4",
-    "imagemin-pngquant": "^4.1.2",
-    "snyk": "^1.321.0"
+    "sass": "^1.51.0",
+    "snyk": "^1.915.0"
   },
   "scripts": {
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect",
-    "test": "snyk test"
+    "test": "snyk test --all-projects",
+    "style": "sass ./_style/main.scss:./css/main.css --no-source-map",
+    "build": "npm run style && bundle exec jekyll serve"
   },
   "snyk": true
 }
