@@ -4,8 +4,7 @@
     <ul class="nav__list">
       {% unless page.is-home %}
       <li class="nav__list__item section-home">
-          <p class="nav__list__item__text--prominent"><a href="/">Anna Debenham</a></p>
-          <p class="nav__list__item__text">Director of Product at <a href="https://snyk.io">Snyk</a></p>
+        <p class="nav__list__item__text--prominent"><a href="/">Anna Debenham</a></p>
       </li>
       {% endunless %}
       <li class="nav__list__item section-fesg">
@@ -38,7 +37,6 @@
       <{% if page.is-home %}h1{% else %}p{% endif %} class="header-intro__title">
       {% unless page.is-home %}<a href="http://maban.co.uk" class="header-intro__title-link" rel="me">{% endunless %}Anna Debenham{% unless page.is-home %}</a>{% endunless %}
       </{% if page.is-home %}h1{% else %}p{% endif %}>
-    	<p class="header-intro__subtitle">Director of Product at <a href="http://snyk.io">Snyk</a> in London</p>
       {% unless page.is-home %}<p><a href="/#about">About me</a></p>{% endunless %}
     	{% comment %}<a href="/hire-me/" class="button button--hire">Hire me</a>{% endcomment %}
     </header>
