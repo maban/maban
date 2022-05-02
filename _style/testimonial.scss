@@ -1,8 +1,8 @@
 .testimonial {
+  border: none;
   font-size: 0.75em;
   margin-bottom: 2em;
   padding-left: 0;
-  border: none;
   & + & {
     @extend .u-separator--s;
   }

@@ -1,7 +1,7 @@
 .list-unstyled {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
 }
 
 .list-horizontal {
@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   margin: 0 0 1em 0;
   li {
-  margin: 0 auto;
+    margin: 0 auto;
   }
 }
 
@@ -21,32 +21,30 @@
     padding-left: 0;
   }
   li {
-  position: relative;
-  margin: 2em 0 2em;
-
-  &:before {
-    content: " ";
-    display: block;
-    content: counter(list-numbers);
-    counter-increment: list-numbers;
-    background-color: $color-accent--c;
-    color: #333;
-    display: inline-block;
-    border-radius: 100%;
-    width: 1.5em;
-    height: 1.5em;
-    text-align: center;
-    line-height: 1.5em;
-    font-size: 1.2em;
-    position: absolute;
-    left: -2em;
-    top: -0.05em;
-    @media (min-width: 73em) {
-      width: 1.5em;
+    margin: 2em 0 2em;
+    position: relative;
+    &:before {
+      background-color: $color-accent--c;
+      border-radius: 100%;
+      color: #333;
+      content: counter(list-numbers);
+      counter-increment: list-numbers;
+      display: block;
+      display: inline-block;
+      font-size: 1.2em;
       height: 1.5em;
-      font-size: 1.7em;
-      top: -0.2em;
+      left: -2em;
+      line-height: 1.5em;
+      position: absolute;
+      text-align: center;
+      top: -0.05em;
+      width: 1.5em;
+      @media (min-width: 73em) {
+        font-size: 1.7em;
+        height: 1.5em;
+        top: -0.2em;
+        width: 1.5em;
+      }
     }
-  }
   }
 }

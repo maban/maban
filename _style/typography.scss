@@ -24,8 +24,8 @@ h2,
 h3,
 .t-h3 {
   font-size: 1.3em;
-  margin-bottom: 0.7em;
   font-weight: normal;
+  margin-bottom: 0.7em;
 }
 
 a,
@@ -49,6 +49,11 @@ a,
 
 .t-link--unstyled {
   border: none;
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: none;
+  }
 }
 
 .t-lede {

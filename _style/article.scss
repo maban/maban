@@ -6,45 +6,45 @@
   padding: 1.5em;
   position: relative;
   a {
-    color: #007f90;
     border-color: #007f90;
+    color: #007f90;
   }
   .article__hero {
+    margin-bottom: 0.75em;
     margin-left: -1.5em;
     margin-right: -1.5em;
     margin-top: -1.5em;
-    margin-bottom: 0.75em;
     position: relative;
     img {
-      width: 100%;
-      max-width: none;
       border-radius: $border-radius-m $border-radius-m 0 0;
+      max-width: none;
+      width: 100%;
     }
   }
   .article__title {
-    margin-top: 0;
-    margin-right: 2em;
     margin-bottom: 0;
+    margin-right: 2em;
+    margin-top: 0;
   }
   .article__date {
-    margin-bottom: 1em;
     display: inline-block;
+    margin-bottom: 1em;
   }
   .article__id {
-    position: absolute;
-    top: 0;
-    right: 0;
     background-color: $color-accent--b;
-    padding: 1em;
     border-radius: 0 $border-radius-m;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   .article__image-credit {
-    text-align: right;
     color: #777;
     display: block;
-    position: absolute;
     margin: 0 1em 0 1em;
+    position: absolute;
     right: 0;
+    text-align: right;
   }
   figure {
     img {
