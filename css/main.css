@@ -248,6 +248,10 @@ a:hover, a:focus, a:active,
   margin-bottom: 1em;
 }
 
+.u-push-bottom-none {
+  margin-bottom: 0;
+}
+
 [class*=l-container] {
   padding: 1em;
   max-width: 45em;
@@ -422,6 +426,12 @@ a:hover, a:focus, a:active,
   font-size: 1.2em;
 }
 
+.image-main {
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px #333;
+  margin-bottom: 0.5em;
+}
+
 .content-list {
   font-size: 0.9em;
   display: flex;
@@ -500,6 +510,11 @@ a:hover, a:focus, a:active,
 }
 .content-list .content-list__item .content-list__item__subtitle {
   margin: 0;
+}
+.content-list .content-list__item .content-list__item__label {
+  margin: 0 0 0.75em;
+  text-align: center;
+  font-size: 1em;
 }
 .content-list .content-list__item .content-list__item__id,
 .content-list .content-list__item .content-list__item__publication,

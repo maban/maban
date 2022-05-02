@@ -32,6 +32,10 @@ collections:
   patterns:
     output: true
     title: Patterns
+  art:
+    output: true
+    title: Artwork
+    permalink: /art/:path/
   talks:
     output: true
     title: Talks

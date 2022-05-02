@@ -1,0 +1,27 @@
+{% include head.html %}
+
+<body class="{{ page.slug }}">
+
+    {% include header.html %}
+
+    <main role="main" class="layout">
+
+      <div class="l-container">
+
+      <h1 class="title">{{ page.title }}</h1>
+
+      <img src="/image/{{ page.image }}" alt="{{ page.image-alt }}" class="image-main"/>
+
+        <div class="lede">
+          <p>{{ page.medium }} {% if page.description %}• {{ page.description }}{% endif %}</p>
+        </div>
+
+      </div>
+
+    </main>
+
+    {% include footer.html %}
+
+</body>
+
+{% include foot.html %}
