@@ -6,76 +6,20 @@ slug: page-speaking
 
 <div class="l-container--tight u-centered">
   <h1 class="heading-section">Speaking</h1>
-  <h2 class="heading-prominent u-separator">Not currently available for speaking</h2>
+  {% if site.availability-speaking %}{% else %}<h2 class="heading-prominent">Not currently available for speaking</h2>{% endif %}
 </div>
 
-<!--<div class="l-container">
-
-  <div class="l-cols">
-
-    <div class="l-cols__item--minor">
-
-      <div class="box box--invert">
-        <h3 class="p title">Get in touch:</h3>
-        <p class="lede">anna@maban.co.uk</p>
-      </div>
-
-      <figure>
-        <img src="/image/photo-update-1.jpg" alt="Photo of me giving a talk">
-        <figcaption>Photo by Geri Coady</figcaption>
-      </figure>
-
-    </div>
-
-    <div class="l-cols__item--major">
-
-      <div class="article">
-
-        <p><strong>£4,000 + VAT for a new talk on a topic we agree on, or £2,500 + VAT for one of my current talks, plus travel and accommodation.</strong> <a href="speaker-pack">Full terms…</a></p>
-
-        <p>I've given over two dozen talks around the world about the things I'm passionate about. When I give a talk, I try and tailor it to the event, so it's really great if you can tell me a bit about your audience beforehand (Is English their first language? Are they mainly designers/developers? Are they at the start of their careers?).</p>
-
-        <p>These are the topics I'm currently speaking about:</p>
-
-        <ul>
-          <li><a href="/speaking/game-console-browsers/">Game console browsers</a></li>
-          <li><a href="/speaking/front-end-style-guides/">Front-end Style Guides</a></li>
-        </ul>
-
-        <p>I'm highly conscious of the need for conferences and meetups to offer a safe space for speakers and attendees, so I only speak at events that have a published and enforced <a href="https://alistapart.com/article/tweaking-the-moral-ui">Code of Conduct</a>.</p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>-->
+{% if site.availability-speaking %}{% include speaking-preamble.html %}{% endif %}
 
 <div class="l-container--full">
 
-  <h2 class="u-separator u-centered"><!--Upcoming and past events-->Past events</h2>
+  <h2 class="u-separator u-centered">{% if site.availability-speaking %}Upcoming and past events{% else %}Past events{% endif %}</h2>
 
-  <ol class="content-list content-list--teaser">
+  <ol class="content-list">
     {% for talk in site.talks reversed %}
     {% if talk.workshop %}
     {% else %}
-    <li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
-      <a class="content-list__item__link" href="{{ talk.link }}">
-        <div class="content-list__item__heading">
-          <h3 class="content-list__item__title">{{ talk.conf }}</h3>
-        </div>
-        <div class="content-list__item__text">
-          <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
-          <time class="date">{{ talk.when }}</time>
-          <p class="subtitle">{{ talk.title }}</p>
-        </div>
-        <p class="content-list__item__status">
-          {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
-        </p>
-        <span class="flag flag-{{ talk.flag }}"></span>
-      </a>
-    </li>
+    {% include teaser-talk.html %}
     {% endif %}
     {% endfor %}
   </ol>
@@ -86,29 +30,13 @@ slug: page-speaking
 
   <h2 class="u-separator u-centered">Workshops</h2>
 
-  <ol class="content-list content-list--teaser">
+  <ol class="content-list">
     {% for talk in site.talks reversed %}
     {% if talk.workshop %}
-    <li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
-      <a class="content-list__item__link" href="{{ talk.link }}">
-        <div class="content-list__item__heading">
-          <h3 class="content-list__item__title">{{ talk.conf }}</h3>
-        </div>
-        <div class="content-list__item__text">
-          <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
-          <time class="date">{{ talk.when }}</time>
-          <p class="subtitle">{{ talk.title }}</p>
-        </div>
-        <p class="content-list__item__status">
-          {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
-        </p>
-        <span class="flag flag-{{ talk.flag }}"></span>
-      </a>
-    </li>
+    {% include teaser-talk.html %}
     {% else %}
     {% endif %}
     {% endfor %}
-
   </ol>
 
 </div>

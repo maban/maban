@@ -14,7 +14,7 @@
 
       <div class="l-container--tight u-centered">
         <h1 class="heading-section">{{page.title}}</h1>
-        <h2 class="heading-prominent">{{page.duration}}</p>
+        <h2 class="heading-prominent">{{page.duration}}</h2>
       </div>
 
       <span class="u-separator"></span>
@@ -74,7 +74,7 @@
       <ol class="content-list">
       {% for talk in site.talks reversed %}
       {% if talk.topic == 'Front-end Style Guides' %}
-      <li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-passed{% endif %}">
+      <li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-past{% endif %}">
         <a class="content-list__item__link" href="{{ talk.link }}">
           <div class="content-list__item__heading">
             <h3 class="content-list__item__title">{{ talk.conf }}</h3>
@@ -85,7 +85,7 @@
             <p class="subtitle">{{ talk.title }}</p>
           </div>
           <p class="content-list__item__status">
-            {% if talk.upcoming %}<p class="status">Upcoming</p>{% endif %}
+            {% if talk.upcoming %}<span class="status">Upcoming</span>{% endif %}
           </p>
           <span class="flag flag-{{ talk.flag }}"></span>
         </a>

@@ -1,0 +1,9 @@
+<div class="box">
+  {% if site.availability-consultancy %}
+    <h3 class="p title">Upcoming availability</h3>
+    <p><strong>{{ site.availability-consultancy.rate }}</strong></p>
+    <p class="lede">Get in touch at anna@maban.co.uk</p>
+  {% else %}
+    <h3 class="p title">No upcoming availability.</h3>
+  {% endif %}
+</div>

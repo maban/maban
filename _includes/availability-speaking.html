@@ -1,0 +1,9 @@
+<div class="box">
+  {% if site.availability-speaking %}
+    <h3 class="p title">Invite me to speak at your event.</h3>
+    <p><strong>{{ site.availability-speaking.rate }}</strong> <a href="/speaking/speaker-pack">Full terms…</a></p>
+    <p class="lede">Get in touch at anna@maban.co.uk</p>
+  {% else %}
+    <h3 class="p title">Not currently available for speaking.</h3>
+  {% endif %}
+</div>

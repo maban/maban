@@ -1,0 +1,16 @@
+<li class="content-list__item {% if talk.upcoming %}talk-upcoming {% else %}talk-past{% endif %}">
+  {% if talk.link %}<a class="content-list__item__link" href="{{ talk.link }}">{% endif %}
+    <div class="content-list__item__heading">
+      <h3 class="content-list__item__title">{{ talk.conf }}</h3>
+    </div>
+    <div class="content-list__item__text">
+      <p class="location"><span class="flag flag-{{ talk.flag }}"></span> {{ talk.location }}</p>
+      <time class="date">{{ talk.when }}</time>
+      <p class="subtitle">{{ talk.title }}</p>
+    </div>
+    {% if talk.link %}<p class="content-list__item__status">
+      {% if talk.upcoming %}<span class="status">Upcoming</span>{% endif %}
+    </p>{% endif %}
+    <span class="flag flag-{{ talk.flag }}"></span>
+  {% if talk.link %}</a>{% endif %}
+</li>
