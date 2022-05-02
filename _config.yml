@@ -21,7 +21,12 @@ timezone:    Europe/London
 markdown:    redcarpet
 permalink:   /:title/
 
-availability: "January 2015"
+#availability-consultancy:
+  #rate: "£500 + VAT a day, plus any agreed expenses."
+#availability-speaking:
+  #rate: "£2,000 + VAT for a new talk on a topic we agree on, or £1,250 + VAT for one of my current talks, plus travel and accommodation."
+availability-editing:
+  rate: "Rate negotiable."
 
 paginate: 20
 paginate_path: "/archives/page/:num"

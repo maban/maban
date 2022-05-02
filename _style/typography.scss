@@ -56,6 +56,64 @@ a,
   }
 }
 
+.t-title {
+  font-weight: 700;
+  margin-top: 0;
+}
 .t-lede {
   font-size: 1.2em;
+}
+
+.t-accent--a,
+.t-accent--a:link,
+.t-accent--a:visited,
+.t-accent--a:hover,
+.t-accent--a:focus,
+.t-accent--a:active {
+  color: $color-accent--a;
+}
+
+.t-accent--b,
+.t-accent--b:link,
+.t-accent--b:visited,
+.t-accent--b:hover,
+.t-accent--b:focus,
+.t-accent--b:active {
+  color: $color-accent--b;
+}
+
+.t-accent--c,
+.t-accent--c:link,
+.t-accent--c:visited,
+.t-accent--c:hover,
+.t-accent--c:focus,
+.t-accent--c:active {
+  color: $color-accent--c;
+}
+
+.t-accent--d,
+.t-accent--d:link,
+.t-accent--d:visited,
+.t-accent--d:hover,
+.t-accent--d:focus,
+.t-accent--d:active {
+  color: $color-accent--d;
+}
+
+.t-accent--e,
+.t-accent--e:link,
+.t-accent--e:visited,
+.t-accent--e:hover,
+.t-accent--e:focus,
+.t-accent--e:active {
+  color: $color-accent--e;
+}
+
+.t-accent--f,
+.t-accent--f:link,
+.t-accent--f:visited,
+.t-accent--f:hover,
+.t-accent--f:focus,
+.t-accent--f:active {
+  color: $color-accent--f;
 }

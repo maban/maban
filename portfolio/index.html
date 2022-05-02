@@ -10,7 +10,7 @@ slug: page-portfolio
 </div>
 
 <div class="l-container--full l-tight--bottom">
-  <ol class="content-list content-list--teaser">
+  <ol class="content-list">
     {% for project in site.projects %}
     <li class="content-list__item content-list__item--image">
       <a class="content-list__item__link" href="{% if project.link %}{{ project.link }}{% else %}{{ project.url }}{% endif %}">

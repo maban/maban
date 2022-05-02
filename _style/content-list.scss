@@ -50,6 +50,9 @@
   @extend .t-link--unstyled;
   display: flex;
   flex-wrap: wrap;
+  .content-list__item__title {
+    margin: 0;
+  }
 }
 
 .content-list__item__heading,
@@ -70,7 +73,6 @@
 .content-list__item__heading {
   font-weight: 700;
   order: 2;
-  width: 100%;
 }
 
 .content-list__item__text {
@@ -78,7 +80,7 @@
 }
 
 .content-list__item__title {
-  margin: 0;
+  margin: 0.5em 0 0 0;
 }
 
 .content-list__item__subtitle {
