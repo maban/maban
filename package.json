@@ -15,7 +15,7 @@
   "scripts": {
     "test": "snyk test --all-projects",
     "style": "sass ./_style/main.scss:./css/main.css --no-source-map",
-    "build": "npm run style && bundle exec jekyll serve"
+    "build": "npm run style && bundle exec jekyll serve --incremental"
   },
   "snyk": true
 }

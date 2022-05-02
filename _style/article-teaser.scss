@@ -1,11 +1,11 @@
 .article--teaser {
-  font-size: 0.95em;
   align-self: flex-start;
+  font-size: 0.95em;
   .article__title {
     display: inline-block;
-    width: 100%;
-    padding-bottom: 0.25em;
     line-height: 1.2em;
+    padding-bottom: 0.25em;
+    width: 100%;
   }
   .article__date {
     display: block;
