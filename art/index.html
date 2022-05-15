@@ -4,24 +4,37 @@ title: Artwork
 slug: page-art
 ---
 
-<div class="l-container--tight u-centered">
-  <h1 class="heading-section">Art</h1>
-  <h2 class="heading-prominent u-separator">Things I've made</h2>
+<div class="l-container--full">
+  <h1 class="heading-section u-centered">Art</h1>
 </div>
 
 <div class="l-container--full l-tight--bottom">
+
+  <h3 class="u-centered">Landscapes</h3>
   <ol class="content-list">
     {% for art in site.art %}
-    <li class="content-list__item content-list__item--image">
-      <a class="content-list__item__link" href="{{ art.url }}">
-        <div class="content-list__item__heading u-push-bottom-none">
-          <h3 class="content-list__item__label">{{ art.title }}</h3>
-        </div>
-        <div class="content-list__item__image">
-          <img src="/image/{{ art.image }}" alt="" />
-        </div>
-      </a>
-    </li>
+      {% if art.category == "landscapes" %}
+        {% include teaser-art.html %}
+      {% endif %}
     {% endfor %}
   </ol>
+
+  <h3 class="u-centered">Animals</h3>
+  <ol class="content-list">
+    {% for art in site.art %}
+      {% if art.category == "animals" %}
+        {% include teaser-art.html %}
+      {% endif %}
+    {% endfor %}
+  </ol>
+
+  <h3 class="u-centered">Miscellaneous</h3>
+  <ol class="content-list">
+    {% for art in site.art %}
+      {% if art.category == "misc" %}
+        {% include teaser-art.html %}
+      {% endif %}
+    {% endfor %}
+  </ol>
+
 </div>
