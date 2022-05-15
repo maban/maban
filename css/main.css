@@ -503,6 +503,7 @@ a:hover, a:focus, a:active,
   flex-wrap: wrap;
   font-size: 0.9em;
   justify-content: center;
+  padding: 0;
 }
 
 .content-list__item {

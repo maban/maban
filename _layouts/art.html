@@ -8,13 +8,12 @@
 
       <div class="l-container">
 
-      <h1 class="title">{{ page.title }}</h1>
+        <h1 class="title">{{ page.title }}</h1>
 
-      <img src="/image/{{ page.image }}" alt="{{ page.image-alt }}" class="image-main"/>
+        <img src="/image/{{ page.image }}" alt="{{ page.image-alt }}" class="image-main"/>
 
-        <div class="lede">
-          <p>{{ page.medium }} {% if page.description %}• {{ page.description }}{% endif %}</p>
-        </div>
+        <p>{% if page.medium %}Medium: {{ page.medium }}{% endif %}</p>
+        <p>{% if page.description %}{{ page.description }}{% endif %}</p>
 
       </div>
 
