@@ -8,7 +8,7 @@ body {
 }
 
 abbr {
-  border-bottom: 2px dotted $color-accent--a;
+  text-decoration: underline dotted;
   &:hover {
     cursor: help;
   }
