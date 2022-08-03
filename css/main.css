@@ -7,7 +7,7 @@ body {
 }
 
 abbr {
-  border-bottom: 2px dotted #009688;
+  text-decoration: underline dotted;
 }
 abbr:hover {
   cursor: help;
