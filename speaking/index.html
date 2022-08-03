@@ -13,7 +13,7 @@ slug: page-speaking
 
 <div class="l-container--full">
 
-  <h2 class="u-separator u-centered">{% if site.availability-speaking %}Upcoming and past events{% else %}Past events{% endif %}</h2>
+  <h2 class="u-separator u-centered" id="events">{% if site.availability-speaking %}Upcoming and past events{% else %}Past events{% endif %}</h2>
 
   <ol class="content-list">
     {% for talk in site.talks reversed %}

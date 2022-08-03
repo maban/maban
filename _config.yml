@@ -21,10 +21,10 @@ timezone:    Europe/London
 markdown:    redcarpet
 permalink:   /:title/
 
-#availability-consultancy:
-  #rate: "£500 + VAT a day, plus any agreed expenses."
-#availability-speaking:
-  #rate: "£2,000 + VAT for a new talk on a topic we agree on, or £1,250 + VAT for one of my current talks, plus travel and accommodation."
+availability-consultancy:
+  rate: "£850 + VAT a day, plus any agreed expenses."
+availability-speaking:
+  rate: "£9,500 + VAT for a new talk on a topic we agree on, or £4,500 + VAT for one of my current talks, plus travel and accommodation."
 availability-editing:
   rate: "Rate negotiable."
 
