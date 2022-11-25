@@ -19,8 +19,11 @@
       <li class="nav__list__item section-speaking">
         <a class="nav__list__link" href="/speaking">Speaking</a>
       </li>
-      <li class="nav__list__item section-hire">
-        <a class="nav__list__link" href="/hire-me">Hire me</a>
+      <!--<li class="nav__list__item section-projects">
+        <a class="nav__list__link" href="/projects">Side projects</a>
+      </li>-->
+      <!--<li class="nav__list__item section-ama">
+        <a class="nav__list__link" href="https://github.com/maban/ama">Ask me anything</a>-->
       </li>
     </ul>
   </nav>
@@ -35,6 +38,7 @@
       {% unless page.is-home %}<a href="http://maban.co.uk" class="header-intro__title-link" rel="me">{% endunless %}Anna Debenham{% unless page.is-home %}</a>{% endunless %}
       </{% if page.is-home %}h1{% else %}p{% endif %}>
       {% unless page.is-home %}<p><a href="/#about">About me</a></p>{% endunless %}
+    	{% comment %}<a href="/hire-me/" class="button button--hire">Hire me</a>{% endcomment %}
     </header>
 
 </div>

@@ -35,6 +35,13 @@ slug: page-portfolio
 
 <div class="l-container--full">
   <ol class="content-list">
+    {% comment %}
+    <li class="content-list__item content-list__item--highlight">
+        <h3 class="title h2">Your project?</h3>
+        <p>Upcoming availability in {{ site.availability }}.</p>
+        <a href="/hire-me/#consultancy" class="button">Hire me</a>
+    </li>
+    {% endcomment %}
     {% for casestudy in site.portfolio %}
     <li class="content-list__item content-list__item--image">
       <a class="content-list__item__link" href="{{casestudy.url}}">

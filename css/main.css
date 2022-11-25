@@ -806,9 +806,6 @@ nav li {
 .nav--extended .section-speaking .nav__list__link:before, .nav--mini .section-speaking .nav__list__link:before {
   background-color: #F06292;
 }
-.nav--extended .section-hire .nav__list__link:before, .nav--mini .section-hire .nav__list__link:before {
-  background-color: #FFC107;
-}
 
 .nav--mini .nav__list {
   flex-wrap: wrap;
