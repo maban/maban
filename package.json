@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "sass": "^1.51.0",
-    "snyk": "^1.996.0"
+    "snyk": "^1.1064.0"
   },
   "scripts": {
     "test": "snyk test --all-projects",
