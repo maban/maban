@@ -1,12 +1,20 @@
+button,
+input[type="button"],
+input[type="submit"],
 [class*='button'] {
   background-color: $color-accent--c;
   border-radius: $border-radius-m;
+  border: none;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.05), 0 3px 0 rgba(255, 255, 255, 0.1), 0 4px 0 rgba(0, 0, 0, 0.4);
   color: #333;
   display: inline-block;
   margin-bottom: 2px;
   padding: 0.75em 1em;
   text-align: center;
+  font-family: $font-sans-regular;
+  font-size: 1em;
+  box-sizing: border-box;
+  line-height: 1em;
   &:link,
   &:visited,
   &:hover,
@@ -14,6 +22,9 @@
   &:active {
     border: none;
     color: #333;
+  }
+  &:hover {
+    cursor: pointer;
   }
   &:hover,
   &:focus,
@@ -23,12 +34,13 @@
     margin-bottom: 0;
     margin-top: 2px;
   }
+  &.button--l {
+    font-size: 1.2em;
+  }
+  
+  &.button--s {
+    font-size: 0.8em;
+  }
 }
 
-.button--l {
-  font-size: 1.2em;
-}
 
-.button--s {
-  font-size: 0.8em;
-}
