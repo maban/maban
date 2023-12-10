@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Karla", "Lucida Grande", "Helvetica", "Arial";
   font-size: 20px;
@@ -463,32 +464,74 @@ a:hover, a:focus, a:active,
   background-color: rgba(0, 0, 0, 0.18);
 }
 
+button,
+input[type=button],
+input[type=submit],
 [class*=button] {
   background-color: #00BCD4;
   border-radius: 0.2em;
+  border: none;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.05), 0 3px 0 rgba(255, 255, 255, 0.1), 0 4px 0 rgba(0, 0, 0, 0.4);
   color: #333;
   display: inline-block;
   margin-bottom: 2px;
   padding: 0.75em 1em;
   text-align: center;
+  font-family: "Karla", "Lucida Grande", "Helvetica", "Arial";
+  font-size: 1em;
+  box-sizing: border-box;
+  line-height: 1em;
 }
-[class*=button]:link, [class*=button]:visited, [class*=button]:hover, [class*=button]:focus, [class*=button]:active {
+button:link, button:visited, button:hover, button:focus, button:active,
+input[type=button]:link,
+input[type=button]:visited,
+input[type=button]:hover,
+input[type=button]:focus,
+input[type=button]:active,
+input[type=submit]:link,
+input[type=submit]:visited,
+input[type=submit]:hover,
+input[type=submit]:focus,
+input[type=submit]:active,
+[class*=button]:link,
+[class*=button]:visited,
+[class*=button]:hover,
+[class*=button]:focus,
+[class*=button]:active {
   border: none;
   color: #333;
 }
-[class*=button]:hover, [class*=button]:focus, [class*=button]:active {
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+[class*=button]:hover {
+  cursor: pointer;
+}
+button:hover, button:focus, button:active,
+input[type=button]:hover,
+input[type=button]:focus,
+input[type=button]:active,
+input[type=submit]:hover,
+input[type=submit]:focus,
+input[type=submit]:active,
+[class*=button]:hover,
+[class*=button]:focus,
+[class*=button]:active {
   background-color: #00BCD4;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
   margin-bottom: 0;
   margin-top: 2px;
 }
-
-.button--l {
+button.button--l,
+input[type=button].button--l,
+input[type=submit].button--l,
+[class*=button].button--l {
   font-size: 1.2em;
 }
-
-.button--s {
+button.button--s,
+input[type=button].button--s,
+input[type=submit].button--s,
+[class*=button].button--s {
   font-size: 0.8em;
 }
 
@@ -856,4 +899,90 @@ nav li {
 .twitter-tweet {
   margin: 0 auto;
   padding-bottom: 0.8em;
+}
+
+.xx-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+.xx-swatch {
+  width: 200px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 5px;
+  border-radius: 2px;
+  color: black;
+}
+
+.xx-swatch-preview {
+  width: 100%;
+  height: 75px;
+  display: block;
+  order: 1;
+  margin-bottom: 0.25em;
+  overflow: hidden;
+}
+
+.xx-swatch-details {
+  display: block;
+  order: 2;
+}
+.xx-swatch-details > strong {
+  display: block;
+  clear: left;
+}
+
+.xx-pattern-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 0 2em;
+  padding: 0;
+}
+.xx-pattern-list li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.xx-pattern-list li:after {
+  content: "• ";
+  margin: 0 0.5em;
+  display: inline-block;
+}
+.xx-pattern-list li:last-child:after {
+  content: "";
+}
+
+.xx-pattern {
+  margin-bottom: 2em;
+  border: 1px solid #6D6D76;
+  border-radius: 3px;
+}
+
+.xx-pattern-details {
+  padding: 0.25em 1em;
+  background-color: #6D6D76;
+}
+.xx-pattern-details .highlight {
+  margin: 0.5em 0 1em;
+}
+.xx-pattern-details .highlight table,
+.xx-pattern-details .highlight pre {
+  margin: 0;
+}
+.xx-pattern-details .highlight tr {
+  border: none;
+}
+.xx-pattern-details .highlight .lineno {
+  margin: 0 1em 0 0;
+}
+
+.xx-pattern-preview {
+  padding: 1em;
 }
