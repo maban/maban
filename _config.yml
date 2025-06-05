@@ -23,10 +23,10 @@ permalink:   /:title/
 
 # availability-consultancy:
 #   rate: "£750 + VAT a day, plus any agreed expenses."
-availability-speaking:
-  rate: "£7,500 + VAT for a new talk on a topic we agree on, or £3,500 + VAT for one of my current talks, plus travel and accommodation."
-availability-editing:
-  rate: "Rate negotiable."
+# availability-speaking:
+#   rate: "£7,500 + VAT for a new talk on a topic we agree on, or £3,500 + VAT for one of my current talks, plus travel and accommodation."
+# availability-editing:
+#   rate: "Rate negotiable."
 
 paginate: 20
 paginate_path: "/archives/page/:num"
